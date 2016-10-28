@@ -33,7 +33,7 @@
 
         <!-- Sidebar -->
       
-	  <div id="add-sidebar"></div>
+	  <object type="text/html" data="menu.html"></object>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -60,15 +60,16 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
+	<script>
+	$("add-sidebar").load("sidebar.html");
+	</script>
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-	<script>
-	$("add-sidebar").load("sidebar.html");
-	</script>
+	
 </body>
 
 </html>
