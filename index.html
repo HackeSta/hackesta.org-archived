@@ -25,6 +25,11 @@
     <![endif]-->
 
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#sidebar").load("sidebar.html"); 
+    });
+    </script> 
 </head>
 
 <body>
@@ -32,8 +37,9 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-      
-	  <object type="text/html" data="sidebar.html"></object>
+      <div id="sidebar"> 
+	  
+	  </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
