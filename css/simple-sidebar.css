@@ -57,7 +57,10 @@
     margin-right: -250px;
 }
 
-
+@font-face{
+	font-family: sevenmonkeyfury;
+	src: url(../fonts/seven.ttf);
+}
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -93,7 +96,8 @@
 
 .sidebar-nav > .sidebar-brand {
     height: 65px;
-    font-size: 18px;
+	font-family: sevenmonkeyfury;
+    font-size: 35px;
     line-height: 60px;
 }
 
