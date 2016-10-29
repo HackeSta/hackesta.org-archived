@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Sidebar</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,9 +29,7 @@
  <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="/index.html">
-                        Hack-e-Sta
-                    </a>
+                    <li><a href="/index.html"><div align="right"><img src="media/logo_glow.png" width="250" align="right" height="70"/></div> </a>
                 </li>
                 <li>
                     <a href="/overview.html">Project Overview</a>
@@ -44,3 +42,14 @@
                 </li>
             </ul>
         </div>
+		
+		<script>
+	$(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(e){
+	e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+		$("#nav-icon1").toggleClass("open")
+	});
+		});
+</script>
+    
