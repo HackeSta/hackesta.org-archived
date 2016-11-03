@@ -61,6 +61,12 @@
 	font-family: sevenmonkeyfury;
 	src: url(../fonts/seven.TTF);
 }
+a.navicon{
+		position: relative;
+		display: block;
+		height: 23px;
+		widht: 30px;
+		}
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -109,6 +115,8 @@
     color: #fff;
     background: none;
 }
+
+
 
 @media(min-width:768px) {
     #wrapper {
@@ -161,6 +169,8 @@
 
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
   display: block;
+  content: '';
+  cursor: pointer;
   position: absolute;
   height: 5px;
   width: 50%;
@@ -180,6 +190,7 @@
 
 #nav-icon1 span:nth-child(1) {
   top: 0px;
+  
 }
 
 #nav-icon1 span:nth-child(2) {
@@ -191,7 +202,8 @@
 }
 
 #nav-icon1.open span:nth-child(1) {
-  top: 18px;
+  top: 11.5px;
+  width: 23px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -204,7 +216,8 @@
 }
 
 #nav-icon1.open span:nth-child(3) {
-  top: 18px;
+  top: 11.5px;
+  width: 23px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);

@@ -5,17 +5,17 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="viewport" content="user-scalable = yes">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Anagram Box - Hack-e-Sta</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,13 +23,24 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script> 
     $(function(){
-      $("#sidebar").load("sidebar.html"); 
+      $("#sidebar").load("../sidebar.html"); 
     });
     </script> 
-
+	<style>
+		h4.margined{
+		margin-left: 20px;
+		margin-right: 80px;
+		line-height: 200%;}
+		li.margined{
+		margin-left: 20px;
+		}
+		
+		
+	</style>
+				
 </head>
 
 <body>
@@ -38,40 +49,117 @@
 
         <!-- Sidebar -->
         <div id="sidebar">
-                
+            
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+		<a class="navicon" href="#" onclick="toggle(); return false;">
+			<div id="nav-icon1" class="">
+						<span></span>
+						<span></span>
+						<span></span>
+			</div>
+		</a>
             <div class="container-fluid">
-                <div class="row">
+                <div id="project-title" class="row">
                     <div class="col-lg-12">
-                        <h1>Anagram Box</h1>
-                        <p>Test page for Anagram Box</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                    </div>
-                </div>
+                        <h1 align="center"> Anagram Box </h1>
+						
+						<div align="center"><hr class="style18" width="400px"></div>
+					</div>
+				</div>
+				<div id="project-info" class="row-a">
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Developement </h3>
+						<br>
+						<div id="dualcenter">
+						<img class="img-dualappinfo" src="../media/visual_studio.svg">
+						<img class="img-dualappinfo" src="../media/csharp.svg">
+						</div>
+						<h4 align="center"> Visual Studio - C#</h4>
+						
+				</div>
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Target </h3>
+						<br>
+						<br>
+						<h3 align="center"> Windows Forms User Control </h3>
+				</div>
+				
+				<div class="col-md-4" align="center">
+						<h3 class="text-center"> Releases </h3>
+						<br>
+						<a href='https://github.com/haideralipunjabi/AnagramBox'><img class="img-appinfo" alt='Github' src='../media/github.svg'/></a>
+						<h4 align="center">Open Source</h4>
+				</div>	
+				</div>
+				<div align="center"><hr class="style14"></div>
+				<br>
+				<div id="project-background" align="justify">
+				<h2>Background</h2>
+				<h4 class="margined" align="justify"> I had never created a control in Visual Studio, even after 2 years of coding. One day while watching a quiz on TV, I saw the way they displayed an anagram of words, and taking inspiration from it, I started this as a practice project.
+				<br>
+				It took me 2 days (1 or 2 hours each day) to finalize it. If asked I might add more features to it.
+				</h4>
+				</div>
+				<br>
+				<div id="project-methods">
+				<h2>Methods</h2>
+				<h4 class="margined" align="justify">
+				<dl>
+					<dt>Shuffle()</dt>
+					<dd>This method shuffles all the text</dd>
+					<br>
+					<dt>UnShuffle</dt>
+					<dd>This method unshuffles all the text</dd>
+					<br>
+					<dt>TextAlign</dt>
+					<dd>Property to change HorizontalAlignment of all boxes</dd>
+					<br>
+					<dt>TextColor<dt>
+					<dd>Property to change the ForeColor/FontColor</dd>
+					<br>
+					<dt>BoxColor</dt>
+					<dd>Property to change the BackColor</dd>
+				</dl>
+				</h4>
+				</div>
+			
             </div>
         </div>
+        
         <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <script type="text/javascript">
+	function toggle(){
+	var sidebarButton = document.getElementById("nav-icon1")
+	 sidebarButton.addEventListener('click', function(event) {
+	var state = document.getElementById("nav-icon1").className;
+	if (state == "open")
+	{
+		state = "";
+		document.getElementById("wrapper").className = "";
+	}
+	else
+	{
+		state = "open";
+		document.getElementById("wrapper").className = "toggled";
+	}
+	}
+  });
+	</script>
 
 </body>
 

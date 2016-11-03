@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="viewport" content="user-scalable = yes">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -29,6 +29,17 @@
       $("#sidebar").load("../sidebar.html"); 
     });
     </script> 
+	<style>
+		h4.margined{
+		margin-left: 20px;
+		margin-right: 80px;
+		line-height: 200%;}
+		li.margined{
+		margin-left: 20px;
+		}
+		
+	</style>
+				
 </head>
 
 <body>
@@ -43,22 +54,22 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-		<a href="#menu-toggle" id="menu-toggle">
-						<div id="nav-icon1" class="open">
+		<a class="navicon" href="#" onclick="toggle(); return false;">
+			<div id="nav-icon1" class="">
 						<span></span>
 						<span></span>
 						<span></span>
-						</div>
-						</a>
+			</div>
+		</a>
             <div class="container-fluid">
-                <div class="row">
+                <div id="project-title" class="row">
                     <div class="col-lg-12">
                         <h1 align="center"> Evolve CP Calculator</h1>
 						
 						<div align="center"><hr class="style18" width="400px"></div>
 					</div>
 				</div>
-				<div class="row-a">
+				<div id="project-info" class="row-a">
 				<div class="col-md-4-border">
 						<h3 class="text-center"> Developement </h3>
 						<br>
@@ -84,6 +95,38 @@
 				</div>	
 				</div>
 				<div align="center"><hr class="style14"></div>
+				<br>
+				<div id="project-background" align="justify">
+				<h2>Background</h2>
+				<h4 class="margined" align="justify"> When <a href="https://www.pokemongo.com">Pokemon GO</a> came out, many developers created variety of tools. Many CP Calculators were available on the Internet, but none was for Android. So I decided to make one. Although I had never made a proper app for Android. I had learnt SQL recently, and made simple practice apps, which helped me a lot in this app. 
+				<br>
+				Initially, I had used the graphics from the game, and not knowing about Vectors, PNG files were used. The first version was only capable of one way calculation. Then someone recommended reverse calculation, which I named "Prevolution Mode". The database was at first made from compiling different data sources, but later I used <a href="http://www.pokemongohub.net">Pokemon GO Hub's database</a>.
+				After that, a user on <a href="https://www.reddit.com">Reddit</a> posted <a href="http://theartificial.nl/pokemonicons/">First Generation Pokemon Vectors by The Artificial</a>
+				</h4>
+				</div>
+				<br>
+				<div id="project-features">
+				<h2>Features</h2>
+				<h4 class="margined" align="justify">
+				<ul style="list-style-type:disc" align="center">
+					<li class="margined">Zero Adverts</li>
+					<li class="margined">Database by <a href="http://www.pokemongohub.net">Pokemon GO Hub</a></li>
+					<li class="margined">Pokemon Images by <a href="http://theartificial.nl">The Artificial</a></li>
+					<li class="margined">Two different estimation modes</li>
+					<li class="margined">Can Swipe to change Pokemon Evolutions</li>
+					<li class="margined">Help Mode can be accessed via the toolbar</li>
+				</ul>
+				</h4>
+				</div>
+				<br>
+				<div id="youtube">
+				<h2>Tutorial</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/I2Ol3fHt0jE" frameborder="0" allowfullscreen></iframe>
+				<br>
+				<h4 class="margined"><i>Note:- This video was made with an older version</i></h4>
+				</div>
+				
+				
 				
             </div>
         </div>
@@ -100,20 +143,24 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
-    <script>
-	$(document).ready(function(){
-	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-		$("nav-icon1").toggleClass('open');
-		$("#wrapper").toggleClass("toggled");
-	});
-});
-</script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <script type="text/javascript">
+	function toggle(){
+	var sidebarButton = document.getElementById("nav-icon1")
+	 sidebarButton.addEventListener('click', function(event) {
+	var state = document.getElementById("nav-icon1").className;
+	if (state == "open")
+	{
+		state = "";
+		document.getElementById("wrapper").className = "";
+	}
+	else
+	{
+		state = "open";
+		document.getElementById("wrapper").className = "toggled";
+	}
+	}
+  });
+	</script>
 
 </body>
 
