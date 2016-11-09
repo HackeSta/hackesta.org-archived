@@ -23,11 +23,7 @@
 }
 
 #sidebar-wrapper {
-<<<<<<< HEAD
 	background:url(../media/logo.svg) no-repeat center;
-=======
-	background:url(../media/logo.svg) no-repeat center; 
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 	background-size: 100px 100px;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -86,15 +82,12 @@ a.navicon{
     text-indent: 20px;
     line-height: 40px;
 }
-<<<<<<< HEAD
 .sidebar-nav li.focus {
   text-decoration: none;
   color: #fff;
   background: rgba(255,255,255,0.2);
 }
 
-=======
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 
 .sidebar-nav li a {
     display: block;
@@ -108,7 +101,6 @@ a.navicon{
     background: rgba(255,255,255,0.2);
 }
 
-<<<<<<< HEAD
 .sidebar-nav li a:active{
   text-decoration: none;
   color: #fff;
@@ -118,11 +110,6 @@ a.navicon{
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
-=======
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -141,7 +128,6 @@ a.navicon{
     background: none;
 }
 
-<<<<<<< HEAD
 li.github {
   background-image: url('../media/github.svg');
   background-position: left center;
@@ -203,8 +189,6 @@ li.instagram a:hover {
 
 
 
-=======
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 
 
 @media(min-width:768px) {
@@ -236,11 +220,7 @@ li.instagram a:hover {
 }
 * {
   margin: 0;
-<<<<<<< HEAD
   padding: 0;
-=======
-  padding: 0; 
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 }
 
 /* Icon 1 */
@@ -283,11 +263,7 @@ li.instagram a:hover {
 
 #nav-icon1 span:nth-child(1) {
   top: 0px;
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 }
 
 #nav-icon1 span:nth-child(2) {
@@ -499,8 +475,4 @@ li.instagram a:hover {
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484

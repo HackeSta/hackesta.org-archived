@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 # DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:puQaGasaVy
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^hackesta.2fh.co$ [OR]
@@ -8,8 +7,6 @@ RewriteRule ^$ http://hackesta.2fh.co/index.html [R=301,L]
 # DO NOT REMOVE THIS LINE AND THE LINES ABOVE puQaGasaVy:REDIRECTID
 
 
-=======
->>>>>>> e8a080708bfe113dd20d8642eec02d199ca46484
 # DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:TyjuvebyLu
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^hackesta.2fh.co$ [OR]
