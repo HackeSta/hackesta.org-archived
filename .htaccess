@@ -1,0 +1,32 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:puQaGasaVy
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^hackesta.2fh.co$ [OR]
+RewriteCond %{HTTP_HOST} ^www.hackesta.2fh.co$
+RewriteRule ^$ http://hackesta.2fh.co/index.html [R=301,L]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE puQaGasaVy:REDIRECTID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:TyjuvebyLu
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^hackesta.2fh.co$ [OR]
+RewriteCond %{HTTP_HOST} ^www.hackesta.2fh.co$
+RewriteRule ^$ http://hackesta.2fh.co/blog/ [R=301,L]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE TyjuvebyLu:REDIRECTID
+
+
+
+
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

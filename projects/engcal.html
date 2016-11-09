@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable = yes">
+    <meta name="description" content="Hack-e-Sta Project Engineer's Calculator">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
+    <meta name="author" content="Haider Ali Punjabi">
+
+    <title>Engineer's Calculator - Hack-e-Sta</title>
+    <link rel="shortcut icon" href="../media/favicons/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../media/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="../media/favicons/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../media/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../media/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../media/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" href="../media/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../media/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../media/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../media/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../media/favicons/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../media/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../media/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../media/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicons/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../media/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="../media/favicons/browserconfig.xml">
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(function(){
+      $("#sidebar").load("../sidebar.html");
+    });
+    </script>
+    <script type="text/javascript">
+  function toggle(){
+  var sidebarButton = document.getElementById("nav-icon1")
+   sidebarButton.addEventListener('click', function(event) {
+  var state = document.getElementById("wrapper").className;
+
+  if (state == "toggled")
+  {
+    document.getElementById("nav-icon1").className = "";
+    document.getElementById("wrapper").className = "toggled";
+  }
+  else
+  {
+    document.getElementById("nav-icon1").className = "open";
+    document.getElementById("wrapper").className = "";
+  }
+  }
+  )};
+  window.onload = function() {
+      document.getElementById('engcal').className = "focus";
+  }
+  </script>
+	<style>
+		h4.margined{
+		margin-left: 20px;
+		margin-right: 80px;
+		line-height: 200%;}
+		li.margined{
+		margin-left: 20px;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		<a class="navicon" href="#" onclick="toggle(); return false;">
+			<div id="nav-icon1" class="open">
+						<span></span>
+						<span></span>
+						<span></span>
+			</div>
+		</a>
+            <div class="container-fluid">
+                <div id="project-title" class="row">
+                    <div class="col-lg-12">
+                        <h1 align="center"> Engineer's Calculator </h1>
+
+						<div align="center"><hr class="style18" width="400px"></div>
+					</div>
+				</div>
+				<div id="project-info" class="row-a">
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Developement </h3>
+						<br>
+						<div id="dualcenter">
+						<img class="img-dualappinfo" src="../media/visual_studio.svg" alt="Visual Studio Logo">
+						<img class="img-dualappinfo" src="../media/csharp.svg" alt="C# Logo">
+						</div>
+						<h4 align="center"> Visual Studio - C#</h4>
+
+				</div>
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Target </h3>
+						<br>
+						<br>
+						<h3 align="center"> Windows Forms Application </h3>
+				</div>
+
+				<div class="col-md-4" align="center">
+						<h3 class="text-center"> Releases </h3>
+						<br>
+						<a href='https://drive.google.com/file/d/0B-E40hIVV18hLUcwVmcxdTZMRlU/view?usp=sharing' target="_blank"><img class="img-appinfo-rect" alt='Google Drive' src='../media/google-drive-badge.png'/></a>
+						<h4 align="center">.EXE from Google Drive</h4>
+				</div>
+				</div>
+				<div align="center"><hr class="style14"></div>
+				<br>
+				<div id="project-background" align="justify">
+				<h2>Background</h2>
+				<h4 class="margined" align="justify">
+          When I first learnt using Visual Studio, Engineer's Calculator was my first proper app. I used to play on <a href="westsideteam.net" target="_blank"> West Side RPG Server </a> back then, and I made this for that server.
+          <br>
+          The server had an Engineer job, which buys minerals from a MineWorker, and converts it to Guns, Ammo and some other stuff and sells it. This app was made for calculating the Mineral Requirements and Cost Price of manking something.
+          <br>
+          A similar app existed on the server's forums, but it wasn't updated for a while and missing a lot of things.
+          <br>
+          It took me around 4-5 hours to make the first version. I wasn't a good coder and all the code was uncommented, and I didn't knew about Arrays and some other stuff at that time, which resulted in a pretty long code, and made it very difficult for me to keep updating it. Although, I have added many new features since its release, but never did any huge changes.
+				</h4>
+				</div>
+				<br>
+				<div id="project-tutorial">
+				<h2>Tutorial</h2>
+				<h4 class="margined" align="justify">
+				Using the app is pretty simple, just choose the item you want, add the required values, press calculate amount, and them press calculate price.
+				</h4>
+				</div>
+        <div id="youtube">
+          <br>
+          <h2>Video:</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wGbl6e3QgUc" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        </div>
+        </div>
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+
+</body>
+
+</html>
