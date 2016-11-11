@@ -68,9 +68,13 @@
   }
   }
   )};
-  window.onload = function() {
-
-  }
+  $(function(){
+  $('a').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('focus');
+    }
+  });
+});
   </script>
 	<style>
 		h4.margined{
