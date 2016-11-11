@@ -58,6 +58,15 @@
     <![endif]-->
 
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script>
+   $(function(){
+   $('li').each(function() {
+     if ($(this).children().prop('href') == window.location.href) {
+       $(this).addClass('focus');
+     }
+   });
+ });
+   </script>
 </head>
  <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
