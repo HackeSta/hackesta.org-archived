@@ -69,7 +69,7 @@
   )};
   $(function(){
   $('li').each(function() {
-    if ($(this).children[0].prop('href') == window.location.href) {
+    if ($(this).children()[0].prop('href') == window.location.href) {
       $(this).addClass('focus');
     }
   });
