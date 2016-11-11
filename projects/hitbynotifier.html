@@ -47,7 +47,6 @@
     <script>
     $(function(){
       $("#sidebar").load("../sidebar.html");
-      document.getElementById('hitbynotifier').className = "focus";
     });
     </script>
     <script type="text/javascript">
@@ -69,9 +68,9 @@
   }
   )};
   $(function(){
-  $('a').each(function() {
+  $('li').each(function() {
     if ($(this).prop('href') == window.location.href) {
-      $(this).addClass('focus');
+      $(this).addClass('current');
     }
   });
 });
