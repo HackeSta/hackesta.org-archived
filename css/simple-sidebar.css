@@ -186,7 +186,26 @@ li.instagram a:hover {
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
+li.wordpress {
+  background-image: url('../media/wordpress.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+li.wordpress a {
+  height: 40px;
+padding-left: 30px;
 
+}
+li.wordpress:hover{
+  background-image: url('../media/wordpress-alt.svg');
+}
+li.wordpress a:hover {
+
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
 
 
 
