@@ -81,11 +81,15 @@ a.navicon{
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
+
 }
 .sidebar-nav li.focus {
   text-decoration: none;
   color: #fff;
   background: rgba(255,255,255,0.2);
+  border-left-style: solid;
+  border-left-color: white;
+  border-left-width: medium;
 }
 
 
