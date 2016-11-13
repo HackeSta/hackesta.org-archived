@@ -33,6 +33,7 @@
     <meta name="msapplication-config" content="../media/favicons/browserconfig.xml">
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slider.css" rel="stylesheel">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="../css/simple-sidebar.css" rel="stylesheet">
@@ -72,6 +73,50 @@
   window.onload = function onLoad(){
 
 }
+
+  </script>
+  <script>
+  jQuery(document).ready(function ($) {
+
+
+  	var slideCount = $('#slider ul li').length;
+  	var slideWidth = $('#slider ul li').width();
+  	var slideHeight = $('#slider ul li').height();
+  	var sliderUlWidth = slideCount * slideWidth;
+
+  	$('#slider').css({ width: slideWidth, height: slideHeight });
+
+  	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+      $('#slider ul li:last-child').prependTo('#slider ul');
+
+      function moveLeft() {
+          $('#slider ul').animate({
+              left: + slideWidth
+          }, 200, function () {
+              $('#slider ul li:last-child').prependTo('#slider ul');
+              $('#slider ul').css('left', '');
+          });
+      };
+
+      function moveRight() {
+          $('#slider ul').animate({
+              left: - slideWidth
+          }, 200, function () {
+              $('#slider ul li:first-child').appendTo('#slider ul');
+              $('#slider ul').css('left', '');
+          });
+      };
+
+      $('a.control_prev').click(function () {
+          moveLeft();
+      });
+
+      $('a.control_next').click(function () {
+          moveRight();
+      });
+
+  });
   </script>
 	<style>
 		h4.margined{
@@ -81,6 +126,7 @@
 		li.margined{
 		margin-left: 20px;
 		}
+
 
 	</style>
 
@@ -143,6 +189,16 @@
         <div align="center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fhackesta.official&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=898852280214428" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
 
 				<br>
+<div id="slider">
+  <a href="#" class="control_next">>></a>
+  <a href="#" class="control_prev"><</a>
+  <ul>
+    <li>SLIDE 1</li>
+    <li style="background: #aaa;">SLIDE 2</li>
+    <li>SLIDE 3</li>
+    <li style="background: #aaa;">SLIDE 4</li>
+  </ul>
+</div>
 				<div id="project-background" align="justify">
 				<h2>Background</h2>
 				<h4 class="margined" align="justify"> When <a href="https://www.pokemongo.com">Pokemon GO</a> came out, many developers created variety of tools. Many CP Calculators were available on the Internet, but none was for Android. So I decided to make one. Although I had never made a proper app for Android. I had learnt SQL recently, and made simple practice apps, which helped me a lot in this app.
