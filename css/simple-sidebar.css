@@ -210,7 +210,29 @@ li.wordpress a:hover {
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
+li.youtube {
+  background-image: url('../media/youtube.svg');
+  background-position: left center;
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  margin-left: -100px;
+}
+li.youtube a {
+  height: 40px;
+padding-left: 30px;
+margin-left: 100px;
 
+}
+li.youtube:hover{
+  background-image: url('../media/youtube-alt.svg');
+}
+li.youtube a:hover {
+
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
 
 
 
