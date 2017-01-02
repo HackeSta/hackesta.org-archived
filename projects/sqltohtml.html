@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="user-scalable = yes">
-<meta name="description" content="Hack-e-Sta Project Evolve CP Calculator">
-<meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers, Google, Android, Pokemon">
+<meta name="description" content="Hack-e-Sta Project SQLtoHTML">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
 <meta name="author" content="Haider Ali Punjabi">
 
-    <title>Evolve CP Calculator - Hack-e-Sta</title>
+    <title>Anagram Box - Hack-e-Sta</title>
     <link rel="shortcut icon" href="../media/favicons/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="../media/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="196x196" href="../media/favicons/favicon-192.png">
@@ -47,8 +47,6 @@
     <script>
     $(function(){
       $("#sidebar").load("../sidebar.html");
-      toggle();
-    document.getElementById('evolvecpcalc').className="focus";
     });
     </script>
     <script type="text/javascript">
@@ -68,13 +66,11 @@
     document.getElementById("wrapper").className = "";
   }
   }
-)};
-  window.onload = function onLoad(){
-
-}
-
+  )};
+  window.onload = function() {
+      document.getElementById('sqltohtml').className = "focus";
+  }
   </script>
-
 	<style>
 		h4.margined{
 		margin-left: 20px;
@@ -111,7 +107,7 @@
             <div class="container-fluid">
                 <div id="project-title" class="row">
                     <div class="col-lg-12">
-                        <h1 align="center"> Evolve CP Calculator</h1>
+                        <h1 align="center"> Anagram Box </h1>
 
 						<div align="center"><hr class="style18" width="400px"></div>
 					</div>
@@ -121,67 +117,50 @@
 						<h3 class="text-center"> Developement </h3>
 						<br>
 						<div id="dualcenter">
-						<img class="img-dualappinfo" src="../media/android_studio.svg" alt="Android Studio Logo">
-						<img class="img-dualappinfo" src="../media/java.svg" alt="Java Logo">
+						<img class="img-dualappinfo" src="../media/icon_PyCharm.svg" alt="PyCharm Logo">
+						<img class="img-dualappinfo" src="../media/python.svg" alt="Python Logo">
 						</div>
-						<h4 align="center"> Android Studio - Java</h4>
+						<h4 align="center"> PyCharm - Python</h4>
 
 				</div>
 				<div class="col-md-4-border">
 						<h3 class="text-center"> Target </h3>
 						<br>
-						<img class="img-appinfo" src="../media/android_robot.svg" alt="Android Robot">
-						<h4 align="center"> Android API 19+ </h4>
+						<br>
+						<h3 align="center"> Python Module </h3>
 				</div>
 
 				<div class="col-md-4" align="center">
 						<h3 class="text-center"> Releases </h3>
 						<br>
-						<a href='https://play.google.com/store/apps/details?id=com.hackesta.pokegocal&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="img-appinfo-rect" alt='Get it on Google Play' src='../media/google-play-badge.png'/></a>
-						<h4 align="center">v2.6</h4>
+						<a href='https://github.com/haideralipunjabi/SQLtoHTML' target="_blank"><img class="img-appinfo" alt='Github' src='../media/github.svg'/></a>
+						<h4 align="center">Open Source</h4>
 				</div>
 				</div>
+
 				<div align="center"><hr class="style14"></div>
 
         <div align="center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fhackesta&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=898852280214428" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
 
 				<br>
-
 				<div id="project-background" align="justify">
 				<h2>Background</h2>
-				<h4 class="margined" align="justify"> When <a href="https://www.pokemongo.com">Pokemon GO</a> came out, many developers created variety of tools. Many CP Calculators were available on the Internet, but none was for Android. So I decided to make one. Although I had never made a proper app for Android. I had learnt SQL recently, and made simple practice apps, which helped me a lot in this app.
-				<br>
-				Initially, I had used the graphics from the game, and not knowing about Vectors, PNG files were used. After that, a user on <a href="https://www.reddit.com" target="_blank">Reddit</a> posted <a href="http://theartificial.nl/pokemonicons/" target="_blank">First Generation Pokemon Vectors by The Artificial</a> and I switched to them. <br> The first version was only capable of one way calculation. Then someone recommended reverse calculation, which I named "Prevolution Mode". The database was at first made from compiling different data sources, but later I used <a href="http://www.pokemongohub.net">Pokemon GO Hub's database</a>.<br /> In the recent update, I added multiple themes, whose icons were provided by <a href="http://meritt.me" target="_blank">Meritt Thomas</a>
-
+				<h4 class="margined" align="justify"> I have used database in many projects of mine, and am surely going to use them in the future as well. While working with Java for over 2 weeks, I though to take a break and made this small Python Module, which I might need in the future to convert my databses to HTML and display on this site.
 				</h4>
 				</div>
 				<br>
-				<div id="project-features">
-				<h2>Features</h2>
-				<h4 class="margined" align="justify">
-				<ul style="list-style-type:disc" align="center">
-					<li class="margined">Zero Adverts</li>
-          <li class="margined">Multiple Themes</li>
-					<li class="margined">Database by <a target="_blank" href="http://www.pokemongohub.net">Pokemon GO Hub</a></li>
-					<li class="margined">Pokemon Images by <a href="http://theartificial.nl" target="_blank">The Artificial</a></li>
-          <li class="margined">Team Icons by <a href="http://meritt.me" target="_blank">Meritt Thomas</a></li>
-					<li class="margined">Two different estimation modes</li>
-					<li class="margined">Can Swipe to change Pokemon Evolutions</li>
-					<li class="margined">Help Mode can be accessed via the toolbar</li>
-				</ul>
-				</h4>
-				</div>
-				<br>
-				<div id="youtube">
-				<h2>Tutorial</h2>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/I2Ol3fHt0jE" frameborder="0" allowfullscreen></iframe>
-				<br>
-				<h4 class="margined"><i>Note:- This video was made with an older version</i></h4>
-				</div>
-        <br>
+        <div id="project-details" align="justify">
+<h2>Usage</h2>
+<h4 class="margined" align="justify">
+<p>Place the .db file in the root directory along with main.py and run main.py</p>
+</h4>
+<h2>Tip</h2>
+<h4 class="margined" align="justify">
+<p>The table generated has <em>"sortable"</em> class. Use the generated table along side <a href="http://www.kryogenix.org/code/browser/sorttable/">Sorttable</a> to make a sortable table</p>
+</h4>
+        </div>
 
         <div align="center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fhackesta&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=898852280214428" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
-
 
 
             </div>
