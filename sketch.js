@@ -29,6 +29,18 @@ function keyPressed()
   }
 }
 
+function touchStarted()
+{
+  circle.touch(mouseX,mouseY);
+}
+function touchMoved()
+{
+  circle.touch(mouseX,mouseY);
+}
+function touchEnded()
+{
+  circle.touch(mouseX,mouseY);
+}
 
 function Circle()
 {
@@ -70,6 +82,11 @@ function Circle()
         this.x += -1 * this.inc;
       }
     }
+  this.touch = function(x,y)
+  {
+    this.x = x;
+    this.y = y;
+  }
   this.reset = function()
   {
       this.x = window.width /2;
