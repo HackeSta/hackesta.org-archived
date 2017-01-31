@@ -35,14 +35,7 @@ function parsePage(page)
 {
   var pageURL = "projects/" + page;
   var contextText;
-/*  jQuery(function($){
-  	$().load(pageURL + ' #project-background', function(result){console.log($().text())});
-  });*/
-  var content;
-$.get('pageURL' +  " #project-background", function(data){
-    content= data;
-});
-// Do something with content:
-alert(content);
-console.log(content);
+  jQuery(function($){
+  	$().load(pageURL + ' #project-background', function(result){console.log(result)});
+  });
 }

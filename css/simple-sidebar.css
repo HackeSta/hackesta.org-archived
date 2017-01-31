@@ -35,7 +35,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background: #fff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -79,6 +79,7 @@ a.navicon{
 }
 
 .sidebar-nav li {
+    color: #002400;
     text-indent: 20px;
     line-height: 40px;
 
@@ -92,16 +93,21 @@ a.navicon{
   border-left-width: medium;
 }
 
+.sidebar-nav li.hover {
+  color: #00cc00;
+}
+
 
 .sidebar-nav li a {
     display: block;
+    padding-left: 25;
     text-decoration: none;
-    color: #999999;
+    color: #002400;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #00cc00;
     background: rgba(255,255,255,0.2);
 }
 
@@ -117,6 +123,12 @@ a.navicon{
 }
 
 .sidebar-nav > .sidebar-brand {
+
+    background-image: url('../media/logo.png');
+
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 65px;
 	font-family: sevenmonkeyfury;
     font-size: 35px;
@@ -124,11 +136,11 @@ a.navicon{
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: #002400;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #002400;
     background: none;
 }
 
@@ -147,7 +159,7 @@ padding-left: 30px;
 }
 li.github a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #00cc00;
     background: rgba(255,255,255,0.2);
 }
 li.facebook {
@@ -167,7 +179,7 @@ li.facebook:hover{
 li.facebook a:hover {
 
     text-decoration: none;
-    color: #fff;
+    color: #00cc00;
     background: rgba(255,255,255,0.2);
 }
 li.instagram {
@@ -187,7 +199,7 @@ li.instagram:hover{
 li.instagram a:hover {
 
     text-decoration: none;
-    color: #fff;
+    color: #00cc00;
     background: rgba(255,255,255,0.2);
 }
 li.wordpress {
@@ -230,7 +242,7 @@ li.youtube:hover{
 li.youtube a:hover {
 
     text-decoration: none;
-    color: #fff;
+    color: #00cc00;
     background: rgba(255,255,255,0.2);
 }
 
