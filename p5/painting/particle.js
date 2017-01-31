@@ -1,4 +1,4 @@
-function particle(x_, y_, magnitude_, angle_, mass_) 
+function particle(x_, y_, magnitude_, angle_, mass_)
 {
   this.x = x_;
   this.y = y_;
@@ -17,7 +17,7 @@ function particle(x_, y_, magnitude_, angle_, mass_)
     this.angle = angle_;
     this.mass = mass_;
   }
-  
+
   this.gravitate = function(Z) {
     var F, mX, mY, A;
     if( sq( this.x - Z.x ) + sq( this.y - Z.y ) != 0 ) {
@@ -25,13 +25,13 @@ function particle(x_, y_, magnitude_, angle_, mass_)
       mX = ( this.mass * this.x + Z.mass * Z.x ) / ( this.mass + Z.mass );
       mY = ( this.mass * this.y + Z.mass * Z.y ) / ( this.mass + Z.mass );
       A = findAngle( mX - this.x, mY - this.y );
-      
+
       mX = F * cos(A);
       mY = F * sin(A);
-      
+
       mX += this.magnitude * cos(this.angle);
       mY += this.magnitude * sin(this.angle);
-      
+
       this.magnitude = sqrt( sq(mX) + sq(mY) );
       this.angle = findAngle( mX, mY );
     }
@@ -44,34 +44,35 @@ function particle(x_, y_, magnitude_, angle_, mass_)
       mX = ( this.mass * this.x + Z.mass * Z.x ) / ( this.mass + Z.mass );
       mY = ( this.mass * this.y + Z.mass * Z.y ) / ( this.mass + Z.mass );
       A = findAngle( this.x - mX, this.y - mY );
-      
+
       mX = F * cos(A);
       mY = F * sin(A);
-      
+
       mX += this.magnitude * cos(this.angle);
       mY += this.magnitude * sin(this.angle);
-      
+
       this.magnitude = sqrt( sq(mX) + sq(mY) );
       this.angle = findAngle( mX, mY );
     }
   }
-  
+
   this.deteriorate = function() {
     this.magnitude *= 0.925;
   }
-  
+
   this.update = function() {
-    
+
     this.x += this.magnitude * cos(this.angle);
     this.y += this.magnitude * sin(this.angle);
-    
+
   }
-  
+
   this.display = function() {
-    strokeWeight(3);
-    line(this.px,this.py,this.x,this.y);
-    this.px = this.x;
-    this.py = this.y;
+    noStroke();
+    fill(colour[0], colour[1], colour[2], slider.value)
+    rect(this.x,this.y,5,5);
+  //  this.px = this.x;
+  //  this.py = this.y;
   }
 }
 
@@ -95,4 +96,3 @@ function findAngle(x, y) {
   }
   return theta;
 }
- 
