@@ -35,7 +35,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #fff;
+    background: #000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -79,7 +79,7 @@ a.navicon{
 }
 
 .sidebar-nav li {
-    color: #002400;
+    color: #ffffff;
     text-indent: 20px;
     line-height: 40px;
 
@@ -102,12 +102,12 @@ a.navicon{
     display: block;
     padding-left: 25;
     text-decoration: none;
-    color: #002400;
+    color: #aaaaaa;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #00cc00;
+    color: #ffffff;
     background: rgba(255,255,255,0.2);
 }
 
@@ -129,8 +129,9 @@ a.navicon{
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: #fff;
     height: 65px;
-	font-family: sevenmonkeyfury;
+	  font-family: sevenmonkeyfury;
     font-size: 35px;
     line-height: 60px;
 }
@@ -159,7 +160,7 @@ padding-left: 30px;
 }
 li.github a:hover {
     text-decoration: none;
-    color: #00cc00;
+    color: #ffffff;
     background: rgba(255,255,255,0.2);
 }
 li.facebook {
@@ -179,7 +180,7 @@ li.facebook:hover{
 li.facebook a:hover {
 
     text-decoration: none;
-    color: #00cc00;
+    color: #ffffff;
     background: rgba(255,255,255,0.2);
 }
 li.instagram {
@@ -199,7 +200,7 @@ li.instagram:hover{
 li.instagram a:hover {
 
     text-decoration: none;
-    color: #00cc00;
+    color: #ffffff;
     background: rgba(255,255,255,0.2);
 }
 li.wordpress {
@@ -242,7 +243,7 @@ li.youtube:hover{
 li.youtube a:hover {
 
     text-decoration: none;
-    color: #00cc00;
+    color: #ffffff;
     background: rgba(255,255,255,0.2);
 }
 
