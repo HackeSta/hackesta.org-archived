@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable = yes">
+<meta name="description" content="Hack-e-Sta Project KPC Explorer">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
+<meta name="author" content="Haider Ali Punjabi">
+
+    <title>KPC Explorer</title>
+    <link rel="shortcut icon" href="../../media/favicons/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../../media/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../media/favicons/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../media/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../media/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../../media/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" href="../../media/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../media/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../media/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../media/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../media/favicons/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../media/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../media/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../media/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/favicons/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../../media/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="../../media/favicons/browserconfig.xml">
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../../css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(function(){
+      $("#sidebar").load("../../sidebar.html");
+    });
+    </script>
+    <script type="text/javascript">
+  function toggle(){
+  var sidebarButton = document.getElementById("nav-icon1")
+   sidebarButton.addEventListener('click', function(event) {
+  var state = document.getElementById("wrapper").className;
+
+  if (state == "toggled")
+  {
+    document.getElementById("nav-icon1").className = "";
+    document.getElementById("wrapper").className = "toggled";
+  }
+  else
+  {
+    document.getElementById("nav-icon1").className = "open";
+    document.getElementById("wrapper").className = "";
+  }
+  }
+  )};
+  window.onload = function() {
+      document.getElementById('kpcexplorer').className = "focus";
+  }
+  </script>
+	<style>
+		h4.margined{
+		margin-left: 20px;
+		margin-right: 80px;
+		line-height: 200%;}
+		li.margined{
+		margin-left: 20px;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+		<a class="navicon" href="#" onclick="toggle(); return false;">
+			<div id="nav-icon1" class="open">
+						<span></span>
+						<span></span>
+						<span></span>
+			</div>
+		</a>
+          <h1>KPC Explorer App Page</h1>
+          <h2>This page is under construction</h2>
+          <br />
+          <h2>The app is under going testing, join it from <a href"">here</a></h2>
+        </div>
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+</body>
+
+</html>
