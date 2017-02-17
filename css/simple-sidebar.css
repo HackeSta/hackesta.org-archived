@@ -134,7 +134,9 @@ a.navicon{
 	  font-family: sevenmonkeyfury;
     font-size: 35px;
     line-height: 60px;
+    text-indent: -9999px;
 }
+
 
 .sidebar-nav > .sidebar-brand a {
     color: #002400;
