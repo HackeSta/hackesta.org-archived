@@ -1,0 +1,20 @@
+{"persons":[
+  {
+    "firstName":"Haider Ali",
+    "lastName":"Punjabi",
+    "role":"Developer",
+    "facebook":"haiderali176",
+    "instagram":"haideralipunjabi",
+    "github":"haideralipunjabi",
+    "website":"http://hackesta.org"
+  },
+  {
+    "firstName":"Areeb",
+    "lastName":"Beigh",
+    "role":"Development Support",
+    "facebook":"areeb12",
+    "instagram":"areebbeigh",
+    "github":"areebbeigh",
+    "website":"http://www.areebbeigh.tk"
+  }
+  ]}

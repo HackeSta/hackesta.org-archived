@@ -1,0 +1,110 @@
+.card {
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20rem;
+
+}
+.profile-image{
+  width: 75%;
+  height: 75%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.col{
+  float: left;
+}
+.cards{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.card-ele{
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+margin-top: 2px;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+align-self: center;
+}
+.card-name{
+
+ background: #76ff03;
+  border: 1px solid #76ff03;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.card-role{
+  background:#20b1d8;
+  border: 1px solid #20b1d8;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-self: center;
+}
+.card-social{
+
+ background: #607D8B;
+  border: 1px solid #607D8B;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-self: center;
+}
+.card-social a{
+  color: #fff;
+  text-align: center;
+}
+.social-bubble{
+  background: #607D8B;
+width: 42px;
+height: 42px;
+font-size: 25px;
+display: inline-block;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+color: #fff;
+text-align: center;
+padding-top: 5px;
+margin-top: 5px;
+margin-left: 5px;
+margin-bottom: 5px;
+}
+.social-bubble:hover{
+  background: #263238;
+}
+.social-bubble a{
+  color: #fff;
+  text-align: center;
+}
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}

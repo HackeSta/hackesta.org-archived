@@ -1,40 +1,151 @@
-var xml;
+var json;
 var roles = [];
 var persons = [];
 function preload()
 {
-  xml = loadXML("assets/credits.xml");
-
+json = loadJSON('assets/credits.json');
 }
 function setup()
 {
-  var children = xml.getChildren("person");
-
-  for (var i = 0; i < children.length; i++) {
-    var name = children[i].getContent();
-    var role = children[i].getString("role");
-    if(roles.indexOf(role) == -1) roles.push(role);
-    persons.push(new Person(name, role));
-  }
-  makeHTML();
+parseJS(json);
+makeHTML();
 }
 
-function makeHTML()
+function makeHTML(){
+   var cards = createDiv('');
+   cards.addClass('cards');
+for(var i =0; i < persons.length; i++)
 {
-  for(var i =0; i < roles.length; i++)
+  //Generating Colors
+  var paletteColors = ['Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue', 'Cyan', 'Teal', 'Deep Orange'];
+  var col = random(paletteColors);
+  paletteColors.splice(paletteColors.indexOf(col), 1);
+  var colRole = random(paletteColors);
+  paletteColors.splice(paletteColors.indexOf(colRole), 1);
+  var colName = random(paletteColors);
+
+  var person = persons[i];
+  //Creating HTML
+  var card = createDiv('');
+  card.addClass('card');
+  card.addClass('col');
+  card.style("background",palette.get(col));
+  var cardB = createDiv('');
+  cardB.addClass('card-block');
+  cardB.attribute('align','middle')
+  var name = createElement('h4', person.firstName + " " + person.lastName);
+  name.addClass('card-name');
+  name.addClass('card-ele');
+  name.style("background", palette.get(colName));
+  name.style("border", "1px solid " + palette.get(colName));
+  var role = createElement('p', person.role);
+  role.addClass('card-role');
+  role.addClass('card-ele');
+  role.style("background",palette.get(colRole));
+  role.style("border", "1px solid " + palette.get(colRole));
+  var image = createElement('img');
+
+  /**
+  *TODO
+  *Replace the below check, and fetch from Facebook
+  **/
+  if(person.facebook != null)
   {
-    createElement('h2', roles[i]);
-    for(var j =0; j< persons.length; j++)
-    {
-      if(persons[j].role == roles[i]) {
-      var ele = createElement('h4', persons[j].name);
-      ele.addClass('margined');
-      }
-    }
+     image.attribute('src','/media/profile.png');
+     image.attribute('alt', person.firstName + " " + person.lastName);
+  }
+  else {
+    image.attribute('src','/media/def_user.svg');
+    image.attribute('alt', 'blank_user');
+  }
+
+  image.addClass('profile-image');
+  cards.child(card);
+  card.child(cardB);
+  cardB.child(image);
+  cardB.child(name);
+  cardB.child(role);
+  if(person.facebook != null){
+    var fb = createDiv('');
+    fb.addClass('social-bubble');
+    var fbBubble = createElement('i');
+    fbBubble.addClass("fa fa-facebook");
+    var fbLink = createA("https://www.facebook.com/"+person.facebook,'');
+    fbLink.attribute('target','_blank');
+    cardB.child(fbLink);
+    fbLink.child(fb);
+    fb.child(fbBubble);
+  }
+  if(person.instagram != null){
+    var ins = createDiv('');
+    ins.addClass('social-bubble');
+    var insBubble = createElement('i');
+    insBubble.addClass("fa fa-instagram");
+    var insLink = createA("https://www.instagram.com/"+person.instagram,'');
+    insLink.attribute('target','_blank');
+    cardB.child(insLink);
+    insLink.child(ins);
+    ins.child(insBubble);
+  }
+  if(person.twitter != null){
+    var tw = createDiv('');
+    tw.addClass('social-bubble');
+    var twBubble = createElement('i');
+    twBubble.addClass("fa fa-twitter");
+    var twLink = createA("https://www.twitter.com/"+person.twitter,'');
+    twLink.attribute('target','_blank');
+    cardB.child(twLink);
+    twLink.child(tw);
+    tw.child(twBubble);
+  }
+  if(person.github != null){
+    var gh = createDiv('');
+    gh.addClass('social-bubble');
+    var ghBubble = createElement('i');
+    ghBubble.addClass("fa fa-github");
+    var ghLink = createA("https://www.github.com/"+person.github,'');
+    ghLink.attribute('target','_blank');
+    cardB.child(ghLink);
+    ghLink.child(gh);
+    gh.child(ghBubble);
+  }
+  if(person.website != null){
+    var web = createDiv('');
+    web.addClass('social-bubble');
+    var webBubble = createElement('i');
+    webBubble.addClass("fa fa-globe");
+    var webLink = createA(person.website,'');
+    cardB.child(webLink);
+    webLink.child(web);
+    web.child(webBubble);
   }
 }
 
-function Person(name, role){
-this.name = name;
+}
+function parseJS(json){
+  console.log(json);
+  for(var i =0; i < json.persons.length; i++)
+  {
+      var jsPer = json.persons[i];
+      var person = new Person(jsPer.firstName,jsPer.lastName,jsPer.role);
+      person.facebook = jsPer.facebook;
+      person.twitter = jsPer.twitter;
+      person.instagram = jsPer.instagram;
+      person.github = jsPer.github;
+      person.website = jsPer.website;
+      console.log(jsPer);
+      persons.push(person);
+  }
+}
+
+function Person(firstName,lastName,role){
+this.firstName = firstName;
+this.lastName = lastName;
 this.role = role;
+
+this.facebook;
+this.twitter;
+this.instagram;
+this.github;
+this.website;
 }
