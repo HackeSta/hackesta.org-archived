@@ -1,5 +1,5 @@
 var json;
-var roles = [];
+var libraries = [];
 var persons = [];
 function preload()
 {
@@ -7,11 +7,15 @@ json = loadJSON('assets/credits.json');
 }
 function setup()
 {
-parseJS(json);
-makeHTML();
+  parseJS(json);
+  makePersons();
+  addBreaks(1);
+  var hr = createElement('hr');
+  hr.addClass('style14');
+  makeLibs();
 }
 
-function makeHTML(){
+function makePersons(){
    var cards = createDiv('');
    cards.addClass('cards');
 for(var i =0; i < persons.length; i++)
@@ -120,10 +124,18 @@ for(var i =0; i < persons.length; i++)
     web.child(webBubble);
   }
 }
-
 }
+function makeLibs(){
+  var libs = createDiv('');
+  libs.addClass('libs');
+  for(var i=0;i<libraries.length;i++){
+    var link = createA(libraries[i].link,libraries[i].title);
+    libs.child(link);
+    libs.child(createElement('br'));
+  }
+}
+
 function parseJS(json){
-  console.log(json);
   for(var i =0; i < json.persons.length; i++)
   {
       var jsPer = json.persons[i];
@@ -135,6 +147,20 @@ function parseJS(json){
       person.website = jsPer.website;
       console.log(jsPer);
       persons.push(person);
+  }
+  for(var i =0; i < json.libraries.length; i++)
+  {
+      var jsLib = json.libraries[i];
+      var lib = new Library(jsLib.title, jsLib.link);
+      libraries.push(lib);
+  }
+}
+
+function addBreaks(number){
+  for(var i = 0; i<number; i++)
+  {
+  var br = createElement('br');
+  br.style('clear','both');
   }
 }
 
@@ -148,4 +174,9 @@ this.twitter;
 this.instagram;
 this.github;
 this.website;
+}
+
+function Library(title, link){
+  this.title = title;
+  this.link = link;
 }

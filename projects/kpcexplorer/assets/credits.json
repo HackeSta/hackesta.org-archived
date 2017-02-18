@@ -17,4 +17,67 @@
     "github":"areebbeigh",
     "website":"http://www.areebbeigh.tk"
   }
+  ],
+"libraries":[
+  {
+    "title":"android.support.v7.appcompat",
+    "link":"https://developer.android.com/reference/android/support/v7/appcompat/package-summary.html"
+  },
+  {
+    "title":"android.support.design",
+    "link":"https://developer.android.com/reference/android/support/design/package-summary.html"
+  },
+  {
+    "title":"android.support.v4.app",
+    "link":"https://developer.android.com/reference/android/support/v4/app/package-summary.html"
+  },
+  {
+    "title":"Facebook Android SDK",
+    "link":"https://github.com/facebook/facebook-android-sdk"
+  },
+  {
+    "title":"Android Image Picker",
+    "link":"https://github.com/esafirm/android-image-picker"
+  },
+  {
+    "title":"Glide",
+    "link":"https://github.com/bumptech/glide"
+  },
+  {
+    "title":"Picasso",
+    "link":"https://github.com/square/picasso"
+  },
+  {
+    "title":"Squeaky-Android",
+    "link":"https://github.com/jasonwyatt/Squeaky-Android"
+  },
+  {
+    "title":"LikeButton",
+    "link":"https://github.com/jd-alexander/LikeButton"
+  },
+  {
+    "title":"CircularImageView",
+    "link":"https://github.com/lopspower/CircularImageView"
+  },
+  {
+    "title":"Cardslib",
+    "link":"https://github.com/gabrielemariotti/cardslib"
+  },
+  {
+    "title":"Android-Exif-Extended",
+    "link":"https://github.com/sephiroth74/Android-Exif-Extended"
+  },
+  {
+    "title":"MaterialAbout",
+    "link":"https://github.com/jrvansuita/MaterialAbout"
+  },
+  {
+    "title":"Toasty",
+    "link":"https://github.com/GrenderG/Toasty"
+  },
+  {
+    "title":"mkloader",
+    "link":"https://github.com/nntuyen/mkloader"
+  }
+
   ]}

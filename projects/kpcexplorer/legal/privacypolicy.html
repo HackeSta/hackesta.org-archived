@@ -35,7 +35,12 @@
     <link href="../../../css/bootstrap.css" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <script>
+  $(function(){
+  $("#topbar").load("../assets/topbar.html");
+});
+</script>
 	<style>
 		h4.margined{
 		margin-left: 20px;
@@ -53,7 +58,12 @@
     }
 
 	</style>
+  <script>
 
+  window.onload = function() {
+      document.getElementById('privacy').className = "active";
+  }
+   </script>
 </head>
 <header>
   <div class="row banner" id="banner">
@@ -62,11 +72,12 @@
         <div class="container text-center" style="height:300px;padding-top:10px;">
           <a href="../../../../"><img src="../../../media/logo.png" height="20%" width="20%"/></a>
           <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">Privacy Policy</h2>
-          <h4 class="intro" style="color: black; font-size:60px;  font-family:Open Sans;"> <a class="intro" href="../">KPC Explorer</a></h4>
         </div>
       </div>
     </div>
   </header>
+
+  <div id="topbar" style="width:100%"></div>
 <div id="data" style="padding-left:13%; padding-right:13%; margin-top:50px;">
 <h4 class="margined">
 This privacy policy governs your use of the software application KPC Explorer ("Application") for mobile devices that was created by Hack-e-Sta. The Application was created for mobile devices for viewing photos from <a href="" target="_blank">Kashmir Photography Club</a></h4>

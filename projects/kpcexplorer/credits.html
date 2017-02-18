@@ -31,6 +31,17 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="../../media/favicons/favicon-144.png">
     <meta name="msapplication-config" content="../../media/favicons/browserconfig.xml">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script>
+    $(function(){
+    $("#topbar").load("assets/topbar.html");
+  });
+</script>
+    <!-- <script>
+    $(function(){
+      $("<iframe />").attr("src", "assets/topbar.html").appendTo("#topbar");
+    });
+    </script> -->
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -40,7 +51,6 @@
   <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.css">
 <!-- Latest compiled and minified JavaScript -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 <script src="../../js/palette.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -49,6 +59,13 @@
   <script src="assets/js/libraries/p5.dom.js"></script>
   <script src="assets/js/libraries/p5.sound.js"></script>
   <script src="assets/js/sketch.js"></script>
+  <script>
+
+  window.onload = function() {
+      document.getElementById('credits').className = "active";
+  }
+   </script>
+
 </head>
 <header>
   <div class="row banner" id="banner">
@@ -57,11 +74,11 @@
         <div class="container text-center" style="height:300px;padding-top:10px;">
           <a href="../../"><img src="../../media/logo.png" height="20%" width="20%"/></a>
           <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">Credits</h2>
-          <h4 class="intro" style="color: black; font-size:60px;  font-family:Open Sans;"> <a class="intro" href="../">KPC Explorer</a></h4>
         </div>
       </div>
   </header>
 </div>
+<div id="topbar" style="width:100%"></div>
 <!-- <div id="content">
     <div class="card" style="width: 20rem; margin-left:40px;">
   <div class="card-block">
