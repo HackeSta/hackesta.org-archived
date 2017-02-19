@@ -36,7 +36,25 @@
     $(function(){
     $("#topbar").load("assets/topbar.html");
   });
+  $(function(){
+        var stickyHeaderTop = $('#topbar').offset().top;
+
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('#topbar').css({position: 'fixed', top: '0px'});
+                        $('#sticky').css('display', 'block');
+                } else {
+                        $('#topbar').css({position: 'static', top: '0px'});
+                        $('#sticky').css('display', 'none');
+                }
+        });
+  });
+
+  window.onload = function() {
+      document.getElementById('credits').className = "active";
+  }
 </script>
+
     <!-- <script>
     $(function(){
       $("<iframe />").attr("src", "assets/topbar.html").appendTo("#topbar");
@@ -60,10 +78,6 @@
   <script src="assets/js/libraries/p5.sound.js"></script>
   <script src="assets/js/sketch.js"></script>
   <script>
-
-  window.onload = function() {
-      document.getElementById('credits').className = "active";
-  }
    </script>
 
 </head>
@@ -72,25 +86,11 @@
     <div class="text-center" style="background-image: url(assets/media/background.png); background-size:cover;">
       <div class="parallax-pattern-overlay">
         <div class="container text-center" style="height:300px;padding-top:10px;">
-          <a href="../../"><img src="../../media/logo.png" height="20%" width="20%"/></a>
-          <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">Credits</h2>
+          <a href="../../"><img src="../../media/logo.png" height="20%"/></a>
+          <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">CREDITS</h2>
         </div>
       </div>
   </header>
 </div>
 <div id="topbar" style="width:100%"></div>
-<!-- <div id="content">
-    <div class="card" style="width: 20rem; margin-left:40px;">
-  <div class="card-block">
-  <img class="profile-image" src="/media/profile.png" alt="Haider Ali Punjabi" />
-  <h4 class="card-name card-ele">Haider Ali Punjabi</h4>
-  <p class="card-role card-ele">Developer</p>
-  <div class="social-bubble">
-  <a href="facebook.com"><i class=" fa fa-facebook"></i></a>
-  </div>
-  <div class="social-bubble">
-  <a href="facebook.com"><i class=" fa fa-instagram"></i></a>
-  </div>
-  </div>
-</div>
-</div> -->
+<div id="sticky"></div>

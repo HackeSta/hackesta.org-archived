@@ -11,6 +11,16 @@
 
 }
 .profile-image{
+
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
   width: 75%;
   height: 75%;
   margin-top: 10%;
@@ -27,6 +37,7 @@
 .card-ele{
 padding: 6px 12px;
 margin-bottom: 0;
+font-family: Open Sans;
 font-size: 14px;
 font-weight: 400;
 line-height: 1.42857143;
@@ -36,7 +47,6 @@ vertical-align: middle;
 -ms-touch-action: manipulation;
 touch-action: manipulation;
 margin-top: 2px;
-cursor: pointer;
 -webkit-user-select: none;
 -moz-user-select: none;
 -ms-user-select: none;

@@ -40,6 +40,19 @@
   $(function(){
   $("#topbar").load("../assets/topbar.html");
 });
+$(function(){
+      var stickyHeaderTop = $('#topbar').offset().top;
+
+      $(window).scroll(function(){
+              if( $(window).scrollTop() > stickyHeaderTop ) {
+                      $('#topbar').css({position: 'fixed', top: '0px'});
+                      $('#sticky').css('display', 'block');
+              } else {
+                      $('#topbar').css({position: 'static', top: '0px'});
+                      $('#sticky').css('display', 'none');
+              }
+      });
+});
 </script>
 	<style>
 		h4.margined{
@@ -70,14 +83,15 @@
     <div class="text-center" style="background-image: url(../assets/media/background.png); background-size:cover;">
       <div class="parallax-pattern-overlay">
         <div class="container text-center" style="height:300px;padding-top:10px;">
-          <a href="../../../../"><img src="../../../media/logo.png" height="20%" width="20%"/></a>
-          <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">Privacy Policy</h2>
+          <a href="../../../../"><img src="../../../media/logo.png" height="20%"/></a>
+          <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;">PRIVACY POLICY</h2>
         </div>
       </div>
     </div>
   </header>
 
   <div id="topbar" style="width:100%"></div>
+  <div id="sticky"></div>
 <div id="data" style="padding-left:13%; padding-right:13%; margin-top:50px;">
 <h4 class="margined">
 This privacy policy governs your use of the software application KPC Explorer ("Application") for mobile devices that was created by Hack-e-Sta. The Application was created for mobile devices for viewing photos from <a href="" target="_blank">Kashmir Photography Club</a></h4>

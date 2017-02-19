@@ -49,19 +49,15 @@ for(var i =0; i < persons.length; i++)
   role.style("border", "1px solid " + palette.get(colRole));
   var image = createElement('img');
 
-  /**
-  *TODO
-  *Replace the below check, and fetch from Facebook
-  **/
-  if(person.facebook != null)
-  {
-     image.attribute('src','/media/profile.png');
-     image.attribute('alt', person.firstName + " " + person.lastName);
-  }
-  else {
+    var imgPath = 'assets/media/' + person.firstName.toLowerCase().replace(/\s/g,'')+person.lastName.toLowerCase().replace(/\s/g,'') + '.png';
+    if(imageExists(imgPath)){
+      image.attribute('src',imgPath);
+      image.attribute('alt', person.firstName + " " + person.lastName);
+    }
+    else{
     image.attribute('src','/media/def_user.svg');
     image.attribute('alt', 'blank_user');
-  }
+}
 
   image.addClass('profile-image');
   cards.child(card);
@@ -145,7 +141,6 @@ function parseJS(json){
       person.instagram = jsPer.instagram;
       person.github = jsPer.github;
       person.website = jsPer.website;
-      console.log(jsPer);
       persons.push(person);
   }
   for(var i =0; i < json.libraries.length; i++)
@@ -163,7 +158,16 @@ function addBreaks(number){
   br.style('clear','both');
   }
 }
+function imageExists(image_url){
 
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status != 404;
+
+}
 function Person(firstName,lastName,role){
 this.firstName = firstName;
 this.lastName = lastName;
