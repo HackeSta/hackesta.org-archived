@@ -35,8 +35,7 @@
     <link href="../../css/bootstrap.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../../css/simple-sidebar.css" rel="stylesheet">
-
+    <link href="assets/css/index.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -62,6 +61,9 @@
                }
        });
  });
+ window.onload = function() {
+     document.getElementById('kpcexplorer').className = "active";
+ }
  </script>
 	<style>
 		h4.margined{
@@ -74,40 +76,32 @@
 
 
 	</style>
-  <script>
-
-  window.onload = function() {
-      document.getElementById('kpcexplorer').className = "active";
-  }
-   </script>
 </head>
 
 <body>
   <header>
-    <div class="row banner" id="banner">
-      <div class="text-center" style="background-image: url(assets/media/background.png); background-size:cover;">
-        <div class="parallax-pattern-overlay">
-          <div class="container text-center" style="height:300px;padding-top:10px;">
-            <a href="../../"><img src="../../media/logo.png" height="20%"/></a>
-            <h2 class="intro" style="color: black; font-size:100px;  font-family:Open Sans;"> KPC Explorer</h4>
-          </div>
-        </div>
+    <div class="row banner" id="banner" style="background-image: url('assets/media/background.png'); background-size:cover;">
+      <div align="center">
+        <img src="/media/kpcexplorer_feature.png" alt="feautre.png" align="center"/>
+      </div>
+    </div>
     </header>
     <div id="topbar"></div>
     <div id="sticky"></div>
     <div id="wrapper">
-
-
-        <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
-        <div id="page-content-wrapper">
+    <div id="page-content-wrapper">
+      <div class="title">
 
-          <h1>KPC Explorer App Page</h1>
-          <h2>This page is under construction</h2>
-          <br />
-          <h2>The app is under going testing, join it from <a href"">here</a></h2>
+        <h1><b>KPC</b>EXPLORER</h1>
+        <div class="subtitle multiline">
+          <h2 id="line-1"><i>Beautiful Photographs</i></h2>
+          <h2  id="line-2"><i>At your finger tips</i></h2>
         </div>
+      </div>
+        <br />
+        <h2>The app is in alpha right now,get it from  <a href="https://play.google.com/store/apps/details?id=org.hackesta.kpcexplorer" target="_blank">here</a></h2>
+    </div
 
         <!-- /#page-content-wrapper -->
 

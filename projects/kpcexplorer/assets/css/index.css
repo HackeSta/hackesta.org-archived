@@ -1,0 +1,38 @@
+#page-content-wrapper{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.banner{
+  height: 50vh;
+
+}
+.banner div{
+  height: inherit;
+}
+.banner div img{
+  height: inherit;
+}
+
+.title{
+  align-items: center;
+  width: inherit;
+}
+.title h1{
+  text-align: center;
+  font-size: 8vh;
+}
+.title .subtitle{
+  text-align: center;
+
+}
+.multiline h2{
+  margin-bottom: -20px;
+font-size: 4vh;
+}
+.multiline #line-1{
+  margin-left: 0;
+}
+.multiline #line-2{
+  margin-left: 210px;
+}
