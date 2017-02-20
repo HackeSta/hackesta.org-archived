@@ -4,14 +4,18 @@
 }
 
 .banner{
-  height: 50vh;
+  /*min-height: 10vh;
+  max-width: 100vw;
+  height: 50vh;*/
 
 }
 .banner div{
   height: inherit;
+  width: inherit;
 }
 .banner div img{
   height: inherit;
+  width: inherit;
 }
 
 .title{

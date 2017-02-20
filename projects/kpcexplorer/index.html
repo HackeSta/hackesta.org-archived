@@ -62,7 +62,16 @@
        });
  });
  window.onload = function() {
-     document.getElementById('kpcexplorer').className = "active";
+     if(verge.viewportW > verge.viewportH){
+       document.getElementById('banner').style.height= verge.viewportH;
+     }
+     else {
+       document.getElementById('banner').style.width= verge.viewportW;
+     }
+ }
+ window.onload = function() {
+
+       document.getElementById('kpcexplorer').className = "active";
  }
  </script>
 	<style>
@@ -86,7 +95,7 @@
       </div>
     </div>
     </header>
-    <div id="topbar"></div>
+    <div id="topbar" style="width:100vw;"></div>
     <div id="sticky"></div>
     <div id="wrapper">
         <!-- Page Content -->
