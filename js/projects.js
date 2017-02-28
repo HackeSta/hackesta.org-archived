@@ -1,41 +1,34 @@
-var fileExt = {};
-    fileExt[0]=".html";
-var filenames = [];
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: 'projects/',
-    success: function (data) {
-       $(data).find("a:contains(" + fileExt[0] + ")").each(function () {
-           var filename = this.href.replace(window.location.host, "").replace("http:///", "");
-          filenames.push(filename)
+var col;
+var colTitle;
+var colLang;
+var cards = [];
+function setup(){
+  noLoop();
+  cards = selectAll('.card');
+}
 
-       });
-       filter();
-       parsePages();
-     }
-  });
+function draw(){
 
-function filter(){
-filenames.forEach(function(item, index){
-  if(item == "index.html"){
-    filenames.splice(index,1);
+  for(var i =0; i<cards.length;i++)
+  {
+    randColors();
+    console.log(col + '--'+ colTitle + '--' + colLang);
+    card = cards[i];
+    card.style("background",palette.get(col));
+    var title = select('.title', card);
+    var lang = select('.lang', card);
+    title.style("background", palette.get(colTitle));
+    lang.style("background", palette.get(colLang));
+
   }
-});
-
 }
 
-function parsePages()
-{
-  filenames.forEach(function(item, index){
-    parsePage(item);
-  });
-}
-
-function parsePage(page)
-{
-  var pageURL = "projects/" + page;
-  var contextText;
-  jQuery(function($){
-  	$().load(pageURL + ' #project-background', function(result){console.log(result)});
-  });
+function randColors(){
+  //Generating Colors
+  var paletteColors = ['Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue', 'Cyan', 'Teal', 'Deep Orange'];
+  col = random(paletteColors);
+  paletteColors.splice(paletteColors.indexOf(col), 1);
+  colTitle = random(paletteColors);
+  paletteColors.splice(paletteColors.indexOf(colTitle), 1);
+  colLang = random(paletteColors)
 }

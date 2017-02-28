@@ -17,7 +17,10 @@
   height: inherit;
   width: inherit;
 }
-
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
 .title{
   align-items: center;
   width: inherit;
@@ -39,4 +42,17 @@ font-size: 4vh;
 }
 .multiline #line-2{
   margin-left: 210px;
+}
+#page-content-wrapper p{
+  font-family: 'Open Sans', sans-serif;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+font-size: 18px;
+margin-top: 20px;
+margin-left: 20px;
+margin-bottom: 20px;
+}
+#features p{
+margin-left: 25px;
 }

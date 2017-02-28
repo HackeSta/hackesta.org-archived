@@ -35,17 +35,17 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <link href="css/projects.css" rel="stylesheet">
+
 
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="js/projects.js"></script>
+   <script src="js/p5.js"></script>
+   <script src="js/p5.dom.js"></script>
+   <script src="js/palette.js"></script>
+
     <script>
     $(function(){
       $("#sidebar").load("sidebar.html");
@@ -127,56 +127,61 @@
         <br>
         <br>
 				</div>
-				<div id="content-row-1" class="row">
-					<div id="EvolveCPCalc" class="col-md-4">
-						<a href="/projects/evolvecpcalc.html">
-							<img class="img-thumbnail" alt="Thumbnail" src="media/evolvecpcalc.png">
-							<h2>Evolve CP Calculator</h2></a>
-							<p>When <a href="https://www.pokemongo.com" target="_blank">Pokemon GO</a> came out, many developers created variety of tools. Many CP Calculators were available ...</p>
-							<p><a class="btn btn-default" href="/projects/evolvecpcalc.html">Read more »</a></p>
-					</div>
-          <div class="col-md-4">
+        <div class="row" id="cards">
+
+          <div id="EvolveCPCalc" class="card col">
+            <a href="/projects/evolvecpcalc.html">
+              <img class="img-thumbnail" alt="Thumbnail" src="media/evolvecpcalc.png">
+              <h2 class="title card-ele" href="/projects/evolvecpcalc.html">Evolve CP Calculator</h2>
+            </a>
+              <h2 class="android lang card-ele">Android</h2>
+              <p class="description">
+                Calculate Pokemon's CP before evolving it
+              </p>
+            </div>
+          <div class="card col">
             <a href="/projects/sqltohtml.html">
               <img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">
-              <h2>SQLtoHTML</h2></a>
-              <p>I have used database in many projects of mine, and am surely going to use them in the future as well. While working with Java for over 2 weeks, I thought..</p>
-              <p><a class="btn btn-default" href="/projects/sqltohtml.html">Read more »</a></p>
+              <h2 class="title card-ele">SQLtoHTML</h2></a>
+              <h2 class="python lang card-ele">Python</h2>
+              <p class="description">Convert SQL tables to HTML</p>
           </div>
-          <div class="col-md-4">
+          <div class="card col">
             <a href="/projects/engcal.html">
               <img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">
-              <h2>Engineer's Calculator</h2></a>
-              <p>When I first learnt using Visual Studio, Engineer's Calculator was my first proper app. I used to play on <a href="westsideteam.net" target="_blank"> West Side RPG Server </a> back then, and I made this for that server...</p>
-              <p><a class="btn btn-default" href="/projects/engcal.html">Read more »</a></p>
+              <h2 class="title card-ele">Engineer's Calculator</h2></a>
+              <h2 class="csharp lang card-ele">C#</h2>
+              <p class="description">Tool for WSRPG</p>
+
           </div>
-        	</div>
           <br>
-          <div id="content-row-2" class="row">
-					<div class="col-md-4">
+
+					<div class="card col">
 						<a href="/projects/anagrambox.html">
 							<img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">
-							<h2>Anagram Box</h2></a>
-							<p>I had never created a control in Visual Studio, even after 2 years of coding. One...</p>
-							<p><a class="btn btn-default" href="/projects/anagrambox.html">Read more »</a></p>
+							<h2 class="title card-ele">Anagram Box</h2></a>
+              <h2 class="csharp lang card-ele">C#</h2>
+              <p class="description">Custom Control</p>
+
 					</div>
 
-
-          <div class="col-md-4">
+          <div class="card col">
             <a href="/projects/hitbynotifier.html">
               <img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">
-              <h2>HitBy Notifier</h2></a>
-              <p>  While making the <a href="/projects/timefetch.html">Time Fetch API</a>, I learnt about how to fetch values from process memory...</p>
-              <p><a class="btn btn-default" href="/projects/hitbynotifier.html">Read more »</a></p>
+              <h2 class="title card-ele">HitBy Notifier</h2></a>
+              <h2 class="csharp lang card-ele">C#</h2>
+              <p class="description">C# SAMP Library</p>
           </div>
-          <div class="col-md-4">
+          <div class="card col">
             <a href="/projects/timefetch.html">
               <img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">
-              <h2>Time Fetch API</h2></a>
-              <p>The <a href="westsideteam.net" target="_blank">West Side RPG Server</a> had just restarted and a lot of new players had joined. During that time, a player had made... </p>
-              <p><a class="btn btn-default" href="/projects/timefetch.html">Read more »</a></p>
+              <h2 class="title card-ele">Time Fetch API</h2></a>
+              <h2 class="csharp lang card-ele">C#</h2>
+              <p class="description">C# SAMP Library</p>
           </div>
+        </div>
 
-      </div>
+
 
       <div align="center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fhackesta&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=898852280214428" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
 

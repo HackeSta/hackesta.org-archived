@@ -128,6 +128,7 @@ function makeLibs(){
     var link = createA(libraries[i].link,libraries[i].title);
     libs.child(link);
     libs.child(createElement('br'));
+    console.log(libraries[i].title);
   }
 }
 

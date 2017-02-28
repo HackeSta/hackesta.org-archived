@@ -26,6 +26,10 @@
   margin-top: 10%;
   margin-bottom: 10%;
 }
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 .col{
   float: left;
 }
