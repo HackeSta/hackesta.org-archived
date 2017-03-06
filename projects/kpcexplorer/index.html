@@ -74,6 +74,18 @@
        document.getElementById('kpcexplorer').className = "active";
  }
  </script>
+
+ <script>
+ function helpFunction(id) {
+
+     var x = document.getElementById(id +'_help');
+     if (x.className === 'hidden') {
+         x.className = '';
+      }  else {
+         x.className = 'hidden';
+      }
+}
+ </script>
 	<style>
 		h4.margined{
 		margin-left: 20px;
@@ -82,7 +94,12 @@
 		li.margined{
 		margin-left: 20px;
 		}
-
+    a.tiny{
+      font-size: 12px !important;
+    }
+    .hidden{
+      display: none;
+    }
 
 	</style>
 </head>
@@ -130,16 +147,44 @@
         </p>
         <h2>Favorites</h2>
         <p>
-          You can favorite any photo and view them in a seperate section
+          You can favorite any photo and view them in a seperate section.
+            <a onclick="helpFunction('favorites')" class="tiny">How?</a>
         </p>
+        <div id="favorites_help" class="hidden">
+        <p>
+            While viewing the photo in full screen view, press the heart button to favorite it. You can then go to the favorites section in the main screen to view the photos.
+        </p>
+      </div>
+        <h2>Predefined Caption</h2>
+        <p>
+            You can set a predefined caption (e.g, your social account links, your website, etc), which can later be added while posting a new photo.
+              <a onclick="helpFunction('caption')" class="tiny">How?</a>
+          </p>
+          <div id="caption_help" class="hidden">
+          <p>
+              Go to the app settings and set your caption. The next time you are posting, click on the 'Use Defined Caption' switch to add the caption.
+          </p>
+        </div>
         <h2>Share the photo</h2>
         <p>
           You can share the viewed photo with people, and can also give credit to the photographer & <a href="http://kashmirphotographyclub.com" target="_blank">KPC</a>
+            <a onclick="helpFunction('share')" class="tiny">How?</a>
         </p>
+        <div id="share_help" class="hidden">
+        <p>
+            While viewing the photo in full screen view, press the share button to share the photo.
+        </p>
+      </div>
         <h2>Download the photo</h2>
         <p>
-          You can download a high quality version of any photo
+          You can download a high quality version of any photo.
+            <a onclick="helpFunction('download')" class="tiny">How?</a>
         </p>
+        <div id="download_help" class="hidden">
+        <p>
+            While viewing the photo in full screen view, press the download button to start the download. The photos will be downloaded to Pictures/KPCExplorer
+        </p>
+      </div>
       </div>
       <hr />
       <br />
