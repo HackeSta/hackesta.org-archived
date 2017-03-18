@@ -33,7 +33,10 @@
   	<meta name="msapplication-TileImage" content="media/favicons/favicon-144.png">
   	<meta name="msapplication-config" content="media/favicons/browserconfig.xml">
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
@@ -41,10 +44,6 @@
 
 
 	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-   <script src="js/projects.js"></script>
-   <script src="js/p5.js"></script>
-   <script src="js/p5.dom.js"></script>
-   <script src="js/palette.js"></script>
 
     <script>
     $(function(){
@@ -75,6 +74,11 @@
       document.getElementById('projects').className = "focus";
   }
   </script>
+
+  <script src="js/p5.js"></script>
+  <script src="js/p5.dom.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/projects.js"></script>
 <style>
         .row-b
         {
@@ -112,7 +116,7 @@
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <div align="center"><img src="media/logo.svg" alt="Hack-e-Sta Logo" height="150px" align="middle"></div>
+                        <div align="center"><a href="/index.html"><img src="media/logo.svg" alt="Hack-e-Sta Logo" height="150px" align="middle"></a></div>
 
 
 
@@ -163,7 +167,9 @@
               <p class="description">Tool for WSRPG</p>
 
           </div>
-          <br>
+        </div>
+        <div id="cards" class="row">
+
 
 					<div class="card col">
 						<a href="/projects/anagrambox.html">
@@ -173,7 +179,6 @@
               <p class="description">Custom Control</p>
 
 					</div>
-
           <div class="card col">
             <a href="/projects/hitbynotifier.html">
               <img class="img-thumbnail" alt="Thumbnail" src="media/default_thumbnail.png">

@@ -25,7 +25,10 @@
     <title>Sidebar</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link href="/css/simple-sidebar.css" rel="stylesheet">
@@ -46,16 +49,16 @@
      }
    });
  });
+ $("#brand").click(function(){
+    location.href='/index.html';
+});
    </script>
 </head>
 
  <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-				<li>
-
-				</li>
-          <li  class="sidebar-brand">
-					<a href="/index.html">123</a>
+          <li  class="sidebar-brand" id="brand">
+					<a href="/index.html"></a>
 				</li>
         <li id='projects'>
         <a href="/projects.html">Project Overview</a>

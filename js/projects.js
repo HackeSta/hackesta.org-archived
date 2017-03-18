@@ -12,7 +12,6 @@ function draw(){
   for(var i =0; i<cards.length;i++)
   {
     randColors();
-    console.log(col + '--'+ colTitle + '--' + colLang);
     card = cards[i];
     card.style("background",palette.get(col));
     var title = select('.title', card);
