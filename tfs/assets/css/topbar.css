@@ -1,0 +1,182 @@
+/*
+    Theme Name: MyResume
+    Theme URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+*/
+/* --- General --- */
+
+.playball {
+	font-family:'Playball',cursive;
+}
+
+
+
+
+/* --- Menu --- */
+.isFixed {
+	left:0px;
+	width:100%;
+}
+.menu {
+	margin-top:0px;
+	position:absolute;
+	z-index:999;
+	left:0px;
+	right:0px;
+	bottom:0;
+}
+
+
+.navArea {
+	/*float:right;*/
+}
+.navwrapper .container {
+	padding:0;
+	width:auto;
+}
+.navbar-header {
+	display:none;
+}
+.nav>li>a {
+	display:inline-block;
+}
+.navbar-nav>li {
+	float:none;
+	display:inline-block;
+}
+.navbar-nav {
+	margin:0 auto;
+	text-align:center;
+	float:none;
+}
+.navbar-toggle {
+	margin-top: 14px;
+}
+/* Special class on .container surrounding .navbar,used for positioning it into place. */
+.navbar-wrapper {
+	margin-top:0px;
+	height:40px;
+	position:relative;
+	z-index:15;
+	margin-right:-15px;
+	background: #111;
+}
+.navbar-wrapper .container {
+	padding:0px;
+}
+.navbar-collapse {
+	padding:0;
+}
+.navbar-collapse.in {
+	max-height:100%;
+}
+.navbar.navbar-inverse.navbar-static-top {
+	margin:0px auto;
+	background:none;
+	color:#92DD03;
+	border:none;
+	font-family:'Open Sans',sans-serif;
+	font-size:14px;
+	font-weight:200;
+	text-transform:uppercase;
+}
+.navbar.navbar-inverse.navbar-static-top a {
+	color:#fff;
+	padding:14px 16px;
+	line-height:14px;
+	text-align:center;
+}
+.navbar.navbar-inverse.navbar-static-top a:hover {
+	background:none;
+	color:#fff;
+}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus {
+	background:none;
+	color:#fff !important;
+}
+.navbar-inverse .navbar-nav>.active>a:hover {
+	color:#fff;
+}
+.hideClass {
+	display:none;
+}
+.isFixed .navbar-inverse .navbar-nav>.active>a,.isFixed .navbar-inverse .navbar-nav>.active>a:focus {
+	background:#2A8C73 ;
+	color:#fff;
+}
+.isFixed .navbar.navbar-inverse.navbar-static-top a:hover {
+	background:#2A8C73 ;
+	color:#fff;
+}
+.isFixed .navbar.navbar-inverse.navbar-static-top a {
+	color:#fff;
+}
+.stuckMenu {
+	-o-transition:all .5s;
+	-ms-transition:all .5s;
+	-moz-transition:all .5s;
+	-webkit-transition:all .5s;
+	transition:all .5s;
+		background:#111;
+}
+.isFixed {
+	background:#333;
+		-o-transition:all .5s;
+	-ms-transition:all .5s;
+	-moz-transition:all .5s;
+	-webkit-transition:all .5s;
+	transition: all .5s;
+}
+.collapse {
+	display: block !important;
+}
+/* Dropdown Button */
+.dropbtn {
+	// background-color: #4CAF50;
+	// color: white;
+	// padding: 16px;
+	// font-size: 16px;
+	// border: none;
+	// cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	 position: relative;
+	 display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	 display: none;
+	 position: absolute;
+	 background-color: #333;
+	 min-width: 100%;
+	 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	 z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	 color: black;
+	 padding: 12px 16px;
+	 text-decoration: none;
+	 display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	 display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+}
+@media (max-width: 655px) {
+	.collapse {background: #333;}
+	.navbar.navbar-inverse.navbar-static-top a {padding: 15px 16px;line-height: 15px;font-size: 13px;}
+}
