@@ -1,40 +1,28 @@
 function collatz(num){
-  this.initial = num;
-  this.num = num;
+  this.number = num;
+  this.initNum = num;
   this.values = [];
-  this.highestVal = 0;
   this.steps = 0;
-  this.xa = 0;
-  this.xb = 0;
-  this.ya = 0;
-  this.yb = 0;
+  this.highestVal = 0;
+  this.heightScale = 1;
+  this.widthScale = 1;
 }
-
 collatz.prototype.loadNums = function () {
-  while (this.num > 1) {
-    this.num = nextNum(this.num);
-    if(this.num > this.highestVal) this.highestVal=this.num;
-    this.values.push(new Value(this.num));
+  while (this.number > 1) {
+    this.number = nextNum(this.number);
+    if(this.number > this.highestVal) this.highestVal=this.number;
+    this.values.push(this.number);
+  //  console.log(this.number);
   }
   this.steps = this.values.length;
 };
+collatz.prototype.calcScale = function (){
+  this.heightScale = roundToTwo(h / (this.highestVal + 400));
+  this.widthScale = roundToTwo(w / (this.steps));
 
-collatz.prototype.draw = function(i){
-  this.xa = i;
-  this.xb = i;
-  this.ya = height;
-  this.yb = height-(this.highestVal * 0.05);
-  line(this.xa, this.ya, this.xb, this.yb);
+
 }
 
-collatz.prototype.inBounds = function(x,y){
-  if(x <= this.xa && x >= this.xb && y <= this.ya && y >=this.yb ){
-    return true;
-  }
-  else {
-    return false;
-  }
-}
 function nextNum(num)
 {
     if(isEven(num)){
@@ -50,4 +38,7 @@ function isEven(n) {
 
 function isOdd(n) {
    return Math.abs(n % 2) == 1;
+}
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
 }

@@ -1,66 +1,48 @@
-var cols;
-h = 800;
-w = 1800;
-start = 1;
-end = 1000;
-
+var w = 1800;
+var h = 800;
+var num = 109;
+var cols = [];
 var display;
-var inputStart;
-var inputEnd;
-var calculate;
-
-
+var lines = [];
 function setup()
 {
   createCanvas(w,h);
+  params = getURLParams();
+  if(params.number)
+  {
+    nums = split(params.number, ",");
+    for(i in nums){
+      cols.push(new collatz(nums[i]))
+    }
+  }
   init();
-  display = createP("");
-  inputStart = createInput();
-  inputEnd = createInput();
-  calculate = createButton("Calculate");
-  calculate.mousePressed(reload);
 }
 function init(){
-  cols = [];
-  for(i=start; i < end; i++){
-    cols.push(new collatz(i));
-    cols[i - 1].loadNums();
+  for(i in cols)
+  {
+    cols[i].loadNums();
+    cols[i].calcScale();
   }
+  display = createP("");
+//  display.html("Number: " + this.num + " Highest Value: " + coll.highestVal + " Steps: " + coll.steps);
 }
 
 function draw()
 {
+  translate(10,h-20);
   background(51);
   stroke(255);
-  strokeWeight(1);
   for(i in cols){
-    cols[i].draw(i);
+
+    drawCollatz(cols[i]);
   }
+  noLoop();
 }
 
-function mouseMoved(){
-  if(mouseX > 0 && mouseX < cols.length && mouseY < height && cols[mouseX].inBounds(mouseX, mouseY))
-  {
-    //console.log(cols[mouseX].highestVal, cols[mouseX].initial);
-    display.html("initial: " + cols[mouseX].initial + " value: " + cols[mouseX].highestVal);
-
-  }
-  else{
-  display.html("initial: " + 0 + " value: " + 0);
-  }
-}
-
-
-function reload(){
-
-  start = inputStart.value();
-  end = inputEnd.value();
-  if(start >=end){
-      alert("Invalid values");
-  }
-  else{
-    init();
-    //redraw();
-
+function drawCollatz(c){
+  for(i in c.values){
+  //  console.log(i, c.values[i]);
+  //  console.log(parseInt(i)*c.widthScale,-1 * (parseInt(c.values[parseInt(i)]) * c.heightScale), (parseInt(i) + 1)*c.widthScale, -1 * parseInt(c.values[parseInt(i)+1])*c.heightScale);
+    line(parseInt(i)*c.widthScale,-1 * (parseInt(c.values[parseInt(i)]) * c.heightScale), (parseInt(i) + 1)*c.widthScale, -1 * parseInt(c.values[parseInt(i)+1])*c.heightScale);
   }
 }
