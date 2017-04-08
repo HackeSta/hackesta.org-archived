@@ -477,7 +477,7 @@ var main = (function($) { var _ = {
 								$this.children().not($thumbnail)
 									.appendTo(s.$slideCaption);
 								s.$slideOpen.append('<a href="' + s.urlB + '" target="_blank" class="icon fa-500px"></a>');
-								s.$slideInfo.append('<a href="#modal" class="icon fa-globe"></a>');
+								s.$slideInfo.append('<a href="#modal" class="icon fa-info"></a>');
 
 					// Preload?
 						if (_.settings.preload) {
