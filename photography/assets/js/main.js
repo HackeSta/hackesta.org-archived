@@ -76,7 +76,11 @@ var main = (function($) { var _ = {
 	 * @var {jQuery}
 	 */
 	$navPrevious: null,
-
+	/**
+	 * Exif .
+	 * @var {jQuery}
+	 */
+	$exif: null,
 	/**
 	 * Slides.
 	 * @var {array}
@@ -144,10 +148,13 @@ var main = (function($) { var _ = {
 
 		// Thumbnails.
 			_.$thumbnails = $('#thumbnails');
+
+		//exif
+		_.$exif = $('#modal');
 		// Viewer.
 			_.$viewer = $(
 				'<div id="viewer">' +
-					'<div class="inner">' +
+					'<div class="inner remodal-bg">' +
 						'<div class="nav-next"></div>' +
 						'<div class="nav-previous"></div>' +
 						'<div class="toggle"></div>' +
@@ -421,17 +428,38 @@ var main = (function($) { var _ = {
 							$slide: null,
 							$slideImage: null,
 							$slideCaption: null,
+							$slideOpen: null,
+							$slideInfo: null,
+							$slide_exif_resolution: null,
+							$slide_exif_camera: null,
+							$slide_exif_lens: null,
+							$slide_exif_focal_length: null,
+							$slide_exif_iso: null,
+							$slide_exif_shutter_speed: null,
+							$slide_exif_aperture: null,
 							url: $thumbnail.attr('href'),
+							urlB: $thumbnail.attr('500url'),
+							exif: null,
 							loaded: false
 						};
 
 					// Parent.
 						$this.attr('tabIndex', '-1');
+						s.exif = {
+							height: $thumbnail.attr('exif_height'),
+							width: $thumbnail.attr('exif_width'),
+							camera: $thumbnail.attr('exif_camera'),
+							lens: $thumbnail.attr('exif_lens'),
+							focal_length: $thumbnail.attr('exif_focal_length'),
+							shutter_speed: $thumbnail.attr('exif_shutter_speed'),
+							iso: $thumbnail.attr('exif_iso'),
+							aperture: $thumbnail.attr('exif_aperture'),
+						}
 
 					// Slide.
 
 						// Create elements.
-	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
+	 						s.$slide = $('<div class="slide"><div class="open500"></div><div class="openExif"></div><div class="caption"></div><div class="image"></div></div>');
 
 	 					// Image.
  							s.$slideImage = s.$slide.children('.image');
@@ -443,10 +471,13 @@ var main = (function($) { var _ = {
 
 						// Caption.
 							s.$slideCaption = s.$slide.find('.caption');
-
+							s.$slideOpen = s.$slide.find('.open500');
+							s.$slideInfo = s.$slide.find('.openExif');
 							// Move everything *except* the thumbnail itself to the caption.
 								$this.children().not($thumbnail)
 									.appendTo(s.$slideCaption);
+								s.$slideOpen.append('<a href="' + s.urlB + '" target="_blank" class="icon fa-500px"></a>');
+								s.$slideInfo.append('<a href="#modal" class="icon fa-globe"></a>');
 
 					// Preload?
 						if (_.settings.preload) {
@@ -591,13 +622,15 @@ var main = (function($) { var _ = {
 											newSlide.$slideImage
 												.css('background-image', 'url(' + newSlide.url + ')');
 
+
 										// Mark as loaded.
 											newSlide.loaded = true;
 											newSlide.$slide.removeClass('loading');
 
 										// Mark as active.
 											newSlide.$slide.addClass('active');
-
+											_.clearExif();
+											_.showExif(newSlide.exif);
 										// Unlock.
 											window.setTimeout(function() {
 												_.locked = false;
@@ -764,5 +797,26 @@ var main = (function($) { var _ = {
 			_.hide();
 
 	},
+
+	clearExif: function(){
+		$("#exif_resolution").empty();
+		$("#exif_camera").empty();
+		$("#exif_lens").empty();
+		$("#exif_focal_length").empty();
+		$("#exif_iso").empty();
+		$("#exif_shutter_speed").empty();
+		$("#exif_aperture").empty();
+	},
+
+	showExif: function(exif){
+		$("#exif_resolution").append("Resolution: " + exif.width + "x" + exif.height);
+		$("#exif_camera").append("Camera: " +exif.camera);
+		$("#exif_lens").append("Lens: "+ exif.lens);
+		$("#exif_focal_length").append("Focal Length: "+ exif.focal_length);
+		$("#exif_iso").append("ISO: " +exif.iso);
+		$("#exif_shutter_speed").append("Shutter Speed: "+ exif.shutter_speed);
+		$("#exif_aperture").append("Aperture: " +exif.aperture);
+
+	}
 
 }; return _; })(jQuery); main.init();
