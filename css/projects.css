@@ -6,7 +6,8 @@
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 25rem;
+    width: 20rem;
+    height: 20rem;
     padding: 4px;
     min-height: 290px;
 }
@@ -25,7 +26,7 @@
 }
 .card-ele{
     display: inline-block;
-    color: #fff;
+    color: #000;
 
     padding: 6px 12px;
     margin-left: 0;
@@ -58,7 +59,7 @@
 }
 .card .description{
   font-family: av;
-  color: #fff;
+  color: #000;
   text-align: center;
   font-size: 20px;
 }
@@ -66,7 +67,7 @@
 
   /*background: #76ff03;*/
   /*border: 1px solid #76ff03;*/
-  color: #fff;
+  color: #000;
   font-weight: 600;
   text-transform: uppercase;
   align-self: center;
@@ -82,7 +83,7 @@
 .card .lang{
   /*background: #8bc34a;*/
   /*border: 1px solid #76ff03;*/
- color: #fff;
+ color: #000;
 
   font-weight: 600;
   text-transform: uppercase;
