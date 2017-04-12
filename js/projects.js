@@ -1,33 +1,22 @@
-var col;
-var colTitle;
-var colLang;
-var cards = [];
-function setup(){
-  noLoop();
-  cards = selectAll('.card');
-}
+jQuery(document).ready(function($) {
+  var url = $.url();
+  var lang = 'all'
 
-function draw(){
+    if(url.param('lang') !== undefined && url.param('lang') !== '')
+    {
+      lang = url.param('lang')
+    }
+    $("#project-title").append(" - " + lang.toString());
+  $.getJSON("assets/projects.json", function(json){
+     $(json.projects).reverse().each(function(index) {
+       if(lang == 'all') {
+         $("#project-cards").append('<div id="'+this.id+'" class="card col"><a href="'+this.link+'"><img class="img-thumbnail" alt="Thumbnail" src="'+this.img+'"><h2 class="title card-ele" href="'+this.link+'">'+this.title+'</h2></a><h2 class="lang card-ele">'+this.client+'</h2><p class="description">'+this.description+'</p></div>');
+       }
+       else{
+         if(this.language == lang) $("#project-cards").append('<div id="'+this.id+'" class="card col"><a href="'+this.link+'"><img class="img-thumbnail" alt="Thumbnail" src="'+this.img+'"><h2 class="title card-ele" href="'+this.link+'">'+this.title+'</h2></a><h2 class="lang card-ele">'+this.client+'</h2><p class="description">'+this.description+'</p></div>');
+       }
+     });
+  });
+});
 
-  for(var i =0; i<cards.length;i++)
-  {
-    randColors();
-    card = cards[i];
-    card.style("background",palette.get(col));
-    var title = select('.title', card);
-    var lang = select('.lang', card);
-    title.style("background", palette.get(colTitle));
-    lang.style("background", palette.get(colLang));
-
-  }
-}
-
-function randColors(){
-  //Generating Colors
-  var paletteColors = ['Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue', 'Cyan', 'Teal', 'Deep Orange'];
-  col = random(paletteColors);
-  paletteColors.splice(paletteColors.indexOf(col), 1);
-  colTitle = random(paletteColors);
-  paletteColors.splice(paletteColors.indexOf(colTitle), 1);
-  colLang = random(paletteColors)
-}
+jQuery.fn.reverse = [].reverse;

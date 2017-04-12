@@ -1,0 +1,69 @@
+
+{
+  "projects":[
+    {
+      "id":"timefetch",
+      "img":"media/default_thumbnail.png",
+      "link":"/projects/timefetch.html",
+      "title":"Time Fetch API",
+      "language":"csharp",
+      "description":"C# SAMP Library",
+      "client":"C#"
+    },
+    {
+      "id":"hitbnotifier",
+      "img":"media/default_thumbnail.png",
+      "link":"/projects/hitbnotifier.html",
+      "title":"HitBy Notifier",
+      "language":"csharp",
+      "description":"C# SAMP Library",
+      "client":"C#"
+    },
+    {
+      "id":"anagrambox",
+      "img":"media/default_thumbnail.png",
+      "link":"/projects/anagrambox.html",
+      "title":"Anagram Box",
+      "language":"csharp",
+      "description":"Custom Control",
+      "client":"C#"
+    },
+    {
+      "id":"engcal",
+      "img":"media/default_thumbnail.png",
+      "link":"/projects/engcal.html",
+      "title":"Engineer's Calculator",
+      "language":"csharp",
+      "description":"Tool for WSRPG",
+      "client":"C#"
+    },
+    {
+      "id":"sqltohtml",
+      "img":"media/default_thumbnail.png",
+      "link":"/projects/sqltohtml.html",
+      "title":"SQLtoHTML",
+      "language":"python",
+      "description":"Convert SQL Tables to HTML",
+      "client":"Python"
+    },
+    {
+      "id":"EvolveCPCalc",
+      "img":"media/evolvecpcalc.png",
+      "link":"/projects/evolvecpcalc.html",
+      "title":"Evolve CP Calculator",
+      "language":"java",
+      "description":"Calculate Pokemon's CP before evolving it",
+      "client":"Android"
+    },
+    {
+      "id":"KPC",
+      "img":"media/kpcexplorer.png",
+      "link":"/projects/kpc/",
+      "title":"KPC",
+      "language":"java",
+      "description":"Beauty of Kashmir is just a tap away",
+      "client":"Android"
+    }
+
+  ]
+}

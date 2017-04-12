@@ -6,7 +6,7 @@
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 20rem;
+    width: 25rem;
     height: 20rem;
     padding: 4px;
     min-height: 290px;
@@ -90,6 +90,4 @@
   align-self: center;
   margin: 0;
 
-}
-.card .android{
 }
