@@ -43,37 +43,7 @@
         <link href="css/projects.css" rel="stylesheet">
 
 
-	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <script>
-    $(function(){
-      $("#sidebar").load("sidebar.html");
-
-
-    });
-    </script>
-    <script type="text/javascript">
-  function toggle(){
-  var sidebarButton = document.getElementById("nav-icon1")
-   sidebarButton.addEventListener('click', function(event) {
-  var state = document.getElementById("wrapper").className;
-
-  if (state == "toggled")
-  {
-    document.getElementById("nav-icon1").className = "";
-    document.getElementById("wrapper").className = "toggled";
-  }
-  else
-  {
-    document.getElementById("nav-icon1").className = "open";
-    document.getElementById("wrapper").className = "";
-  }
-  }
-  )};
-  window.onload = function() {
-      document.getElementById('projects').className = "focus";
-  }
-  </script>
 
 
 <style>
@@ -196,6 +166,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
     <script src="js/purl.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -205,7 +176,37 @@
   <!-- Menu Toggle Script -->
 
   <script src="js/projects.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
 
+   <script>
+   $(function(){
+     $("#sidebar").load("sidebar.html");
+
+
+   });
+   </script>
+   <script type="text/javascript">
+ function toggle(){
+ var sidebarButton = document.getElementById("nav-icon1")
+  sidebarButton.addEventListener('click', function(event) {
+ var state = document.getElementById("wrapper").className;
+
+ if (state == "toggled")
+ {
+   document.getElementById("nav-icon1").className = "";
+   document.getElementById("wrapper").className = "toggled";
+ }
+ else
+ {
+   document.getElementById("nav-icon1").className = "open";
+   document.getElementById("wrapper").className = "";
+ }
+ }
+ )};
+ window.onload = function() {
+     document.getElementById('projects').className = "focus";
+ }
+ </script>
 </body>
 
 </html>

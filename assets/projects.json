@@ -6,16 +6,16 @@
       "img":"media/default_thumbnail.png",
       "link":"/projects/timefetch.html",
       "title":"Time Fetch API",
-      "language":"csharp",
+      "languages":"csharp",
       "description":"C# SAMP Library",
       "client":"C#"
     },
     {
-      "id":"hitbnotifier",
+      "id":"hitbynotifier",
       "img":"media/default_thumbnail.png",
-      "link":"/projects/hitbnotifier.html",
+      "link":"/projects/hitbynotifier.html",
       "title":"HitBy Notifier",
-      "language":"csharp",
+      "languages":"csharp",
       "description":"C# SAMP Library",
       "client":"C#"
     },
@@ -24,7 +24,7 @@
       "img":"media/default_thumbnail.png",
       "link":"/projects/anagrambox.html",
       "title":"Anagram Box",
-      "language":"csharp",
+      "languages":"csharp",
       "description":"Custom Control",
       "client":"C#"
     },
@@ -33,7 +33,7 @@
       "img":"media/default_thumbnail.png",
       "link":"/projects/engcal.html",
       "title":"Engineer's Calculator",
-      "language":"csharp",
+      "languages":"csharp",
       "description":"Tool for WSRPG",
       "client":"C#"
     },
@@ -42,7 +42,7 @@
       "img":"media/default_thumbnail.png",
       "link":"/projects/sqltohtml.html",
       "title":"SQLtoHTML",
-      "language":"python",
+      "languages":"python",
       "description":"Convert SQL Tables to HTML",
       "client":"Python"
     },
@@ -51,7 +51,7 @@
       "img":"media/evolvecpcalc.png",
       "link":"/projects/evolvecpcalc.html",
       "title":"Evolve CP Calculator",
-      "language":"java",
+      "languages":"java",
       "description":"Calculate Pokemon's CP before evolving it",
       "client":"Android"
     },
@@ -60,7 +60,7 @@
       "img":"media/kpcexplorer.png",
       "link":"/projects/kpc/",
       "title":"KPC",
-      "language":"java",
+      "languages":"java",
       "description":"Beauty of Kashmir is just a tap away",
       "client":"Android"
     }
