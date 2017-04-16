@@ -381,7 +381,7 @@
         shade = shades[random(0, shades.length - 1)];
       }
 
-      return this.get(color, shade);
+      return this.get(color, 500);
     }
   };
 });
