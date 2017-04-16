@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
               });
               var myChart = new Chart(ctx, {
                 type:'pie',
-                data: { 
+                data: {
                   labels: labels,
                   datasets: [{
                       //label: '# of Votes',
@@ -45,10 +45,9 @@ jQuery(document).ready(function($) {
               },
               borderWidth: bWidth
               });
+              console.log(myData);
             }
           });
-
-
     });
 
     /* Bootstrap Tooltip for Skillset */
