@@ -5,6 +5,39 @@ jQuery(document).ready(function($) {
 
     $('.level-bar-inner').css('width', '0');
 
+$(document).ready(function() {
+
+          $("#github-langs").append('<canvas id ="lang-chart"></canvas>');
+          var ctx = document.getElementById("lang-chart");
+          var labels = [], data = [], bgColor = [], bWidth = [];
+          var myData;
+          $.ajax({
+              url: 'http://hackesta.pythonanywhere.com/github/languages/?format=json',
+              type: 'GET',
+              crossDomain: true,
+              dataType: 'json',
+              success: function(myData) {
+                 $.each(myData, function(key,val){
+                labels.push(key);
+                data.push(val);
+                bgColor.push(palette.random());
+                bWidth.push(0);
+                });
+                var myChart = new Chart(ctx, {
+                  type:'pie',
+                  data: {
+                    labels: labels,
+                    datasets: [{
+                        //label: '# of Votes',
+                        data: data,
+                        backgroundColor: bgColor
+                    }]
+                },
+                borderWidth: bWidth
+                });
+              }
+            });});
+
     $(window).on('load', function() {
 
         $('.level-bar-inner').each(function() {
@@ -17,37 +50,6 @@ jQuery(document).ready(function($) {
 
         });
 
-        $("#github-langs").append('<canvas id ="lang-chart"></canvas>');
-        var ctx = document.getElementById("lang-chart");
-        var labels = [], data = [], bgColor = [], bWidth = [];
-        var myData;
-        $.ajax({
-            url: 'http://hackesta.pythonanywhere.com/github/languages/?format=json',
-            type: 'GET',
-            crossDomain: true,
-            dataType: 'json',
-            success: function(myData) {
-               $.each(myData, function(key,val){
-              labels.push(key);
-              data.push(val);
-              bgColor.push(palette.random());
-              bWidth.push(0);
-              });
-              var myChart = new Chart(ctx, {
-                type:'pie',
-                data: {
-                  labels: labels,
-                  datasets: [{
-                      //label: '# of Votes',
-                      data: data,
-                      backgroundColor: bgColor
-                  }]
-              },
-              borderWidth: bWidth
-              });
-              console.log(myData);
-            }
-          });
     });
 
     /* Bootstrap Tooltip for Skillset */
