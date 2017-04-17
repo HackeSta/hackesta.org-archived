@@ -1,12 +1,5 @@
 
 $(document).ready(function(){
-  if(getUrlParameter('talk') == undefined){
-    loadData('gallery.json')
-  }
-  else{
-    loadTalk(getUrlParameter('talk'))
-  }
-
 });
 
 

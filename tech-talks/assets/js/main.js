@@ -15,6 +15,8 @@
 	});
 
 	$(function() {
+		loadTalk(getUrlParameter('talk'));
+
 
 		var $body = $('body'),
 			$header = $('#header'),
