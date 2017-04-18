@@ -1,26 +1,27 @@
 
 $(document).ready(function(){
+  loadTalk(getUrlParameter('talk'));
 });
 
 
 var loadTalk = function loadTalk(talk){
   console.log(talk);
-  console.log(getText("/tech-talks/talks/" +talk.toString()+'.md'));
-  $(".markdown").html(getText("/tech-talks/talks/" +talk.toString()+'.md'));
-}
-
-function getText(myUrl){
+  getText("/tech-talks/talks/" +talk.toString()+'.md', function(data){
+  $(".markdown").html(data);
+  });
+  //$(".markdown").html(getText("/tech-talks/talks/" +talk.toString()+'.md'));
+};
+var getText = function getText(myUrl, doneRes){
            var result = null;
            $.ajax( { url: myUrl,
                      type: 'get',
                      dataType: 'html',
                      async: false,
-                     success: function(data) { result = data; }
+                     success: function(data) { doneRes(data);}
                    }
            );
            FileReady = true;
-           return result;
-       }
+  };
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),

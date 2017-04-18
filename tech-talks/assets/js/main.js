@@ -14,8 +14,9 @@
 		xsmall: '(max-width: 480px)'
 	});
 
-	$(function() {
-		loadTalk(getUrlParameter('talk'));
+
+$(function() {
+
 
 
 		var $body = $('body'),
@@ -110,6 +111,6 @@
 					$('#titleBar, #header, #wrapper')
 						.css('transition', 'none');
 
-	});
 
+});
 })(jQuery);

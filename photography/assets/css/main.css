@@ -1264,3 +1264,8 @@ font-size: 1.3em;
 			.openExif a{
 				z-index: 2;
 			}
+
+			#info .icons .icon {
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
