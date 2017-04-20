@@ -6,7 +6,8 @@
 
 var loadTalk = function loadTalk(talk, callback){
   if(!talk){
-    $('.container').html('<div id="content"></div>');
+    $('#one .container').html('<div id="content"></div>');
+    $('#content').html('<h1>Tech Talks</h1>')
     getTalks();
     callback();
   }
@@ -29,7 +30,7 @@ var getTalks = function getTalks(){
     success: function(json){
 
       $(json).each(function(index){
-        $("#content").append('<a href="?talk='+index.toString()+'">'+this.name.replace(".md", "")+'</a>');
+        $("#content").append('<h3><a href="?talk='+index.toString()+'">'+this.name.replace(".md", "")+'</a></h3>');
       });
     }
   });

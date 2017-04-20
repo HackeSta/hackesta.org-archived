@@ -1603,6 +1603,10 @@
 			text-decoration: none;
 		}
 
+	h1 {
+		font-size: 2.25em;
+		line-height: 1.5em;
+	}
 	h2 {
 		font-size: 2em;
 		line-height: 1.5em;
@@ -2599,16 +2603,7 @@
 
 /* One */
 
-	#one:before {
-		background-image: url("../../images/banner.jpg");
-		background-position: top right;
-		background-repeat: no-repeat;
-		background-size: cover;
-		content: '';
-		display: block;
-		height: 15em;
-		width: 100%;
-	}
+
 
 /* Footer */
 
