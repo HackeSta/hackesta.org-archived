@@ -1,15 +1,49 @@
 
-$(document).ready(function(){
-  loadTalk(getUrlParameter('talk'));
-});
+// $(document).ready(function(){
+//   loadTalk(getUrlParameter('talk'));
+// });
 
 
-var loadTalk = function loadTalk(talk){
-  console.log(talk);
-  getText("/tech-talks/talks/" +talk.toString()+'.md', function(data){
-  $(".markdown").html(data);
+var loadTalk = function loadTalk(talk, callback){
+  if(talk === undefined){
+    $('.container').html('<div id="content"></div>');
+    getTalks();
+    callback();
+  }
+  else{
+    url = getTalkUrl(talk, function(url){
+      $('#markdown').load(url, function (data){
+        callback();
+    });
   });
-  //$(".markdown").html(getText("/tech-talks/talks/" +talk.toString()+'.md'));
+}
+
+};
+
+var getTalks = function getTalks(){
+  $.ajax({
+    url: 'http://hackesta.pythonanywhere.com/github/talks/?format=json',
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'json',
+    success: function(json){
+
+      $(json).each(function(index){
+        $("#content").append('<a href="?talk='+index.toString()+'">'+this.name.replace(".md", "")+'</a>');
+      });
+    }
+  });
+};
+var getTalkUrl = function getTalkUrl(id, callback){
+  $.ajax({
+    url: 'http://hackesta.pythonanywhere.com/github/talk/?format=json&talk_id=' + id.toString(),
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'json',
+    success: function(json){
+      callback(json.url);
+    }
+  });
 };
 var getText = function getText(myUrl, doneRes){
            var result = null;

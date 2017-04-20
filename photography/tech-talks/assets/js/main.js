@@ -4,7 +4,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(
+
+
+
+	function($) {
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',
@@ -13,8 +17,15 @@
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)'
 	});
+	
+	$(function(){
+		loadTalk(getUrlParameter('talk'));
+		console.log('called');
+	});
 
-	$(function() {
+$(function() {
+
+
 
 		var $body = $('body'),
 			$header = $('#header'),
@@ -108,6 +119,6 @@
 					$('#titleBar, #header, #wrapper')
 						.css('transition', 'none');
 
-	});
 
+});
 })(jQuery);
