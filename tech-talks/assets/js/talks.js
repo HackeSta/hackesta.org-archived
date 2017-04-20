@@ -5,7 +5,7 @@
 
 
 var loadTalk = function loadTalk(talk, callback){
-  if(talk === undefined){
+  if(!talk){
     $('.container').html('<div id="content"></div>');
     getTalks();
     callback();
