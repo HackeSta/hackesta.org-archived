@@ -42,6 +42,9 @@ var getTalkUrl = function getTalkUrl(id, callback){
     crossDomain: true,
     dataType: 'json',
     success: function(json){
+      $("title").html(json.name.replace(".md", "") + " | Hack-e-Sta");
+      $('meta[property="og:title"]').attr('content', json.name.replace(".md", "") + " | Hack-e-Sta");
+      
       callback(json.url);
     }
   });
