@@ -44,7 +44,7 @@ var getTalkUrl = function getTalkUrl(id, callback){
     success: function(json){
       $("title").html(json.name.replace(".md", "") + " | Hack-e-Sta");
       $('meta[property="og:title"]').attr('content', json.name.replace(".md", "") + " | Hack-e-Sta");
-      
+      $('meta[property="og:url"]').attr('content', "http://hackesta.org/tech-talks/?talk=" + id.toString());
       callback(json.url);
     }
   });
