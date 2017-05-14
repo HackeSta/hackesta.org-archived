@@ -1,7 +1,6 @@
   var langs = [];
 jQuery(document).ready(function($) {
   var url = $.url();
-
   var all = true;
   var query = '';
     if(url.param('langs') !== undefined && url.param('langs') !== '')
@@ -25,6 +24,11 @@ jQuery(document).ready(function($) {
        }
      }
      });
+     if(all){
+       $(json.websites).each(function(index){
+         $("#websites").append('<div id="'+this.id+'" class="col"><a href="'+this.link+'"><img style="" alt="Thumbnail" src="' + this.img + '"><h2 class="title">' + this.title + '</h2></a>');
+       });
+     }
   });
 
 

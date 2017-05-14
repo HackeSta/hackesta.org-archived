@@ -65,5 +65,19 @@
       "client":"Android"
     }
 
+  ],
+  "websites":[
+    {
+      "id":"FourSeasons",
+      "img":"http://fourseasonskashmir.com/assets/media/logo.png",
+      "link":"http://fourseasonskashmir.com",
+      "title":"Four Seasons"
+    },
+    {
+      "id":"YousufNaqshbandi",
+      "img":"/media/websites/yousufnaqshbandi.jpg",
+      "link":"http://yousufnaqshbandi.com",
+      "title":"Yousuf Naqshbandi"
+    }
   ]
 }

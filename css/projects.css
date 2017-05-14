@@ -91,3 +91,16 @@
   margin: 0;
 
 }
+#websites img{
+  width:256px;
+}
+#websites .title{
+  color: #000; 
+  font-weight: 200; 
+}
+#websites div {
+  width:256px;
+  text-transform: uppercase; 
+  margin: 20px; 
+  text-align: center;
+}
