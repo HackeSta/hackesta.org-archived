@@ -85,6 +85,33 @@
 
 
 	}
+		body:before {
+		-moz-animation: spinner 1s linear infinite;
+		-webkit-animation: spinner 1s linear infinite;
+		-ms-animation: spinner 1s linear infinite;
+		animation: spinner 1s linear infinite;
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 3em;
+		height: 3em;
+		background-image: url("images/spinner.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: -1.5em 0 0 -1.5em;
+		opacity: 0;
+	}
+
+	body.loading:before {
+		opacity: 1;	
+	}
 
 	html, body {
 		background-color: #101010;
