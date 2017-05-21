@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Videos | Hack-e-Sta</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable = yes">
+  <meta charset="UTF-8">
+  <meta name="description" content="Youtube videos from Hack-e-Sta's Youtube Channel.s">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
+  <meta name="author" content="Haider Ali Punjabi">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="shortcut icon" href="media/favicons/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="media/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="media/favicons/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="media/favicons/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="media/favicons/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="media/favicons/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" href="media/favicons/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="media/favicons/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="media/favicons/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="media/favicons/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="media/favicons/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="media/favicons/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="media/favicons/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="media/favicons/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="media/favicons/favicon-144.png">
+  <meta name="msapplication-config" content="media/favicons/browserconfig.xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/videos.css">
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sidebar"></div>
+
+    <div id="page-content-wrapper">
+      <a class="navicon" href="#" id="menu-toggle" onclick="toggle(); return false;">
+        <div id="nav-icon1" class="open">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+      <div id="header" class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+
+                  <div align="center"><a href="/index.html"><img src="media/logo.svg" alt="Hack-e-Sta Logo" height="150px" align="middle"></a></div>
+
+
+
+              </div>
+          </div>
+        </div>
+      <div class="container">
+        <hr>
+						<div align="left"><h3 id="project-title">Videos</h3></div>
+				<hr>
+        <br>
+        <br>
+        <div class="row" id="videos_container">
+          <h3 id=loading>Loading videos from Youtube. Wait a moment...</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+  <script type="text/javascript" src="js/videos.js"></script>
+  <script type="text/javascript">
+    getVideos();
+  </script>
+  <script type="text/javascript">
+    $("#sidebar").load("sidebar.html");
+
+    function toggle() {
+      var sidebarButton = document.getElementById("nav-icon1")
+      sidebarButton.addEventListener('click', function(event) {
+        var state = document.getElementById("wrapper").className;
+
+        if (state == "toggled") {
+          document.getElementById("nav-icon1").className = "";
+          document.getElementById("wrapper").className = "toggled";
+        } else {
+          document.getElementById("nav-icon1").className = "open";
+          document.getElementById("wrapper").className = "";
+        }
+      })
+    };
+    window.onload = function() {
+      document.getElementById('videos').className = "focus";
+    }
+  </script>
+</body>
+
+</html>
