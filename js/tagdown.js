@@ -832,8 +832,7 @@
 }());
 // Above there is marked.js by Christopher Jeffrey, below is my code to put it in the page.
 // If you for some reason need to see the un-minified version of marked.js, go to https://github.com/chjj/marked.
-loadTalk(getUrlParameter('talk'), function(){
-  console.log('star');
+var markdown = function(){
   document.body.style.display = "none"; // Hide the page until it's finished rendering.
 
   document.createElement("markdown");
@@ -852,4 +851,4 @@ loadTalk(getUrlParameter('talk'), function(){
 
   document.body.style.display = ""; // Show the rendered page.
 
-});
+}

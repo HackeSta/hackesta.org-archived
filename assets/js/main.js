@@ -50,7 +50,15 @@ jQuery(document).ready(function($) {
         $("#latest_video").append('<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + video.video_id + '?autoplay=0&origin=http://hackesta.org" frameborder="0"></iframe>');
       }
     });
-
+    $.ajax({
+      url: 'http://hackesta.pythonanywhere.com/github/talks/?format=json',
+      type: 'GET',
+      crossDomain: true,
+      dataType: 'json',
+      success: function(json){
+        $("#latest_talks").append('<h3 class="title"><a href=http://hackesta.org/tech-talks/?talk=latest target=_blank>'+json[0].name.replace(".md", "")+'</a>');
+      }
+    });
   });
 
 
