@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
       bgColor = [],
       bWidth = [];
     var myData;
+    //Languages Chart
     $.ajax({
       url: 'http://hackesta.pythonanywhere.com/github/languages/?format=json',
       type: 'GET',
@@ -40,6 +41,8 @@ jQuery(document).ready(function($) {
         });
       }
     });
+    
+    //Latest Video
     $.ajax({
       url: 'http://hackesta.pythonanywhere.com/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
       type: 'GET',
@@ -50,6 +53,8 @@ jQuery(document).ready(function($) {
         $("#latest_video").append('<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + video.video_id + '?autoplay=0&origin=http://hackesta.org" frameborder="0"></iframe>');
       }
     });
+    
+    //Latest Tech Talk
     $.ajax({
       url: 'http://hackesta.pythonanywhere.com/github/talks/?format=json',
       type: 'GET',
@@ -59,6 +64,48 @@ jQuery(document).ready(function($) {
         $("#latest_talks").append('<h3 class="title"><a href=http://hackesta.org/tech-talks/?talk=latest target=_blank>'+json[0].name.replace(".md", "")+'</a>');
       }
     });
+    
+    //Todo List
+    $.ajax({
+      url: 'http://hackesta.pythonanywhere.com/wunderlist/todo?format=json',
+      type: 'GET',
+      crossDomain: true,
+      dataType: 'json',
+      success: function(json){
+        $container = $("<div id='container'></div>");
+        $.each(json,function(key,value){
+          $regex = /\[.+]\((http:\/\/|https:\/\/).+\)/;
+          // Key: Name of List
+          title = key;
+          if($regex.test(key)){
+            name = key.substring(1, key.indexOf(']'));
+            link = key.substring(key.indexOf('(')+1, key.indexOf(')'));
+            title='<a href="'+link+'" target=_blank>'+name+'</a>';
+          }
+          $container.append('<h1>'+title+'</h1>');
+          list = [];
+          $list = $('<ul></ul>');
+          $(value.not_completed).each(function(index){
+              $listitem = $('<li></li>');
+              $listitem.append('<input disabled="" type="checkbox">');
+              $listitem.append(value.not_completed[index].title);
+              $list.append($listitem);  
+            });
+          toShow = 5;
+          if(value.completed.length < 5) toShow = value.completed.length;
+          for(i =0; i < toShow; i++){
+                $listitem = $('<li></li>');
+                $listitem.append('<input disabled="" checked="" type="checkbox">');
+                $listitem.append(value.completed[i].title);
+                $list.append($listitem);  
+          }
+            
+          $container.append($list);
+        });
+        $("#todo_list").append($container);
+      }
+    });
+    
   });
 
 
