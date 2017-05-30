@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable = yes">
+<meta name="description" content="Hack-e-Sta Project Anagram Box">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
+<meta name="author" content="Haider Ali Punjabi">
+
+    <title>Project - Hack-e-Sta</title>
+    <link rel="shortcut icon" href="../media/favicons/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../media/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="../media/favicons/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../media/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../media/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../media/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" href="../media/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../media/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../media/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../media/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../media/favicons/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../media/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../media/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../media/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicons/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../media/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="../media/favicons/browserconfig.xml">
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/font-awesome-extension.css">
+    <link rel="stylesheet" href="/css/project.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  
+	<style>
+		h4.margined{
+		margin-left: 20px;
+		margin-right: 80px;
+		line-height: 200%;}
+		li.margined{
+		margin-left: 20px;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+      <div id="sidebar-icon" class="fa fa-bars" onclick="toggle()">
+      </div>
+            <div class="container-fluid container">
+                <div id="project-title" class="row">
+                    <div class="col-lg-12">
+                        <h1 align="center" id="project_name"></h1>
+
+						<div align="center"><hr class="style18" width="400px"></div>
+					</div>
+				</div>
+				<div id="project-info" class="row-a">
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Development </h3>
+						<br>
+						<div id="dualcenter">
+						<img id="development_environment_icon" class="img-dualappinfo" src="" alt="">
+						<img id="language_icon" class="img-dualappinfo" src="" alt="">
+						</div>
+						<h4 align="center" id="development_details"></h4>
+
+				</div>
+				<div class="col-md-4-border">
+						<h3 class="text-center"> Target </h3>
+						<br>
+            <img id="target_icon" class="img-appinfo" src="" alt="">
+						<h4 align="center" id ="target"></h4>
+				</div>
+
+				<div class="col-md-4" align="center">
+						<h3 class="text-center"> Releases </h3>
+						<br>
+						<a id="release_url" href='' target="_blank"><img id="release_type_icon" class="img-appinfo" src=""/></a>
+						<h4 align="center" id="release_type"></h4>
+				</div>
+				</div>
+
+				<div align="center"><hr class="style14"></div>
+        <div class="cssload-container">
+<div id="loader" class="cssload-bouncywrap">
+  <div class="cssload-cssload-dotcon cssload-dc1">
+  <div class="cssload-dot"></div>
+</div>
+<div class="cssload-cssload-dotcon dc2">
+  <div class="cssload-dot"></div>
+</div>
+<div class="cssload-cssload-dotcon dc3">
+  <div class="cssload-dot"></div>
+</div>
+</div>
+</div>
+          <markdown id="markdown">
+            
+          </markdown>
+            </div>
+        </div>
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/tagdown.js"></script>
+    <script type="text/javascript" src="/js/sidebar.js"></script>
+    <script type="text/javascript" src="/js/project.js"></script>
+    
+    <!-- Menu Toggle Script -->
+
+
+</body>
+
+</html>

@@ -12,26 +12,35 @@ jQuery(document).ready(function($) {
       all = false;
     }
     $("#project-title").append(" - " + query.toString());
-  $.getJSON("assets/projects.json", function(json){
-     $(json.projects).reverse().each(function(index) {
-       if(all) {
-         $("#project-cards").append('<div id="'+this.id+'" class="card col"><a href="'+this.link+'"><img class="img-thumbnail" alt="Thumbnail" src="'+this.img+'"><h2 class="title card-ele" href="'+this.link+'">'+this.title+'</h2></a><h2 class="lang card-ele">'+this.client+'</h2><p class="description">'+this.description+'</p></div>');
-       }
-       else{
-         //console.log(isinLangs(this.languages));
-         if(isinLangs(this.languages) === true){
-           $("#project-cards").append('<div id="'+this.id+'" class="card col"><a href="'+this.link+'"><img class="img-thumbnail" alt="Thumbnail" src="'+this.img+'"><h2 class="title card-ele" href="'+this.link+'">'+this.title+'</h2></a><h2 class="lang card-ele">'+this.client+'</h2><p class="description">'+this.description+'</p></div>');
-       }
-     }
-     });
-     if(all){
-       $(json.websites).each(function(index){
-         $("#websites").append('<div id="'+this.id+'" class="col"><a href="'+this.link+'"><img style="" alt="Thumbnail" src="' + this.img + '"><h2 class="title">' + this.title + '</h2></a>');
-       });
-     }
-  });
-
-
+    $.ajax({
+      url: 'http://hackesta.pythonanywhere.com/projects/?format=json',
+      type: 'GET',
+      crossDomain: true,
+      dataType: 'json',
+      success: function(json){
+        
+        $(json).reverse().each(function(index){
+          link = '/projects/?id='+this.id.toString();
+          if(this.external_link !== '' && this.external_link !== undefined) link = this.external_link;
+          $("#project-cards").append('<div id="project-'+this.id+'" class="col-md-4 col-xs-6 col-sm-6"><a href="'+link+'"><img class="img-thumbnail" alt="Thumbnail" src="'+this.icon+'"></a><a href="'+link+'" class="button"><span class="fa fae '+this.fa_icon+'"></span><h2 href="'+link+'">'+this.name+'</h2></a><p>'+this.short_description+'</p></div>');
+          
+        });
+      }
+    });
+    if(all)
+    {
+    $.ajax({
+      url: 'http://hackesta.pythonanywhere.com/websites/?format=json',
+      type: 'GET',
+      crossDomain: true,
+      dataType: 'json',
+      success: function(json){
+        $(json).reverse().each(function(index){
+           $("#websites").append('<div id="website-'+this.id+'" class="col-md-3 col-xs-6 col-sm-6"><a href="'+this.url+'"><img style="" alt="Thumbnail" src="' + this.icon + '"><h2 class="title">' + this.name + '</h2></a>');
+        });
+      }
+    });
+}
 });
 
 function isinLangs(lang){
@@ -42,5 +51,19 @@ function isinLangs(lang){
     }
   });
   return retVar;
+}
+
+function getIcon(client){
+    switch (client) {
+      case "C#":
+        
+        return
+      case "Android":
+        return "fa fa-android";
+      case "Python":
+        return "fae fae-python";
+      default:
+        return "fa fa-code";
+    }
 }
 jQuery.fn.reverse = [].reverse;

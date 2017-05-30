@@ -1,0 +1,190 @@
+#content {
+  font-size: 1.7em;
+}
+
+.img-appinfo{
+	display: block;
+    margin: 0 auto;
+	height: 90px;
+}
+.img-dualappinfo {
+	display: inline-block;
+	height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-appinfo-rect{
+	display: block;
+    margin: 0 auto;
+	height: 90px;
+}
+.img-appinfo-github{
+		display: block;
+		height: 82px;
+		margin-left: auto;
+		margin-right: auto;
+		}
+#dualcenter{
+    text-align:center;
+}
+.cssload-container *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+}
+
+.cssload-container{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+}
+
+.cssload-bouncywrap{
+	position: relative;
+}
+
+.cssload-cssload-dotcon{
+	display: block;
+	float: left;
+	width: 175px;
+	position: absolute;
+}
+
+.cssload-dc1{
+	animation: bouncy1 0.825s infinite;
+		-o-animation: bouncy1 0.825s infinite;
+		-ms-animation: bouncy1 0.825s infinite;
+		-webkit-animation: bouncy1 0.825s infinite;
+		-moz-animation: bouncy1 0.825s infinite;
+	left: -140px;
+}
+
+.dc2{
+	animation: bouncy2 0.825s infinite;
+		-o-animation: bouncy2 0.825s infinite;
+		-ms-animation: bouncy2 0.825s infinite;
+		-webkit-animation: bouncy2 0.825s infinite;
+		-moz-animation: bouncy2 0.825s infinite;
+	left: 0;
+}
+
+.dc3{
+	animation: bouncy3 0.825s infinite;
+		-o-animation: bouncy3 0.825s infinite;
+		-ms-animation: bouncy3 0.825s infinite;
+		-webkit-animation: bouncy3 0.825s infinite;
+		-moz-animation: bouncy3 0.825s infinite;
+	left: 140px;
+}
+
+.cssload-dot{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	background: rgba(150,160,180,0.8);
+}
+
+
+
+
+
+
+
+
+@keyframes bouncy1{
+	0% {transform: translate(0px,0px) rotate(0deg);}
+	50% {transform: translate(0px,0px) rotate(180deg);}
+	100% {transform: translate(140px,0px) rotate(-180deg);}
+}
+
+@-o-keyframes bouncy1{
+	0% {-o-transform: translate(0px,0px) rotate(0deg);}
+	50% {-o-transform: translate(0px,0px) rotate(180deg);}
+	100% {-o-transform: translate(140px,0px) rotate(-180deg);}
+}
+
+@-ms-keyframes bouncy1{
+	0% {-ms-transform: translate(0px,0px) rotate(0deg);}
+	50% {-ms-transform: translate(0px,0px) rotate(180deg);}
+	100% {-ms-transform: translate(140px,0px) rotate(-180deg);}
+}
+
+@-webkit-keyframes bouncy1{
+	0% {-webkit-transform: translate(0px,0px) rotate(0deg);}
+	50% {-webkit-transform: translate(0px,0px) rotate(180deg);}
+	100% {-webkit-transform: translate(140px,0px) rotate(-180deg);}
+}
+
+@-moz-keyframes bouncy1{
+	0% {-moz-transform: translate(0px,0px) rotate(0deg);}
+	50% {-moz-transform: translate(0px,0px) rotate(180deg);}
+	100% {-moz-transform: translate(140px,0px) rotate(-180deg);}
+}
+
+@keyframes bouncy2{
+	0% {transform: translateX(0px);}
+	50% {transform: translateX(-140px);}
+	100% {transform: translateX(-140px);}
+}
+
+@-o-keyframes bouncy2{
+	0% {-o-transform: translateX(0px);}
+	50% {-o-transform: translateX(-140px);}
+	100% {-o-transform: translateX(-140px);}
+}
+
+@-ms-keyframes bouncy2{
+	0% {-ms-transform: translateX(0px);}
+	50% {-ms-transform: translateX(-140px);}
+	100% {-ms-transform: translateX(-140px);}
+}
+
+@-webkit-keyframes bouncy2{
+	0% {-webkit-transform: translateX(0px);}
+	50% {-webkit-transform: translateX(-140px);}
+	100% {-webkit-transform: translateX(-140px);}
+}
+
+@-moz-keyframes bouncy2{
+	0% {-moz-transform: translateX(0px);}
+	50% {-moz-transform: translateX(-140px);}
+	100% {-moz-transform: translateX(-140px);}
+}
+
+@keyframes bouncy3{
+	0% {transform: translateX(0px);}
+	50% {transform: translateX(0px);}
+	100% {transform: translateX(-140px);}
+}
+
+@-o-keyframes bouncy3{
+	0% {-o-transform: translateX(0px);}
+	50% {-o-transform: translateX(0px);}
+	100% {-o-transform: translateX(-140px);}
+}
+
+@-ms-keyframes bouncy3{
+	0% {-ms-transform: translateX(0px);}
+	50% {-ms-transform: translateX(0px);}
+	100% {-ms-transform: translateX(-140px);}
+}
+
+@-webkit-keyframes bouncy3{
+	0% {-webkit-transform: translateX(0px);}
+	50% {-webkit-transform: translateX(0px);}
+	100% {-webkit-transform: translateX(-140px);}
+}
+
+@-moz-keyframes bouncy3{
+	0% {-moz-transform: translateX(0px);}
+	50% {-moz-transform: translateX(0px);}
+	100% {-moz-transform: translateX(-140px);}
+}

@@ -832,7 +832,7 @@
 }());
 // Above there is marked.js by Christopher Jeffrey, below is my code to put it in the page.
 // If you for some reason need to see the un-minified version of marked.js, go to https://github.com/chjj/marked.
-var markdown = function(){
+var markdown = function(callback){
   document.body.style.display = "none"; // Hide the page until it's finished rendering.
 
   document.createElement("markdown");
@@ -850,5 +850,5 @@ var markdown = function(){
   }
 
   document.body.style.display = ""; // Show the rendered page.
-
+  callback();
 }

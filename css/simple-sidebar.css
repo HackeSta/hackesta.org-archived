@@ -73,8 +73,7 @@ a.navicon{
 /* Sidebar Styles */
 
 .sidebar-nav {
-    position: absolute;
-    top: 0;
+  
     width: 250px;
     margin: 0;
     padding: 0;
@@ -246,7 +245,7 @@ li.youtube a:hover {
 
 
 
-@media(min-width:768px) {
+/*@media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -272,6 +271,9 @@ li.youtube a:hover {
         position: relative;
         margin-right: 0;
     }
+}*/
+#sidebar-icon{
+  font-size: 2em;
 }
 * {
   margin: 0;
