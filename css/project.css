@@ -27,6 +27,9 @@
 #dualcenter{
     text-align:center;
 }
+#content p{
+  text-align: justify;
+}
 .cssload-container *{
 	margin: 0;
 	padding: 0;
