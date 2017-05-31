@@ -11,10 +11,13 @@ $(function() {
         }
         $(json).reverse().each(function(value){
           link = '/projects/?id='+this.id.toString();
-          if(this.external_link !== '' & this.external_link !== undefined) link = this.external_link
+          if(this.external_link !== '' & this.external_link !== undefined) link = this.external_link;
           $("#projects-sidebar").append('<li id="project-sidebar-'+this.id+'"><a href="'+link+'">'+this.name+'</a></li>');
         });
-        
+        $("#sidebar-loader").css('display','none');
+      },
+      error: function(){
+        $("#sidebar-loader").html("Refresh the page!")
       }
     });  
   });

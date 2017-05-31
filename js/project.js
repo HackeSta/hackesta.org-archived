@@ -22,10 +22,12 @@ jQuery(document).ready(function($) {
         $("#release_type").html(json.release_type.name);
         $("#markdown").load(convertToGithubRaw(json.github_url, "master", "README.md"), function(){
           markdown(function(){
-            findAndPlaceYoutube();            
+            findAndPlaceYoutube();  
+            $("#loader").css("display", "none");
+            Prism.highlightAll();
+          
           });
         });
-        $("#loader").css("display", "none");
       },
       error: function(){
         $("#loader").html("<h2>An error occured, please try again later</h2>");
