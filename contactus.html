@@ -12,47 +12,12 @@
 
     <title>Contact Us | Hack-e-Sta</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-    $(function(){
-      $("#sidebar").load("sidebar.html");
-
-
-    });
-    </script>
-    <script type="text/javascript">
-  function toggle(){
-  var sidebarButton = document.getElementById("nav-icon1")
-   sidebarButton.addEventListener('click', function(event) {
-  var state = document.getElementById("wrapper").className;
-
-  if (state == "toggled")
-  {
-    document.getElementById("nav-icon1").className = "";
-    document.getElementById("wrapper").className = "toggled";
-  }
-  else
-  {
-    document.getElementById("nav-icon1").className = "open";
-    document.getElementById("wrapper").className = "";
-  }
-  }
-  )};
-
-  </script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link href="/assets/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome-extension.css">
+  
 <style>
         .row-b
         {
@@ -79,13 +44,9 @@
         <!-- Page Content -->
 
         <div id="page-content-wrapper">
-		<a class="navicon" href="#" id="menu-toggle" onclick="toggle(); return false;">
-						<div id="nav-icon1" class="open">
-						<span></span>
-						<span></span>
-						<span></span>
-						</div>
-						</a>
+          <div id="sidebar-icon" class="fa fa-bars" onclick="toggle()">
+          </div>
+						
             <div id="header" class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -93,7 +54,7 @@
                         <div align="center"><h1>Contact Us</h1></div>
                         <br>
                         <br>
-                        <div align="center"><img src="media/logo.svg" alt="Hack-e-Sta Logo" height="100px" align="middle"></div>
+                        <div align="center"><img src="/assets/media/logo.svg" alt="Hack-e-Sta Logo" height="100px" align="middle"></div>
                         <br>
                         <br>
                         <div id="contact_details" align="center">
@@ -116,10 +77,11 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/sidebar.js"> </script>
 
     <!-- Menu Toggle Script -->
 
