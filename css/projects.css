@@ -23,6 +23,16 @@
 #project-cards p{
   font-size: 1.3em;
 }
+#project-tags h4 {
+  font-size: 1.2em;
+	margin: 0 0 0 0;
+	line-height: 1.5em;
+}
+#project-tags a{
+  font-size: 1.2em;
+  margin: 0 0 0 0 !important; 
+	line-height: 1.5em;
+}
 .button {
   display: inline-block;
   height:50px;

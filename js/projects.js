@@ -1,4 +1,5 @@
   var langs = [];
+  var availableLanguages = [];
   jQuery(document).ready(function($) {
     var url = $.url();
     var all = true;
@@ -19,12 +20,21 @@
       success: function(json) {
 
         $(json).reverse().each(function(index) {
-          if (isinLangs(this.language.name)) {
+          if (all || isinLangs(this.language.name)) {
+            if(availableLanguages.indexOf(this.language.name.toLowerCase()) < 0) availableLanguages.push(this.language.name.toLowerCase());
             link = '/projects/?id=' + this.id.toString();
             if (this.external_link !== '' && this.external_link !== undefined) link = this.external_link;
             $("#project-cards").append('<div id="project-' + this.id + '" class="col-md-4 col-xs-6 col-sm-6"><a href="' + link + '"><img class="img-thumbnail" alt="Thumbnail" src="' + this.icon + '"></a><a href="' + link + '" class="button"><span class="fa fae ' + this.fa_icon + '"></span><h2 href="' + link + '">' + this.name + '</h2></a><p>' + this.short_description + '</p></div>');
           }
         });
+        if(all){
+          $(availableLanguages).each(function(index){
+            domElem = $("#project-tags")[0];
+            link = availableLanguages[index]; 
+            if(availableLanguages[index] === 'c#') link = 'csharp';
+            $(domElem).append('<div class="col-md-1 col-xs-1" ><a href="?langs='+link+'" >'+availableLanguages[index]+'</a></div>');
+          });
+        }
         $("#projects-loader").css('display', 'none');
       },
       error: function() {
@@ -32,6 +42,8 @@
       }
     });
     if (all) {
+      
+    
       $.ajax({
         url: 'http://hackesta.pythonanywhere.com/websites/?format=json',
         type: 'GET',
