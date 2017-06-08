@@ -78,7 +78,3 @@ HTML/CSS/JS based static websites
 #### National Cadet Corps
 * Annual Training Camp, Tatto Ground Srinagar - 2014
 * Annual Training Camp, Nagrota - 2015
-=======
-## Haider Ali Punjabi 
-[haideralipunjabi@hackesta.org](mailto:haideralipunjabi@hackesta.org)
-[hackesta.org](http://hackesta.org)
