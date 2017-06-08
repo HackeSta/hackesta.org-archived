@@ -62,7 +62,7 @@ HTML/CSS/JS based static websites
 
 #### Events
 * Showcased photographs at an Art and Photography event **INCEPTION** at DPS Srinagar in 2014
-* Showcased photograps at an Art, Photography and Literature event **Clicks, Lines and Verses** at Tyndale Biscoe and Mallinson School, Srinagar in August 2015
+* Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at Tyndale Biscoe and Mallinson School, Srinagar in August 2015
 
 
 ## Sports
