@@ -75,9 +75,9 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 
 
 #### Swimming
-* Qualified 75m Swimming Test (TBS Swimming Pool) - 2013
+* Qualified 50m Swimming Test (TBS Swimming Pool) - 2013
 * Qualified 1 mile Swimming Test, Dal Lake (Kabootar Khana to Nehru Park) - 2014
-* Qualified 3.5km Dal Cross Swimming Test, Dal Lake (Nehru Park to Nishat) - 2015  
+* Qualified 7.5km Dal Cross Swimming Test, Dal Lake (Nehru Park to Nishat) - 2015  
 
 
 #### Golf
