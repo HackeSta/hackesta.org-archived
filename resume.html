@@ -2,14 +2,18 @@
 <html>
 <title>Resume - Haider Ali Punjabi</title>
 
-<xmp theme="journal" style="display:none;">
+<xmp theme="united" style="display:none;">
 
 </xmp>
+
 <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+
+<script src="/assets/plugins/strapdown/strapdown.js"></script>
 <script type="text/javascript">
   $("xmp").load('https://raw.githubusercontent.com/HackeSta/hackesta.org/master/resume.md', function(){
-    console.log('loaded');
+    markdown(window,document,function(){
+      $("#content").append('<a style="float:right;" href="https://gitprint.com/HackeSta/hackesta.org/blob/master/resume.md?download" class="btn btn-primary">Print Resume</a>');
+    });
   });
 </script>
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 </html>
