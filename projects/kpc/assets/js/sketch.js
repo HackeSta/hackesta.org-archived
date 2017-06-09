@@ -55,7 +55,7 @@ for(var i =0; i < persons.length; i++)
       image.attribute('alt', person.firstName + " " + person.lastName);
     }
     else{
-    image.attribute('src','/media/def_user.svg');
+    image.attribute('src','/assets/media/def_user.svg');
     image.attribute('alt', 'blank_user');
 }
 
