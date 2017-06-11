@@ -89,6 +89,30 @@
     <script type="text/javascript" src="/assets/js/jquery.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/sidebar.js"> </script>
+    <script type="text/javascript">
+    function toggle(state) {
+        $navicon = $("#sidebar-icon");
+        $wrapper = $("#wrapper");
+        if(state === undefined){
+          if($($wrapper).hasClass("toggled")){
+            state = 0;
+          }
+          else{
+            state = 1;
+          }
+        }
+          if (state === 1) {
+            $navicon.removeClass("fa-bars");
+            $navicon.addClass("fa-times");
+            $wrapper.addClass("toggled");
+            } 
+          else {
+            $navicon.removeClass("fa-times");
+            $navicon.addClass('fa-bars');
+            $wrapper.removeClass("toggled");
+          }
+    }
+    </script>
 
     <!-- Menu Toggle Script -->
 

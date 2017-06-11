@@ -26,7 +26,6 @@
   src: url(../fonts/av.ttf);
 }
 #sidebar-wrapper {
-	background:url(../media/logo.svg) no-repeat center;
 	background-size: 100px 100px;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -118,13 +117,13 @@ transform: scale(1.2);
 
 .sidebar-nav > .sidebar-brand {
 
-    background-image: url('../media/logo.png');
+    background-image: url('/assets/media/logo_main.svg');
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #ddd;
-    height: 45px;
+    height: 200px;
 	  font-family: sevenmonkeyfury;
     font-size: 35px;
     line-height: 60px;
