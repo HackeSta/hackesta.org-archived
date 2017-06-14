@@ -6,6 +6,9 @@
 **Github:** [haideralipunjabi](https://github.com/haideralipunjabi)  
 **500px:** [haideralipunjabi](https://500px.com/haideralipunjabi)
 
+## Work:
+* [Four Seasons](http://fourseasonskashmir.com) - IT Partner (as [Hack-e-Sta](http://hackesta.org)) - (April 2017 - Current)  
+* Co-Anchor at Quiz Time Doordarshan J&K (2015)
 
 ## Programming
 [Github Profile of Haider Ali Punjabi](https://github.com/haideralipunjabi)  
@@ -22,8 +25,6 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * SQL  
 
 
-#### Work:
-* [Four Seasons](http://fourseasonskashmir.com) - IT Partner (as [Hack-e-Sta](http://hackesta.org)) - (April 2017 - Current)  
 
 
 #### Major Projects
