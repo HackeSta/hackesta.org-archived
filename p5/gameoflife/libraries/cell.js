@@ -37,7 +37,7 @@ cell.prototype.process = function(){
   }
   if(!this.dead){
     if(!(total === 2 || total === 3)){
-      this.dead = false;
+      this.dead = true;
     }
     if(total < 2) console.log("lonely");
     if(total > 3) console.log("overcrowd");
