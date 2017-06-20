@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
     var myData;
     //Languages Chart
     $.ajax({
-      url: 'http://hackesta.pythonanywhere.com/github/languages/?format=json',
+      url: 'https://hackesta.pythonanywhere.com/github/languages/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
@@ -44,30 +44,30 @@ jQuery(document).ready(function($) {
     
     //Latest Video
     $.ajax({
-      url: 'http://hackesta.pythonanywhere.com/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
+      url: 'https://hackesta.pythonanywhere.com/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
       success: function(myData) {
         video = myData.videos[0];
-        $("#latest_video").append('<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + video.video_id + '?autoplay=0&origin=http://hackesta.org" frameborder="0"></iframe>');
+        $("#latest_video").append('<iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + video.video_id + '?autoplay=0&origin=https://hackesta.org" frameborder="0"></iframe>');
       }
     });
     
     //Latest Tech Talk
     $.ajax({
-      url: 'http://hackesta.pythonanywhere.com/github/talks/?format=json',
+      url: 'https://hackesta.pythonanywhere.com/github/talks/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
       success: function(json){
-        $("#latest_talks").append('<h3 class="title"><a href=http://hackesta.org/tech-talks/?talk=latest target=_blank>'+json[0].name.replace(".md", "")+'</a>');
+        $("#latest_talks").append('<h3 class="title"><a href=https://hackesta.org/tech-talks/?talk=latest target=_blank>'+json[0].name.replace(".md", "")+'</a>');
       }
     });
     
     //Todo List
     $.ajax({
-      url: 'http://hackesta.pythonanywhere.com/wunderlist/todo?format=json',
+      url: 'https://hackesta.pythonanywhere.com/wunderlist/todo?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',

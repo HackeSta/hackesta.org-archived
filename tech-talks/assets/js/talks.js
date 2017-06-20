@@ -23,7 +23,7 @@ var loadTalk = function loadTalk(talk, callback){
 
 var getTalks = function getTalks(){
   $.ajax({
-    url: 'http://hackesta.pythonanywhere.com/github/talks/?format=json',
+    url: 'https://hackesta.pythonanywhere.com/github/talks/?format=json',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',
@@ -37,7 +37,7 @@ var getTalks = function getTalks(){
 };
 var getTalkUrl = function getTalkUrl(id, callback){
   $.ajax({
-    url: 'http://hackesta.pythonanywhere.com/github/talk/?format=json&talk_id=' + id.toString(),
+    url: 'https://hackesta.pythonanywhere.com/github/talk/?format=json&talk_id=' + id.toString(),
     type: 'GET',
     crossDomain: true,
     dataType: 'json',
@@ -45,7 +45,7 @@ var getTalkUrl = function getTalkUrl(id, callback){
       $("#date-time").html( (new Date(json.date)).toLocaleString());
       $("title").html(json.name.replace(".md", "") + " | Hack-e-Sta");
       $('meta[property="og:title"]').attr('content', json.name.replace(".md", "") + " | Hack-e-Sta");
-      $('meta[property="og:url"]').attr('content', "http://hackesta.org/tech-talks/?talk=" + id.toString());
+      $('meta[property="og:url"]').attr('content', "https://hackesta.org/tech-talks/?talk=" + id.toString());
       
       callback(json.url);
     }
