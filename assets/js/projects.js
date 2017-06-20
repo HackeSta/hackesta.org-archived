@@ -13,7 +13,7 @@
     }
     $("#project-title").append(" - " + query.toString());
     $.ajax({
-      url: 'http://hackesta.pythonanywhere.com/projects/?format=json',
+      url: 'https://hackesta.pythonanywhere.com/projects/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
@@ -45,7 +45,7 @@
       
     
       $.ajax({
-        url: 'http://hackesta.pythonanywhere.com/websites/?format=json',
+        url: 'https://hackesta.pythonanywhere.com/websites/?format=json',
         type: 'GET',
         crossDomain: true,
         dataType: 'json',
