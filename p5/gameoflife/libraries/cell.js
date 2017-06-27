@@ -48,3 +48,16 @@ cell.prototype.process = function(){
     }
   }
 };
+
+cell.prototype.mousePressed = function(){
+  if (mouseX > this.x && mouseX < this.x + 50 && mouseY > this.y && mouseY < this.y + 50){
+    return true;
+  }
+  return false;
+};
+cell.prototype.switchState = function(){
+  if (this.dead){
+    this.dead = false;
+  }
+  else this.dead = true;
+};

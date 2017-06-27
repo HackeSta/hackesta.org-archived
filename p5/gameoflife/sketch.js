@@ -23,7 +23,7 @@ function setup()
     for (var i = 0; i < s; i++) {
       for (var j = 0; j < s; j++) {
         rand = random(1);
-        if(rand >= 0.5){
+        if(rand >= 0.9){
           cells[i][j].dead = false;
         }
         else{
@@ -53,4 +53,14 @@ function process(){
       cells[i][j].process();
     }  
 }
+}
+
+function mousePressed() {
+  for (var i = 0; i < s; i++){
+    for (var j = 0; j < s; j++){
+      if(cells[i][j].mousePressed()){
+        cells[i][j].switchState();
+      }
+    }
+  }
 }
