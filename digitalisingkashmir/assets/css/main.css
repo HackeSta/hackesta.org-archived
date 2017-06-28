@@ -2295,6 +2295,10 @@
 		border-bottom: none;
 		position: relative;
 	}
+	.icon:hover {
+		animation: spin 1s 1 linear;
+
+	}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -3799,3 +3803,9 @@
 			}
 
 		}
+		
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
