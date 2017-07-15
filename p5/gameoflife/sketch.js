@@ -7,29 +7,31 @@ function make2DArray(cols, rows) {
 }
 
 
-var w = 500;
-var h = 500;
-var s = 10;
-var cells;
+var winWidth      = 500, // window width
+    winHeight     = 500, // window Height
+    probability   = 0.9, // Death probability
+    neighbourDistance   = 30,  // Neighbour Distance 
+    sizeParticle  = 10,  // Size (radius) of particle
+    numParticles  = 1000, // Number of particles
+    arrParticles;
+    
+    
 function setup()
 {  
-  createCanvas(w,h);
-  cells = make2DArray(s,s);
-  for (var i = 0; i < s; i++) {
-    for (var j = 0; j < s; j++) {
-      cells[i][j] = new cell(i, j);
-    }
+  createCanvas(winWidth,winHeight);
+  arrParticles = [];
+  for (var i = 0; i < numParticles; i++) {
+    arrParticles.push(new Particle(random(winWidth), random(winHeight), sizeParticle));
   }
-    for (var i = 0; i < s; i++) {
-      for (var j = 0; j < s; j++) {
-        rand = random(1);
-        if(rand >= 0.9){
-          cells[i][j].dead = false;
-        }
-        else{
-          cells[i][j].dead = true;
-        }
-      }
+  
+  for (var i = 0; i < numParticles; i++) {
+    rand = random(1);
+    if(rand >= probability){
+      arrParticles[i].dead = false;
+    }
+    else{
+      arrParticles[i].dead = true;
+    }
       
     
 }
@@ -39,28 +41,36 @@ function setup()
 
 function draw()
 {
-  background(255);
-  for (var i = 0; i < s; i++) {
-    for (var j = 0; j < s; j++) {
-      cells[i][j].draw();
+  background(51);
+  for (var i = 0; i < numParticles; i++) {
+    arrParticles[i].draw();
     }
-}
 }
 
 function process(){
-  for (var i = 0; i < s; i++) {
-    for (var j = 0; j < s; j++) {
-      cells[i][j].process();
-    }  
+  for (var i = numParticles - 1; i >=0; i--) {
+      arrParticles[i].process();      
 }
+removeDead();
+
+}
+
+function removeDead(){
+  tempArray = arrParticles;
+  for (var i = numParticles -1; i >=0; i--){
+    particle = tempArray[i];
+    if(particle.dead){
+      tempArray.splice(i,1);
+    }
+  }
+  numParticles = tempArray.length;
+  arrParticles = tempArray;
 }
 
 function mousePressed() {
-  for (var i = 0; i < s; i++){
-    for (var j = 0; j < s; j++){
-      if(cells[i][j].mousePressed()){
-        cells[i][j].switchState();
-      }
-    }
+  for (var i = 0; i < numParticles; i++){
+    if(arrParticles[i].mousePressed()){
+        arrParticles[i].switchState();
+    }    
   }
 }
