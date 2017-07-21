@@ -49,7 +49,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * [Hack-e-Sta](http://hackesta.org) - August 2016
 * [Four Seasons](http://fourseasonskashmir.com) - April 2017
 * [Yousuf Naqshbandi](http://yousufnaqshbandi.com) - May 2017  
-
+* [Raja Aadam](http://rajaaadam.com) - July 2017
 
 #### Events
 * Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017  
