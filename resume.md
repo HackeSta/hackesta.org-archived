@@ -62,8 +62,8 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 
 
 #### Events
-* Showcased photographs at an Art and Photography event **INCEPTION** at DPS Srinagar in 2014
-* Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at Tyndale Biscoe and Mallinson School, Srinagar in August 2015
+* Showcased photographs at an Art and Photography event **INCEPTION** at [DPS Srinagar](http://www.dpssrinagar.com/) in 2014
+* Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2015
 
 
 ## Sports
@@ -86,6 +86,6 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 
 
 ## Extras
-#### National Cadet Corps
+#### [National Cadet Corps](http://nccindia.nic.in/en)
 * Annual Training Camp, Tatto Ground Srinagar - 2014
 * Annual Training Camp, Nagrota - 2015
