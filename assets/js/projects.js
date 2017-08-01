@@ -24,7 +24,7 @@
             if(availableLanguages.indexOf(this.language.name.toLowerCase()) < 0) availableLanguages.push(this.language.name.toLowerCase());
             link = '/projects/?id=' + this.id.toString();
             if (this.external_link !== '' && this.external_link !== undefined) link = this.external_link;
-            $("#project-cards").append('<div id="project-' + this.id + '" class="col-md-4 col-xs-6 col-sm-6"><a href="' + link + '"><img class="img-thumbnail" alt="Thumbnail" src="' + this.icon + '"></a><a href="' + link + '" class="button"><span class="fa fae ' + this.fa_icon + '"></span><h2 href="' + link + '">' + this.name + '</h2></a><p>' + this.short_description + '</p></div>');
+            $("#project-cards").append('<div style="margin-bottom: 10px;" id="project-' + this.id + '" class="col-md-4 col-xs-12 col-sm-12"><a href="' + link + '"><img class="img-thumbnail" alt="Thumbnail" src="' + this.icon + '" width=100%;></a><a href="' + link + '" class="button"><span class="fa fae ' + this.fa_icon + '"></span><h2 href="' + link + '">' + this.name + '</h2></a><p>' + this.short_description + '</p></div>');
           }
         });
         if(all){
@@ -51,7 +51,7 @@
         dataType: 'json',
         success: function(json) {
           $(json).reverse().each(function(index) {
-            $("#websites").append('<div id="website-' + this.id + '" class="col-md-3 col-xs-6 col-sm-6"><a href="' + this.url + '"><img style="" alt="Thumbnail" src="' + this.icon + '"><h2 class="title">' + this.name + '</h2></a>');
+            $("#websites").append('<div id="website-' + this.id + '" class="col-md-3 col-xs-12 col-sm-12"><a href="' + this.url + '"><img style="" alt="Thumbnail" src="' + this.icon + '"><h2 class="title">' + this.name + '</h2></a>');
           });
           $("#websites-loader").css('display', 'none');
 
