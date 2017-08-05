@@ -74,6 +74,7 @@ jQuery(document).ready(function($) {
       success: function(json){
         $container = $("<div id='container'></div>");
         $.each(json,function(key,value){
+          console.log(key,value);
           $regex = /\[.+]\((http:\/\/|https:\/\/).+\)/;
           // Key: Name of List
           title = key;
@@ -88,7 +89,14 @@ jQuery(document).ready(function($) {
           $(value.not_completed).each(function(index){
               $listitem = $('<li></li>');
               $listitem.append('<input disabled="" type="checkbox">');
-              $listitem.append(value.not_completed[index].title);
+              // Code to check for MD Links
+              content = value.not_completed[index].title;
+              if($regex.test(content)){
+                name = content.substring(content.indexOf('['), content.indexOf(']'));
+                link = content.substring(content.indexOf('(')+1, content.indexOf(')'));
+                content ='<a href="'+link+'" target=_blank>'+name+'</a>';
+              }
+              $listitem.append(jsmd(value.not_completed[index].title));
               $list.append($listitem);  
             });
           toShow = 5;
@@ -96,7 +104,9 @@ jQuery(document).ready(function($) {
           for(i =0; i < toShow; i++){
                 $listitem = $('<li></li>');
                 $listitem.append('<input disabled="" checked="" type="checkbox">');
-                $listitem.append(value.completed[i].title);
+                // Code to check for MD Links
+                
+                $listitem.append(jsmd(value.completed[i].title));
                 $list.append($listitem);  
           }
             
