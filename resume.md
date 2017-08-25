@@ -1,4 +1,4 @@
-<img src="https://hackesta.org/assets/media/profile.png" width="200px"/>
+<img src="https://raw.githubusercontent.com/hackesta/hackesta.org/master/assets/media/profile.png" width="200px"/>
 
 # Haider Ali Punjabi 
 **Contact:** [haideralipunjabi@hackesta.org](mailto:haideralipunjabi@hackesta.org)  
