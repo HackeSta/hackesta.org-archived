@@ -1,3 +1,5 @@
+<img src="https://hackesta.org/assets/media/profile.png" width="200px"/>
+
 # Haider Ali Punjabi 
 **Contact:** [haideralipunjabi@hackesta.org](mailto:haideralipunjabi@hackesta.org)  
 **Website:** [hackesta.org](http://hackesta.org)  
@@ -9,13 +11,14 @@
 ## Work:
 * [Four Seasons](http://fourseasonskashmir.com) - IT Partner (as [Hack-e-Sta](http://hackesta.org)) - (April 2017 - Current)  
 * Co-Anchor at Quiz Time Doordarshan J&K (2015)
+* Started & Head of [Code Club TBMS](https://github.com/codeclubtbms) (2017)
 
 ## Programming
 [Github Profile of Haider Ali Punjabi](https://github.com/haideralipunjabi)  
-Most of the work is done as/under the name [Hack-e-Sta](http://hackesta.org)  
+Most of the work is done as/under the name [Hackesta](http://hackesta.org)  
 Details on most of the projects can be found [here](http://hackesta.org/projects.html)
 
-#### Technologies used
+#### Technologies
 * C#
 * Visual Basic
 * Java
@@ -23,9 +26,25 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * HTML/CSS/JS
 * Django
 * SQL  
+* Markdown
 
+#### Tools/Softwares
+* [Github](https://github.com)
+* [Github Pages](https://pages.github.com)
+* [Atom](https://atom.io)
+* [Visual Studio](https://www.visualstudio.com)
+* [PyCharm](https://www.jetbrains.com/pycharm/)
+* [Android Studio](https://developer.android.com/studio/)
 
-
+#### APIs
+* [Facebook Graph API](https://developers.facebook.com/docs/graph-api/)
+* [Github API](https://developer.github.com)
+* [Wunderlist API](https://developer.wunderlist.com/)
+* [Dropbox API](https://www.dropbox.com/developers)
+* [Youtube API](https://developers.google.com/youtube/)
+* [Google Drive API](https://developers.google.com/drive/)
+* [500px API](https://github.com/500px/api-documentation)
+* [Deviant Art API](https://www.deviantart.com/developers/)
 
 #### Major Projects
 * [KPC](http://hackesta.org/projects/kpc/) - An Android client for [Kashmir Photography Club](http://kashmirphotographyclub.com) - December 2016
@@ -44,7 +63,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * [General Quiz Module](https://github.com/areebbeigh/django_quiz) - Django(Backend), HTML/CSS/JS (Frontend) - May/June 2017  
 
 
-#### Websites
+### Websites
 ##### HTML/CSS/JS based static websites  
 * [Hack-e-Sta](http://hackesta.org) - August 2016
 * [Four Seasons](http://fourseasonskashmir.com) - April 2017
@@ -54,6 +73,9 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 #### Events
 * Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017  
 
+#### Initiatives
+* [Digitalising Kashmir](https://hackesta.org/digitalisingkashmir) - An initiative to digitalise the photographers and artists of Kashmir
+jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hackesta](https://hackesta.org) and [Captivating Kashmir](http://captivatingkashmir.com/)
 
 
 ## Photography
@@ -64,8 +86,15 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 #### Events
 * Showcased photographs at an Art and Photography event **INCEPTION** at [DPS Srinagar](http://www.dpssrinagar.com/) in 2014
 * Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2015
+* Showcased photographs at an Art and Photography exhibition **Clicks & Strokes** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2017
 
 
+## Education
+* [Tyndale Biscoe School](https://tbmes.org/) (2004 - 2017)
+  * House Helper [Class 4th (2009), Class 6th (2011), Class 7th (2012), Class 8th (2013), Class 9th (2014), Class 11th(2016)]
+  * House Captain [Class 5th (2010), Class 12th (2017)]
+  * School Vice-Captain [Class 10th (2015)]
+   
 ## Sports
 
 #### Skiing
@@ -77,7 +106,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 
 #### Swimming
 * Qualified 50m Swimming Test (TBS Swimming Pool) - 2013
-* Qualified 1 mile Swimming Test, Dal Lake (Kabootar Khana to Nehru Park) - 2014
+* Qualified 1 mile Swimming Test, Dal Lake (Kabootar Khana to Nehru Park) - 2014 & 2017
 * Qualified 7.5km Dal Cross Swimming Test, Dal Lake (Nehru Park to Nishat) - 2015  
 
 
