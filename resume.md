@@ -71,7 +71,8 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * [Raja Aadam](http://rajaaadam.com) - July 2017
 
 #### Events
-* Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017  
+* Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017 
+* Attended Robotics workshop at TechKnow 2017 organised by [CyberCrew DPS](http://cybercrew.dpssrinagar.com) at [DPS Srinagar](http://dpssrinagar.com)
 
 #### Initiatives
 * [Digitalising Kashmir](https://hackesta.org/digitalisingkashmir) - An initiative to digitalise the photographers and artists of Kashmir
@@ -87,6 +88,7 @@ jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hacke
 * Showcased photographs at an Art and Photography event **INCEPTION** at [DPS Srinagar](http://www.dpssrinagar.com/) in 2014
 * Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2015
 * Showcased photographs at an Art and Photography exhibition **Clicks & Strokes** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2017
+
 
 
 ## Education
