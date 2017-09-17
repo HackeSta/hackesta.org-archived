@@ -1,6 +1,6 @@
 var getVideos = function getVideos(){
   $.ajax({
-    url: 'https://hackesta.pythonanywhere.com/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
+    url: 'https://hackesta.org/api/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',

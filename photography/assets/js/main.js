@@ -826,7 +826,7 @@ var main = (function($) {
 	loadData: function(){
 		
 		$.ajax({
-			url: 'https://hackesta.pythonanywhere.com/photographs/user?format=json&user_id=8734325',
+			url: 'https://hackesta.org/api/photographs/user?format=json&user_id=8734325',
 			type: 'GET',
 			crossDomain: true,
 	    dataType: 'json',
@@ -841,7 +841,7 @@ var main = (function($) {
 
 	loadPhotos: function(){
 	  $.ajax({
-	    url: 'https://hackesta.pythonanywhere.com/photographs/?format=json&user_id=8734325',
+	    url: 'https://hackesta.org/api/photographs/?format=json&user_id=8734325',
 	    type: 'GET',
 	    crossDomain: true,
 	    dataType: 'json',

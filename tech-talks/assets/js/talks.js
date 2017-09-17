@@ -23,7 +23,7 @@ var loadTalk = function loadTalk(talk, callback){
 
 var getTalks = function getTalks(){
   $.ajax({
-    url: 'https://hackesta.pythonanywhere.com/github/talks/?format=json',
+    url: 'https://hackesta.org/api/github/talks/?format=json',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',
@@ -37,7 +37,7 @@ var getTalks = function getTalks(){
 };
 var getTalkUrl = function getTalkUrl(id, callback){
   $.ajax({
-    url: 'https://hackesta.pythonanywhere.com/github/talk/?format=json&talk_id=' + id.toString(),
+    url: 'https://hackesta.org/api/github/talk/?format=json&talk_id=' + id.toString(),
     type: 'GET',
     crossDomain: true,
     dataType: 'json',

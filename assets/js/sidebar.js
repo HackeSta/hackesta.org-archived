@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   $("#sidebar").load("/sidebar.html", function(){
     $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/projects/list/?format=json',
+      url: 'https://hackesta.org/api/projects/list/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',

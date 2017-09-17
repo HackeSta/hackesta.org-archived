@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     if(getUrlParameter('id') !== '' & getUrlParameter('id') !== undefined)
     {
       $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/projects/?format=json&id='+getUrlParameter('id').toString(),
+      url: 'https://hackesta.org/api/projects/?format=json&id='+getUrlParameter('id').toString(),
       type: 'GET',
       crossDomain: true,
       dataType: 'json',

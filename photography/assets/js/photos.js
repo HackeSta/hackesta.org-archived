@@ -2,7 +2,7 @@
 var loadPhotos = function(){
   console.log('called');
   $.ajax({
-    url: 'https://hackesta.pythonanywhere.com/photographs/?format=json&user_id=8734325',
+    url: 'https://hackesta.org/api/photographs/?format=json&user_id=8734325',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',

@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
     var myData;
     //Languages Chart
     $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/github/languages/?format=json',
+      url: 'https://hackesta.org/api/github/languages/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
     
     //Latest Video
     $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
+      url: 'https://hackesta.org/api/youtube/videos/?format=json&channel_id=UCF-qoE_8k_aum76Rk7EWMIg',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
     
     //Latest Tech Talk
     $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/github/talks/?format=json',
+      url: 'https://hackesta.org/api/github/talks/?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
     
     //Todo List
     $.ajax({
-      url: 'https://hackesta.pythonanywhere.com/wunderlist/todo?format=json',
+      url: 'https://hackesta.org/api/wunderlist/todo?format=json',
       type: 'GET',
       crossDomain: true,
       dataType: 'json',
