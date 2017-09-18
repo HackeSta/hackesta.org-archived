@@ -1,2 +1,2 @@
 /api/*  https://hackesta.pythonanywhere.com/:splat  200
-/static/* https://hackesta.pythonanywhere.com/static/:splat :200
+/static/* https://hackesta.pythonanywhere.com/static/:splat 200
