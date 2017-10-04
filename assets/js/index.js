@@ -24,8 +24,7 @@ jQuery.fn.extend({
         
         $.each(data, function(index, repo){
             
-            if(!repo.fork && $container.children().length < 3){
-              console.log(repo);
+            if(!repo.fork && $container.children().length <= 3){
               $card = $(
                 '<div class="col s12 m6 l4 ">'+
                 '<div class="card hoverable project-card '+ avalColors.random() +' darken-2">'+
@@ -47,6 +46,8 @@ jQuery.fn.extend({
               $container.append($card);
             }
         });
+        $container.hideloader();
+
       },
       
     });
@@ -61,7 +62,7 @@ loadclosedprojects : function() {
     success: function(data) {
 
       $.each(data, function(index, repo) {
-        if($container.children().length < 3){
+        if($container.children().length <= 3){
           
           $card = $(
             '<div class="col s12 m6 l4 ">' +
