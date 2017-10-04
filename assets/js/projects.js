@@ -1,108 +1,226 @@
-  var langs = [];
-  var availableLanguages = [];
-  // jQuery(document).ready(function($) {
-  //   var url = $.url();
-  //   var all = true;
-  //   var query = '';
-  //   if (url.param('langs') !== undefined && url.param('langs') !== '') {
-  //     query = url.param('langs');
-  //     $(query.split(',')).each(function(index) {
-  //       langs.push(this.toString().toLowerCase());
-  //     });
-  //     all = false;
-  //   }
-  //   $("#project-title").append(" - " + query.toString());
-  // 
-  //   if (all) {
-  //     
-  //   
-  //     $.ajax({
-  //       url: 'https://hackesta.org/api/websites/?format=json',
-  //       type: 'GET',
-  //       crossDomain: true,
-  //       dataType: 'json',
-  //       success: function(json) {
-  //         $(json).reverse().each(function(index) {
-  //           $("#websites").append('<div id="website-' + this.id + '" class="col-md-3 col-xs-12 col-sm-12"><a href="' + this.url + '"><img style="" alt="Thumbnail" src="' + this.icon + '"><h2 class="title">' + this.name + '</h2></a>');
-  //         });
-  //         $("#websites-loader").css('display', 'none');
-  // 
-  //       },
-  //       error: function() {
-  //         $("#websites-loader").html('<h2>There was an error in contacting the server. Please try again later</h2>');
-  //       }
-  //     });
-  //   } else {
-  //     $("#websites-container").css('display', 'none');
-  //     $("#websites-loader").css('display', 'none');
-  //   }
-  // });
+let avalColors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange'];
+let availableLanguages = [];
+jQuery(document).ready(function($) {
+  $("#header").load("/header.html", function() {
+    $(".button-collapse").sideNav();
+  });
+  $("#footer").load("/footer.html");
+  if(getUrlParameter('lang') !== undefined){
+    $(".nonlang").each(function(index) {
+      $(this).hide();
+    });
+  }
+  loadprojects();
+  loadhackestaprojects();
+  loadwebsites();
+  loadclosedprojects();
+});
+jQuery.fn.extend({
+  hideloader: function() {
+    $($(this).children(".preloader-wrapper")).hide();
+  }
+});
+let loadprojects = function() {
+  var $opencontainer = $("#openprojects");
+  var $contribcontainer = $("#contribprojects");
+  var language = getUrlParameter('lang');
+  if(language === "Other") language = null;
   
-  function loadProjects(){
-    $.ajax({
-      url: 'http://localhost:8000/projects/?format=json',
-      type: 'GET',
-      crossDomain: true,
-      dataType: 'json',
-      success: function(json) {
+  $.ajax({
+    url: "https://hackesta.org/api/github/users/haideralipunjabi/repos?format=json",
+    crossDomain: true,
+    dataType: 'json',
+    success: function(data) {
 
-        $(json).reverse().each(function(index) {
-            link = '/projects/?id=' + this.id.toString();
-            if (this.external_link !== '' && this.external_link !== undefined) link = this.external_link;
-            navbar_string = '<li class="tab"><a href="'+link+'">'+this.name+'</a></li>';
-            card_string = '<div class="col s12 m6 l4">' + 
-            '<div class="card">'+
-            '<div class="card-content">'+
-            '<span class="card-title">'+this.name+'</span>'+
-            '<div class="chip">'+
-            '<img src="'+this.target.icon+'">'+this.target.name+
+      data = shuffle(data);
+
+      $.each(data, function(index, repo) {
+        if (language === repo.language || language === undefined) {
+          $card = $(
+            '<div class="col s12 m6 l4 ">' +
+            '<div class="card hoverable project-card ' + avalColors.random() + ' darken-2">' +
+            '<div class="card-content white-text">' +
+            '<span class="card-title">' + generateA(repo.name, repo.svn_url, true) + '</span>' +
+            '<div class="repo-data">' +
+            generateA("<i class='fa fa-random'>" + repo.forks_count + "</i>", repo.svn_url + "/fork", true) +
+            generateA("<i class='fa fa-star'>" + repo.stargazers_count + "</i>", repo.svn_url + "/stargazers", true) +
+            generateA("<i class='fa fa-eye'>" + repo.watchers_count + "</i>", repo.svn_url + "/watchers", true) +
+            '</div>' +
+            '<p>' + ((repo.description === null) ? "" : repo.description) + '</p>' +
+            '</div>' +
+            '<div class="card-action">' +
+            '<span> Updated At ' + (new Date(repo.updated_at)).toLocaleString() + '</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+          );
+          if (repo.fork) {
+            $contribcontainer.append($card);
+          } else {
+            $opencontainer.append($card);
+          }
+          addLanguage(repo.language);
+        }
+        
+
+
+      });
+      $opencontainer.hideloader();
+      $contribcontainer.hideloader();
+      
+    },
+
+  });
+};
+let loadhackestaprojects = function() {
+  let $container = $("#hackestaprojects")
+  let language = getUrlParameter('lang');
+  if(language === "Other") language = null;
+  $.ajax({
+    url: "https://hackesta.org/api/github/orgs/hackesta/repos?format=json",
+    crossDomain: true,
+    dataType: 'json',
+    success: function(data) {
+
+      data = shuffle(data);
+
+      $.each(data, function(index, repo) {
+        if (language === repo.language || language === undefined) {
+          $card = $(
+            '<div class="col s12 m6 l4 ">' +
+            '<div class="card hoverable project-card ' + avalColors.random() + ' darken-2">' +
+            '<div class="card-content white-text">' +
+            '<span class="card-title">' + generateA(repo.name, repo.svn_url, true) + '</span>' +
+            '<div class="repo-data">' +
+            generateA("<i class='fa fa-random'>" + repo.forks_count + "</i>", repo.svn_url + "/fork", true) +
+            generateA("<i class='fa fa-star'>" + repo.stargazers_count + "</i>", repo.svn_url + "/stargazers", true) +
+            generateA("<i class='fa fa-eye'>" + repo.watchers_count + "</i>", repo.svn_url + "/watchers", true) +
+            '</div>' +
+            '<p>' + ((repo.description === null) ? "" : repo.description) + '</p>' +
+            '</div>' +
+            '<div class="card-action">' +
+            '<span> Updated At ' + (new Date(repo.updated_at)).toLocaleString() + '</span>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+          );
+          $container.append($card);
+          addLanguage(repo.language);
+        
+        }
+
+
+      });
+      $container.hideloader();
+    },
+
+  });
+};
+
+let loadwebsites = function() {
+  let $container = $("#websites")
+  
+  $.ajax({
+    url: "https://hackesta.org/api/websites/?format=json",
+    crossDomain: true,
+    dataType: 'json',
+    success: function(data) {
+
+      $.each(data, function(index, repo) {
+          $card = $(
+            '<div class="col s12 m6 l4 ">' +
+            '<div class="card hoverable project-card ' + avalColors.random() + ' darken-2">' +
+            '<div class="card-image">'+
+            '<img class="responsive-img circle" style="border-radius: 50%; width:50%; margin-left: auto; margin-right:auto;"  src="'+repo.icon+'" alt="'+repo.name+'"></img>'+
             '</div>'+
-            '<p class="flow-text">'+this.short_description+'</p>'+
-            '</div>'+
-            '</div>'+
-            '</div>';
-            $("#project-tabs, #mobile-projects").append(navbar_string);
-            $("#project-cards").append(card_string);
-        });
-        // if(all){
-        //   $(availableLanguages).each(function(index){
-        //     domElem = $("#project-tags")[0];
-        //     link = availableLanguages[index]; 
-        //     if(availableLanguages[index] === 'c#') link = 'csharp';
-        //     $(domElem).append('<div class="col-md-1 col-xs-1" ><a href="?langs='+link+'" >'+availableLanguages[index]+'</a></div>');
-        //   });
-        // }
-        // $("#projects-loader").css('display', 'none');
-      },
-      error: function() {
-        $("#projects-loader").html('<h2>There was an error in contacting the server. Please try again later</h2>');
-      }
-    });
+            '<div class="card-content white-text">' +
+            '<span class="card-title">' + generateA(repo.name, repo.url, true) + '</span>' +            
+            '</div>' +
+            '</div>' +
+            '</div>'
+          );
+          $container.append($card);
+
+      });
+      $container.hideloader();
+    },
+
+  });
+};
+let loadclosedprojects = function() {
+  let $container = $("#closedprojects");
+  
+  $.ajax({
+    url: "https://hackesta.org/api/projects/?format=json",
+    crossDomain: true,
+    dataType: 'json',
+    success: function(data) {
+
+      $.each(data, function(index, repo) {
+          $card = $(
+            '<div class="col s12 m6 l4 ">' +
+            '<div class="card hoverable project-card ' + avalColors.random() + ' darken-2">' +
+            '<div class="card-content white-text">' +
+            '<span class="card-title">' + generateA(repo.name, repo.release_url, true) + '</span>' +
+            '<p>' + ((repo.short_description === null) ? "" : repo.short_description) + '</p>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+          );
+          $container.append($card);
+
+      });
+      $container.hideloader();
+    },
+
+  });
+};
+Array.prototype.random = function() {
+  return this[Math.floor(Math.random() * this.length)];
+};
+
+function generateA(text, link, blank) {
+  return '<a href="' + link + '"' + ((blank) ? 'target="_blank"' : "") + '>' + text + '</a>';
+}
+
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
-  function isinLangs(lang) {
-    if (lang === 'C#') {
-      lang = "CSharp";
+
+  return array;
+}
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
     }
-    var retVar = false;
-    $(lang.split(',')).each(function(index) {
-      if (langs.indexOf(this.toString().toLowerCase()) >= 0) {
-        retVar = true;
-      }
-    });
-    return retVar;
   }
+};
+function addLanguage(language){
+  if(language === null) language = "Other";
 
-  function getIcon(client) {
-    switch (client) {
-      case "C#":
-
-        return
-      case "Android":
-        return "fa fa-android";
-      case "Python":
-        return "fae fae-python";
-      default:
-        return "fa fa-code";
-    }
+  if(!availableLanguages.includes(language)){
+    $("#languages").append('<a class="waves-effect waves-light btn col s2 lang-button" href="?lang='+language+'">'+language+'</a>');
+    availableLanguages.push(language);
   }
-  jQuery.fn.reverse = [].reverse;
+}
