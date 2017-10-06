@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
   
   $("#github_projects").loadprojects();
   $("#closedprojects").loadclosedprojects();
+  $("#todo-list").loadtodolist();
 });
 
 jQuery.fn.extend({
@@ -83,6 +84,91 @@ loadclosedprojects : function() {
 
   });
 },
+loadtodolist: function(){
+  let $container = $(this);
+  $.ajax({
+    url: 'https://hackesta.org/api/wunderlist/todo?format=json',
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'json',
+    success: function(json){
+      
+      $.each(json,function(key,value){
+        console.log(key,value);
+        $regex = /\[.+]\((http:\/\/|https:\/\/).+\)/;
+        // Key: Name of List
+        title = key;
+        if($regex.test(key)){
+          name = key.substring(1, key.indexOf(']'));
+          link = key.substring(key.indexOf('(')+1, key.indexOf(')'));
+          title='<a href="'+link+'" target=_blank>'+name+'</a>';
+        }
+        list = [];
+        $list = $('<ul></ul>');
+        $(value.not_completed).each(function(index){
+            $listitem = $('<li></li>');
+            $listitem.append('<input id="notcheck'+index.toString()+'" disabled="" type="checkbox">');
+            // Code to check for MD Links
+            content = value.not_completed[index].title;
+            if($regex.test(content)){
+              name = content.substring(content.indexOf('['), content.indexOf(']'));
+              link = content.substring(content.indexOf('(')+1, content.indexOf(')'));
+              content ='<a href="'+link+'" target=_blank>'+name+'</a>';
+            }
+            $listitem.append("<label for='notcheck"+index.toString()+"'>"+jsmd(value.not_completed[index].title)+"</label>");
+            $list.append($listitem);  
+          });
+        toShow = 5;
+        if(value.completed.length < 5) toShow = value.completed.length;
+        for(i =0; i < toShow; i++){
+              $listitem = $('<li></li>');
+              $listitem.append('<input id="check'+i.toString()+'" disabled="" checked="" type="checkbox">');
+              // Code to check for MD Links
+              
+              $listitem.append("<label for='check"+i.toString()+"'>"+jsmd(value.completed[i].title)+"</label>");
+              $list.append($listitem);  
+        }
+        console.log($list[0]);
+        $card = $(
+          "<div class='card hoverable col s12'>"+
+          "<h4>"+title+"</h4>"+
+          "</div>"
+        );
+        $card.append($list);
+        $container.append($card)
+        
+      });
+    $container.removeClass("center-align");  
+    $container.hideloader();  
+    }
+  });
+},
+loadinstagram: function(){
+  $container = $(this);
+  $.ajax({
+    url: 'https://hackesta.org/api/instagram/haideralipunjabi/?__a=1',
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'json',
+    success: function(json){
+      $.each(json.user.media.nodes,function(post){
+        if(post.__typename==="GraphImage"){
+          $card = $(
+            '<div class="card hoverable s2">'+
+              '<div class="card-image>"'+
+                '<img src="'+post.thumbnail_src+'" dis_url="'+post.display_url+'"></img>'+
+              '</div>'+
+            '</div>'
+          );
+        }
+        $container.append($card);
+      });
+    $container.removeClass("center-align");  
+    $container.hideloader();  
+    }
+  });
+},
+
 hideloader: function() {
   $($(this).children(".preloader-wrapper")).hide();
 }

@@ -1,0 +1,69 @@
+/*!
+ * previewer.js v0.2.0
+ * https://github.com/ajayns/previewer
+ *
+ * Copyright (c) 2017 Ajay NS
+ * Released under the MIT license
+ */
+
+/* PREVIEWER STYLING */
+
+#previewer {
+	display: none;
+}
+
+/* Button to close previewer */
+#previewer-close {
+	position: fixed;
+  	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	right: -40px;
+	top: -40px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.9);
+	cursor: pointer;
+	z-index: 10;
+}
+
+/* 'x' inside the close button */
+#previewer-close>span {
+	position: fixed;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: white;
+	top: 0px;
+	right: 8px;
+}
+
+/* Styling for image */
+#previewer-img {
+	margin: auto;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-height: 90%;
+	max-width: 90%;
+	z-index: 10;
+	
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+/* Transperant page fade */
+#previewer-fade {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+}
+
+/* Use pointer cursor for src img */
+.preview-image, .preview-images>li>img {
+	cursor: pointer;
+}

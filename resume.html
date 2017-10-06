@@ -1,24 +1,76 @@
 <!DOCTYPE html>
-<html>
-<style>
-  a {
-text-decoration: underline !important;
- }
-</style>
-<title>Resume - Haider Ali Punjabi</title>
-<meta property="fb:app_id" content="898852280214428 ">
-<xmp theme="united" style="display:none;">
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="description" content="Index page of hackesta.org. Portfolio of Haider Ali Punjabi. ">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript, Programming, Coding, C#, Java, Python, Code, Computers">
+  <meta name="author" content="Haider Ali Punjabi">
+  <title>Resume - Hack-e-Sta</title>
+  <link rel="shortcut icon" href="/assets/media/favicons/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/assets/media/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="/assets/media/favicons/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/assets/media/favicons/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/media/favicons/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/media/favicons/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/media/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/media/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/media/favicons/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/media/favicons/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/media/favicons/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/media/favicons/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/media/favicons/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/media/favicons/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/media/favicons/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/media/favicons/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/media/favicons/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="/assets/media/favicons/favicon-144.png">
+  <meta name="msapplication-config" content="/assets/media/favicons/browserconfig.xml">
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/materialize.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+</head>
 
-</xmp>
+<body>
+  <div id="header">
+    
+  </div>
+  <div class="container">
+    <markdown>
+      
+      
+      
+    </markdown>    
+  </div>
 
-<script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
+  <div id="footer">
+    
+  </div>
+  <!-- Javascript -->
+  <script type="text/javascript" src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/materialize.js" charset="utf-8"></script>
+  <script src="/assets/js/tagdown.js"></script>
+  
+  
+  <script type="text/javascript">
+  $("#header").load("/header.html", function() {
+        $(".button-collapse").sideNav();
+  });
+  $("#footer").load("/footer.html");
+  $(".container").append('<a style="float:right;" href="https://gitprint.com/HackeSta/hackesta.org/blob/master/resume.md?download" class="waves-effect waves-light btn deep-purple"><i class="fa fa-print"></i>Print Resume</a>');
 
-<script src="/assets/plugins/strapdown/strapdown.js"></script>
-<script type="text/javascript">
-  $("xmp").load('https://raw.githubusercontent.com/HackeSta/hackesta.org/master/resume.md', function(){
-    markdown(window,document,function(){
-      $("#content").append('<a style="float:right;" href="https://gitprint.com/HackeSta/hackesta.org/blob/master/resume.md?download" class="btn btn-primary">Print Resume</a>');
+  $("markdown").load('https://raw.githubusercontent.com/HackeSta/hackesta.org/master/resume.md', function(){
+    markdown(function(){
+    $("#content strong").addClass("deep-purple-text text-darken-2");
+    $("#content a").addClass("light-blue-text");
+
     });
   });
-</script>
+  </script>
+</body>
 </html>
