@@ -13,7 +13,7 @@
 * Co-Anchor at Quiz Time Doordarshan J&K (2015)
 * Started & Head of [Code Club TBMS](https://github.com/codeclubtbms) (2017)
 
-## Programming
+## Programming  
 [Github Profile of Haider Ali Punjabi](https://github.com/haideralipunjabi)  
 Most of the work is done as/under the name [Hackesta](http://hackesta.org)  
 Details on most of the projects can be found [here](http://hackesta.org/projects.html)
@@ -23,8 +23,12 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * Visual Basic
 * Java
 * Python
-* HTML/CSS/JS
-* Django
+  * Django 
+* HTML/CSS/JavaScript  
+  * jQuery
+  * p5js
+  * MaterializeCSS
+  * Bootstrap
 * SQL  
 * Markdown
 
@@ -49,7 +53,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 #### Major Projects
 * [KPC](http://hackesta.org/projects/kpc/) - An Android client for [Kashmir Photography Club](http://kashmirphotographyclub.com) - December 2016
 * [Evolve CP Calculator](http://hackesta.org/?id=6) - An Android tool for the game Pokemon GO - July 2016  
-
+* [p5-documentation](https://github.com/HackeSta/p5-documentation) -  A Javascript addon to add documentation features to your p5js sketch.  
 
 #### Minor Projects
 * [SQLtoHTML](http://hackesta.org/?id=5) - Python script to convert SQL tables to HTML tables - December 2016
@@ -62,13 +66,21 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 #### Extra Projects
 * [General Quiz Module](https://github.com/areebbeigh/django_quiz) - Django(Backend), HTML/CSS/JS (Frontend) - May/June 2017  
 
+#### Major Open Source Contributions
+All the contributions can be seen on my [Github Profile](https://github.com/haideralipunjabi).  
+* [12oclocks](https://github.com/CodingTrain/12oclocks) - p5.js port of [John Maeda's 12 o'clocks](https://maedastudio.com/2004/rbooks2k/twelve.html) (Made Clock 9 & 10) 
+
+
 
 ### Websites
 ##### HTML/CSS/JS based static websites  
-* [Hack-e-Sta](http://hackesta.org) - August 2016
+* [Hackesta](https://hackesta.org) - August 2016
 * [Four Seasons](http://fourseasonskashmir.com) - April 2017
 * [Yousuf Naqshbandi](http://yousufnaqshbandi.com) - May 2017  
 * [Raja Aadam](http://rajaaadam.com) - July 2017
+* [TBMS Website(Demo)](https://tbms.hackesta.org) - August 2017
+* [Code Club TBMS](https://codeclub.hackesta.org) - August 2017 
+
 
 #### Events
 * Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017 
@@ -77,7 +89,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 #### Initiatives
 * [Digitalising Kashmir](https://hackesta.org/digitalisingkashmir) - An initiative to digitalise the photographers and artists of Kashmir
 jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hackesta](https://hackesta.org) and [Captivating Kashmir](http://captivatingkashmir.com/)
-
+* [Code Club TBMS](https://codeclub.hackesta.org) - Started a school club for coders in [Tyndale Biscoe & Mallinson School](https://tbmes.org)  
 
 ## Photography
 [Online Photography Portfolio of Haider Ali Punjabi](http://hackesta.org/photography)  
