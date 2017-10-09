@@ -9,11 +9,13 @@ jQuery(document).ready(function($) {
   $("#github_projects").loadprojects();
   $("#closedprojects").loadclosedprojects();
   $("#todo-list").loadtodolist();
+  $("#instagram").loadinstagram();
+  // var previewer = new Previewer();
 });
 
 jQuery.fn.extend({
   loadprojects: function(){
-    var $container = $(this);
+    var $projectcontainer = $(this);
     
     $.ajax({
       url:"https://hackesta.org/api/github/users/haideralipunjabi/repos?format=json",
@@ -25,7 +27,7 @@ jQuery.fn.extend({
         
         $.each(data, function(index, repo){
             
-            if(!repo.fork && $container.children().length <= 3){
+            if(!repo.fork && $projectcontainer.children().length <= 3){
               $card = $(
                 '<div class="col s12 m6 l4 ">'+
                 '<div class="card hoverable project-card '+ avalColors.random() +' darken-2">'+
@@ -44,17 +46,17 @@ jQuery.fn.extend({
                 '</div>'+
                 '</div>'
               );
-              $container.append($card);
+              $projectcontainer.append($card);
             }
         });
-        $container.hideloader();
+        $projectcontainer.hideloader();
 
       },
       
     });
 },
 loadclosedprojects : function() {
-  let $container = $(this);
+  let $closedcontainer = $(this);
   
   $.ajax({
     url: "https://hackesta.org/api/projects/?format=json",
@@ -63,7 +65,7 @@ loadclosedprojects : function() {
     success: function(data) {
 
       $.each(data, function(index, repo) {
-        if($container.children().length <= 3){
+        if($closedcontainer.children().length <= 3){
           
           $card = $(
             '<div class="col s12 m6 l4 ">' +
@@ -75,17 +77,17 @@ loadclosedprojects : function() {
             '</div>' +
             '</div>'
           );
-          $container.append($card);
+          $closedcontainer.append($card);
         }
 
       });
-      $container.hideloader();
+      $closedcontainer.hideloader();
     },
 
   });
 },
 loadtodolist: function(){
-  let $container = $(this);
+  let $todocontainer = $(this);
   $.ajax({
     url: 'https://hackesta.org/api/wunderlist/todo?format=json',
     type: 'GET',
@@ -135,36 +137,40 @@ loadtodolist: function(){
           "</div>"
         );
         $card.append($list);
-        $container.append($card)
+        $todocontainer.append($card)
         
       });
-    $container.removeClass("center-align");  
-    $container.hideloader();  
+    $todocontainer.removeClass("center-align");  
+    $todocontainer.hideloader();  
     }
   });
 },
 loadinstagram: function(){
-  $container = $(this);
+  let $instacontainer = $(this);
   $.ajax({
-    url: 'https://hackesta.org/api/instagram/haideralipunjabi/?__a=1',
+    url: 'https://hackesta.org/api/instagram/haideralipunjabi/?__a=1&format=json',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',
     success: function(json){
-      $.each(json.user.media.nodes,function(post){
+      $.each(json.user.media.nodes,function(index,post){
         if(post.__typename==="GraphImage"){
+          console.log(post.__typename);
           $card = $(
-            '<div class="card hoverable s2">'+
-              '<div class="card-image>"'+
-                '<img src="'+post.thumbnail_src+'" dis_url="'+post.display_url+'"></img>'+
+            '<div class="card hoverable col s2">'+
+              '<div class="card-image">'+
+                '<img src="'+post.thumbnail_src+'" preview_src="'+post.display_src+'"></img>'+
               '</div>'+
             '</div>'
           );
+          $instacontainer.append($card);
+
         }
-        $container.append($card);
       });
-    $container.removeClass("center-align");  
-    $container.hideloader();  
+    $instacontainer.removeClass("center-align");  
+    $instacontainer.hideloader();  
+    var previewer = new Previewer();
+
     }
   });
 },

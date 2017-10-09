@@ -7398,7 +7398,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0 32px;
 }
 
-.side-nav li > a:hover {
+.side-nav li:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
