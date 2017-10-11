@@ -52,7 +52,16 @@ jQuery.fn.extend({
         $projectcontainer.hideloader();
 
       },
-      
+      error: function(jqXHR, textStatus){
+              if(textStatus === 'timeout')
+              {     
+                $projectcontainer.loadprojects();
+              }
+              else{
+                $projectcontainer.showError();
+              }
+          },
+      timeout: 10000   
     });
 },
 loadclosedprojects : function() {
@@ -83,6 +92,16 @@ loadclosedprojects : function() {
       });
       $closedcontainer.hideloader();
     },
+    error: function(jqXHR, textStatus){
+            if(textStatus === 'timeout')
+            {     
+              $closedcontainer.loadclosedprojects();
+            }
+            else{
+              $closedcontainer.showError();
+            }
+        },
+    timeout: 10000   
 
   });
 },
@@ -96,7 +115,6 @@ loadtodolist: function(){
     success: function(json){
       
       $.each(json,function(key,value){
-        console.log(key,value);
         $regex = /\[.+]\((http:\/\/|https:\/\/).+\)/;
         // Key: Name of List
         title = key;
@@ -130,7 +148,6 @@ loadtodolist: function(){
               $listitem.append("<label for='check"+i.toString()+"'>"+jsmd(value.completed[i].title)+"</label>");
               $list.append($listitem);  
         }
-        console.log($list[0]);
         $card = $(
           "<div class='card hoverable col s12'>"+
           "<h4>"+title+"</h4>"+
@@ -142,7 +159,17 @@ loadtodolist: function(){
       });
     $todocontainer.removeClass("center-align");  
     $todocontainer.hideloader();  
-    }
+  },
+  error: function(jqXHR, textStatus){
+          if(textStatus === 'timeout')
+          {     
+            $todocontainer.loadtodolist();
+          }
+          else{
+            $todocontainer.showError();
+          }
+      },
+  timeout: 10000   
   });
 },
 loadinstagram: function(){
@@ -155,9 +182,8 @@ loadinstagram: function(){
     success: function(json){
       $.each(json.user.media.nodes,function(index,post){
         if(post.__typename==="GraphImage"){
-          console.log(post.__typename);
           $card = $(
-            '<div class="card hoverable col s2">'+
+            '<div class="card hoverable col s4 m2">'+
               '<div class="card-image">'+
                 '<img src="'+post.thumbnail_src+'" preview_src="'+post.display_src+'"></img>'+
               '</div>'+
@@ -171,12 +197,26 @@ loadinstagram: function(){
     $instacontainer.hideloader();  
     var previewer = new Previewer();
 
-    }
+  },
+  error: function(jqXHR, textStatus){
+          if(textStatus === 'timeout')
+          {     
+            $instacontainer.loadinstagram();
+          }
+          else{
+            $instacontainer.showError();
+          }
+      },
+  timeout: 10000   
   });
 },
 
 hideloader: function() {
   $($(this).children(".preloader-wrapper")).hide();
+},
+showError: function() {
+  $(this).hideloader();
+  $(this).html('<span class="flow-text">An error occured. Reload to try again.</span>')
 }
 });
 
