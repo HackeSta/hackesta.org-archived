@@ -25,7 +25,7 @@ def hackesta_projects():
 def websites():
     url = "https://hackesta.org/api/websites/?format=json"
     response = req.get(url)
-    print(response.json(),file=open('websites.json',"a")
+    print(response.json(),file=open('websites.json',"a"))
 
 user_repos()
 closed_projects()
