@@ -6,6 +6,6 @@ python:
 install:
   - pip install -r .travis/requirements.txt
 # command to run tests
-script: python .travis/json.py
+script: python .travis/get_data.py
 after_script:
   - bash .travis/push.sh
