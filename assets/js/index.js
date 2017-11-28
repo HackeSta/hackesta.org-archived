@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
         $(".button-collapse").sideNav();
   });
   $("#footer").load("/footer.html");
-  
+
   $("#github_projects").loadprojects();
   $("#closedprojects").loadclosedprojects();
   $("#todo-list").loadtodolist();
@@ -16,17 +16,17 @@ jQuery(document).ready(function($) {
 jQuery.fn.extend({
   loadprojects: function(){
     var $projectcontainer = $(this);
-    
+
     $.ajax({
-      url:"https://hackesta.org/api/github/users/haideralipunjabi/repos?format=json",
+      url:"https://hackesta.org/data/user_repos.json",
       crossDomain: true,
       dataType: 'json',
       success: function(data){
-        
+
         data = shuffle(data);
-        
+
         $.each(data, function(index, repo){
-            
+
             if(!repo.fork && $projectcontainer.children().length <= 3){
               $card = $(
                 '<div class="col s12 m6 l4 ">'+
@@ -54,28 +54,28 @@ jQuery.fn.extend({
       },
       error: function(jqXHR, textStatus){
               if(textStatus === 'timeout')
-              {     
+              {
                 $projectcontainer.loadprojects();
               }
               else{
                 $projectcontainer.showError();
               }
           },
-      timeout: 10000   
+      timeout: 10000
     });
 },
 loadclosedprojects : function() {
   let $closedcontainer = $(this);
-  
+
   $.ajax({
-    url: "https://hackesta.org/api/projects/?format=json",
+    url: "https://hackesta.org/data/closed_projects.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
 
       $.each(data, function(index, repo) {
         if($closedcontainer.children().length <= 3){
-          
+
           $card = $(
             '<div class="col s12 m6 l4 ">' +
             '<div class="card hoverable project-card ' + avalColors.random() + ' darken-2">' +
@@ -94,14 +94,14 @@ loadclosedprojects : function() {
     },
     error: function(jqXHR, textStatus){
             if(textStatus === 'timeout')
-            {     
+            {
               $closedcontainer.loadclosedprojects();
             }
             else{
               $closedcontainer.showError();
             }
         },
-    timeout: 10000   
+    timeout: 10000
 
   });
 },
@@ -113,7 +113,7 @@ loadtodolist: function(){
     crossDomain: true,
     dataType: 'json',
     success: function(json){
-      
+
       $.each(json,function(key,value){
         $regex = /\[.+]\((http:\/\/|https:\/\/).+\)/;
         // Key: Name of List
@@ -136,7 +136,7 @@ loadtodolist: function(){
               content ='<a href="'+link+'" target=_blank>'+name+'</a>';
             }
             $listitem.append("<label for='notcheck"+index.toString()+"'>"+jsmd(value.not_completed[index].title)+"</label>");
-            $list.append($listitem);  
+            $list.append($listitem);
           });
         toShow = 5;
         if(value.completed.length < 5) toShow = value.completed.length;
@@ -144,9 +144,9 @@ loadtodolist: function(){
               $listitem = $('<li></li>');
               $listitem.append('<input id="check'+i.toString()+'" disabled="" checked="" type="checkbox">');
               // Code to check for MD Links
-              
+
               $listitem.append("<label for='check"+i.toString()+"'>"+jsmd(value.completed[i].title)+"</label>");
-              $list.append($listitem);  
+              $list.append($listitem);
         }
         $card = $(
           "<div class='card hoverable col s12'>"+
@@ -155,27 +155,27 @@ loadtodolist: function(){
         );
         $card.append($list);
         $todocontainer.append($card)
-        
+
       });
-    $todocontainer.removeClass("center-align");  
-    $todocontainer.hideloader();  
+    $todocontainer.removeClass("center-align");
+    $todocontainer.hideloader();
   },
   error: function(jqXHR, textStatus){
           if(textStatus === 'timeout')
-          {     
+          {
             $todocontainer.loadtodolist();
           }
           else{
             $todocontainer.showError();
           }
       },
-  timeout: 10000   
+  timeout: 10000
   });
 },
 loadinstagram: function(){
   let $instacontainer = $(this);
   $.ajax({
-    url: 'https://hackesta.org/api/instagram/haideralipunjabi/?__a=1&format=json',
+    url: 'https://hackesta.org/data/instagram.json',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',
@@ -193,21 +193,21 @@ loadinstagram: function(){
 
         }
       });
-    $instacontainer.removeClass("center-align");  
-    $instacontainer.hideloader();  
+    $instacontainer.removeClass("center-align");
+    $instacontainer.hideloader();
     var previewer = new Previewer();
 
   },
   error: function(jqXHR, textStatus){
           if(textStatus === 'timeout')
-          {     
+          {
             $instacontainer.loadinstagram();
           }
           else{
             $instacontainer.showError();
           }
       },
-  timeout: 10000   
+  timeout: 10000
   });
 },
 

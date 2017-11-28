@@ -25,9 +25,9 @@ let loadprojects = function() {
   var $contribcontainer = $("#contribprojects");
   var language = getUrlParameter('lang');
   if(language === "Other") language = null;
-  
+
   $.ajax({
-    url: "https://hackesta.org/api/github/users/haideralipunjabi/repos?format=json",
+    url: "https://hackesta.org/data/user_repos.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -61,13 +61,13 @@ let loadprojects = function() {
           }
           addLanguage(repo.language);
         }
-        
+
 
 
       });
       $opencontainer.hideloader();
       $contribcontainer.hideloader();
-      
+
     },
 
   });
@@ -77,7 +77,7 @@ let loadhackestaprojects = function() {
   let language = getUrlParameter('lang');
   if(language === "Other") language = null;
   $.ajax({
-    url: "https://hackesta.org/api/github/orgs/hackesta/repos?format=json",
+    url: "https://hackesta.org/data/hackesta_repos.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -106,7 +106,7 @@ let loadhackestaprojects = function() {
           );
           $container.append($card);
           addLanguage(repo.language);
-        
+
         }
 
 
@@ -119,9 +119,9 @@ let loadhackestaprojects = function() {
 
 let loadwebsites = function() {
   let $container = $("#websites")
-  
+
   $.ajax({
-    url: "https://hackesta.org/api/websites/?format=json",
+    url: "https://hackesta.org/data/websites.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -134,7 +134,7 @@ let loadwebsites = function() {
             '<img class="responsive-img circle" style="border-radius: 50%; width:50%; margin-left: auto; margin-right:auto;"  src="'+repo.icon+'" alt="'+repo.name+'"></img>'+
             '</div>'+
             '<div class="card-content white-text">' +
-            '<span class="card-title">' + generateA(repo.name, repo.url, true) + '</span>' +            
+            '<span class="card-title">' + generateA(repo.name, repo.url, true) + '</span>' +
             '</div>' +
             '</div>' +
             '</div>'
@@ -149,9 +149,9 @@ let loadwebsites = function() {
 };
 let loadclosedprojects = function() {
   let $container = $("#closedprojects");
-  
+
   $.ajax({
-    url: "https://hackesta.org/api/projects/?format=json",
+    url: "https://hackesta.org/data/closed_projects.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
