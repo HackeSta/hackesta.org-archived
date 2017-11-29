@@ -12,7 +12,7 @@ commit_website_files() {
 upload_files() {
   git remote remove origin
   git remote add origin https://${GH_TOKEN}@github.com/hackesta/hackesta.org.git
-  git push origin HEAD:master
+  git push --quiet origin HEAD:master > /dev/null 2>&1
 }
 
 setup_git
