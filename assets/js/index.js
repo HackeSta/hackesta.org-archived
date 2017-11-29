@@ -18,7 +18,7 @@ jQuery.fn.extend({
     var $projectcontainer = $(this);
 
     $.ajax({
-      url:"https://hackesta.org/data/user_repos.json",
+      url:"/data/user_repos.json",
       crossDomain: true,
       dataType: 'json',
       success: function(data){
@@ -68,7 +68,7 @@ loadclosedprojects : function() {
   let $closedcontainer = $(this);
 
   $.ajax({
-    url: "https://hackesta.org/data/closed_projects.json",
+    url: "/data/closed_projects.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -175,7 +175,7 @@ loadtodolist: function(){
 loadinstagram: function(){
   let $instacontainer = $(this);
   $.ajax({
-    url: 'https://hackesta.org/data/instagram.json',
+    url: '/data/instagram.json',
     type: 'GET',
     crossDomain: true,
     dataType: 'json',

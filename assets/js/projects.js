@@ -27,7 +27,7 @@ let loadprojects = function() {
   if(language === "Other") language = null;
 
   $.ajax({
-    url: "https://hackesta.org/data/user_repos.json",
+    url: "/data/user_repos.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -77,7 +77,7 @@ let loadhackestaprojects = function() {
   let language = getUrlParameter('lang');
   if(language === "Other") language = null;
   $.ajax({
-    url: "https://hackesta.org/data/hackesta_repos.json",
+    url: "/data/hackesta_repos.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -121,7 +121,7 @@ let loadwebsites = function() {
   let $container = $("#websites")
 
   $.ajax({
-    url: "https://hackesta.org/data/websites.json",
+    url: "/data/websites.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
@@ -151,7 +151,7 @@ let loadclosedprojects = function() {
   let $container = $("#closedprojects");
 
   $.ajax({
-    url: "https://hackesta.org/data/closed_projects.json",
+    url: "/data/closed_projects.json",
     crossDomain: true,
     dataType: 'json',
     success: function(data) {
