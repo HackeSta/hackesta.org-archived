@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 
   $("#github_projects").loadprojects();
   $("#closedprojects").loadclosedprojects();
-  $("#todo-list").loadtodolist();
+  // $("#todo-list").loadtodolist();
   $("#instagram").loadinstagram();
   // var previewer = new Previewer();
 });
