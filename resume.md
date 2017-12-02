@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/hackesta/hackesta.org/master/assets/media/profile.png" width="200px"/>
 
-# Haider Ali Punjabi 
+# Haider Ali Punjabi
 **Contact:** [haideralipunjabi@hackesta.org](mailto:haideralipunjabi@hackesta.org)  
 **Website:** [hackesta.org](http://hackesta.org)  
 **Facebook:** [haiderali176](https://facebook.com/haiderali176)  
@@ -23,7 +23,7 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * Visual Basic
 * Java
 * Python
-  * Django 
+  * Django
 * HTML/CSS/JavaScript  
   * jQuery
   * p5js
@@ -39,7 +39,8 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 * [Visual Studio](https://www.visualstudio.com)
 * [PyCharm](https://www.jetbrains.com/pycharm/)
 * [Android Studio](https://developer.android.com/studio/)
-
+* [Travis CI](https://travis-ci.org)
+* [Netlify](https://netlify.com)  
 #### APIs
 * [Facebook Graph API](https://developers.facebook.com/docs/graph-api/)
 * [Github API](https://developer.github.com)
@@ -68,8 +69,8 @@ Details on most of the projects can be found [here](http://hackesta.org/projects
 
 #### Major Open Source Contributions
 All the contributions can be seen on my [Github Profile](https://github.com/haideralipunjabi).  
-* [12oclocks](https://github.com/CodingTrain/12oclocks) - p5.js port of [John Maeda's 12 o'clocks](https://maedastudio.com/2004/rbooks2k/twelve.html) (Made Clock 9 & 10) 
-
+* [12oclocks](https://github.com/CodingTrain/12oclocks) - p5.js port of [John Maeda's 12 o'clocks](https://maedastudio.com/2004/rbooks2k/twelve.html) (Made Clock 9 & 10)
+* [CommunityClouds](https://github.com/CodingTrain/CommunityClouds) -  Cloud Designs for Processing Community Day (Made rndCloud)
 
 
 ### Websites
@@ -79,16 +80,14 @@ All the contributions can be seen on my [Github Profile](https://github.com/haid
 * [Yousuf Naqshbandi](http://yousufnaqshbandi.com) - May 2017  
 * [Raja Aadam](http://rajaaadam.com) - July 2017
 * [TBMS Website(Demo)](https://tbms.hackesta.org) - August 2017
-* [Code Club TBMS](https://codeclub.hackesta.org) - August 2017 
+* [Code Club TBMS](https://codeclub.hackesta.org) - August 2017
 
 
 #### Events
-* Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017 
+* Presented KPC and other projects at **The Youth Speaks** organised by [**Four Seasons**](http://fourseasonskashmir.com) in April 2017
 * Attended Robotics workshop at TechKnow 2017 organised by [CyberCrew DPS](http://cybercrew.dpssrinagar.com) at [DPS Srinagar](http://dpssrinagar.com)
 
 #### Initiatives
-* [Digitalising Kashmir](https://hackesta.org/digitalisingkashmir) - An initiative to digitalise the photographers and artists of Kashmir
-jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hackesta](https://hackesta.org) and [Captivating Kashmir](http://captivatingkashmir.com/)
 * [Code Club TBMS](https://codeclub.hackesta.org) - Started a school club for coders in [Tyndale Biscoe & Mallinson School](https://tbmes.org)  
 
 ## Photography
@@ -100,7 +99,7 @@ jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hacke
 * Showcased photographs at an Art and Photography event **INCEPTION** at [DPS Srinagar](http://www.dpssrinagar.com/) in 2014
 * Showcased photographs at an Art, Photography and Literature event **Clicks, Lines and Verses** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2015
 * Showcased photographs at an Art and Photography exhibition **Clicks & Strokes** at [Tyndale Biscoe and Mallinson School, Srinagar](http://tbmes.org/) in August 2017
-
+* Showcased photographs at a Photography exhibition organised under 'Valley Weekends' at Nigeen Club in December 2017
 
 
 ## Education
@@ -108,7 +107,7 @@ jointly undertaken by [The Four Seasons](https://fourseasonskashmir.com), [Hacke
   * House Helper [Class 4th (2009), Class 6th (2011), Class 7th (2012), Class 8th (2013), Class 9th (2014), Class 11th(2016)]
   * House Captain [Class 5th (2010), Class 12th (2017)]
   * School Vice-Captain [Class 10th (2015)]
-   
+
 ## Sports
 
 #### Skiing
