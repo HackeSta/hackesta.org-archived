@@ -27,8 +27,22 @@ def websites():
     response = req.get(url)
     print(response.text,file=open('data/websites.json',"w"))
 
+def fpx_photographs():
+    userid = '8734325'
+    url = "https://api.500px.com/v1/photos?feature=user&user_id=%s&page=1&image_size[]=3&image_size[]=4&rpp=100&consumer_key=" + os.environ.get('FHPX_CON_KEY')
+    response = req.get(url % userid)
+    print(response.text,file=open('data/fpx_photographs.json'))
+
+def fpx_user():
+    userid = '8734325'
+    url ="https://api.500px.com/v1/users/%s/?consumer_key=" + os.environ.get('FHPX_CON_KEY')
+    response = req.get(url % userid)
+    print(response.text, file=open('data/fpx_user.json'))
+
 user_repos()
 closed_projects()
 instagram()
 hackesta_projects()
 websites()
+fpx_photographs()
+fpx_user()

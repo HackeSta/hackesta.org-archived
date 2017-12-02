@@ -198,11 +198,11 @@ var main = (function($) {
 		// Window.
 		// console.log('onload');
 		// _.$body.removeClass('is-loading-0');
-		// 
+		//
 		// window.setTimeout(function() {
 		// _.$body.removeClass('is-loading-1');
 		// }, 100);
-		// 
+		//
 		// window.setTimeout(function() {
 		// _.$body.removeClass('is-loading-2');
 		// }, 100 + Math.max(_.settings.layoutDuration - 150, 0));
@@ -513,7 +513,6 @@ var main = (function($) {
 	 */
 	init: function() {
 
-		console.log('called');
 
 		// IE<10: Zero out transition delays.
 			if (skel.vars.IEVersion < 10) {
@@ -824,9 +823,9 @@ var main = (function($) {
 
 	},
 	loadData: function(){
-		
+
 		$.ajax({
-			url: 'https://hackesta.org/api/photographs/user?format=json&user_id=8734325',
+			url: '/data/fpx_user.json',
 			type: 'GET',
 			crossDomain: true,
 	    dataType: 'json',
@@ -840,8 +839,9 @@ var main = (function($) {
 	},
 
 	loadPhotos: function(){
+		console.log('called 1');
 	  $.ajax({
-	    url: 'https://hackesta.org/api/photographs/?format=json&user_id=8734325',
+	    url: '/data/fpx_photographs.json',
 	    type: 'GET',
 	    crossDomain: true,
 	    dataType: 'json',
@@ -852,11 +852,11 @@ var main = (function($) {
 	      });
 				$("body").removeClass('loading')
 				$("body").removeClass('is-loading-0');
-		
+
 				window.setTimeout(function() {
 				$("body").removeClass('is-loading-1');
 				}, 100);
-		
+
 				window.setTimeout(function() {
 				$("body").removeClass('is-loading-2');
 				}, 100 + Math.max(_.settings.layoutDuration - 150, 0));
