@@ -839,7 +839,6 @@ var main = (function($) {
 	},
 
 	loadPhotos: function(){
-		console.log('called 1');
 	  $.ajax({
 	    url: '/data/fpx_photographs.json',
 	    type: 'GET',
