@@ -1,23 +1,21 @@
 let avalColors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange'];
 
 jQuery(document).ready(function($) {
+
   $("#header").load("/header.html", function() {
         $(".button-collapse").sideNav();
   });
   $("#footer").load("/footer.html");
-
   $("#github_projects").loadprojects();
   $("#closedprojects").loadclosedprojects();
-  // $("#todo-list").loadtodolist();
   $("#instagram").loadinstagram();
-  // var previewer = new Previewer();
 });
 
 jQuery.fn.extend({
   loadprojects: function(){
     var $projectcontainer = $(this);
 
-    $.ajax({
+    $.ajaxq("queue",{
       url:"/data/user_repos.json",
       crossDomain: true,
       dataType: 'json',
@@ -67,7 +65,7 @@ jQuery.fn.extend({
 loadclosedprojects : function() {
   let $closedcontainer = $(this);
 
-  $.ajax({
+  $.ajaxq("queue",{
     url: "/data/closed_projects.json",
     crossDomain: true,
     dataType: 'json',
@@ -107,7 +105,7 @@ loadclosedprojects : function() {
 },
 loadtodolist: function(){
   let $todocontainer = $(this);
-  $.ajax({
+  $.ajaxq("queue",{
     url: 'https://hackesta.org/api/wunderlist/todo?format=json',
     type: 'GET',
     crossDomain: true,
@@ -174,7 +172,7 @@ loadtodolist: function(){
 },
 loadinstagram: function(){
   let $instacontainer = $(this);
-  $.ajax({
+  $.ajaxq("queue",{
     url: '/data/instagram.json',
     type: 'GET',
     crossDomain: true,
