@@ -2,8 +2,9 @@ let avalColors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'lig
 
 jQuery(document).ready(function($) {
 
-  $("#header").load("/header.html", function() {
-        $(".button-collapse").sideNav();
+  $("#header").load("/header.html",function(){
+    $(".button-collapse").sideNav();
+
   });
   $("#footer").load("/footer.html");
   $("#github_projects").loadprojects();
