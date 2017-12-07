@@ -3729,12 +3729,10 @@ if (Vel) {
         onClose: null
       };
       options = $.extend(defaults, options);
-
       $(this).each(function () {
         var $this = $(this);
         var menuId = $this.attr('data-activates');
         var menu = $("#" + menuId);
-
         // Set to width
         if (options.menuWidth != 300) {
           menu.css('width', options.menuWidth);
@@ -4079,10 +4077,10 @@ if (Vel) {
               options.onOpen.call(this, menu);
             }
           }
-
           return false;
         });
       });
+
     },
     destroy: function () {
       var $overlay = $('#sidenav-overlay');
@@ -4106,6 +4104,7 @@ if (Vel) {
     } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
       // Default to "init"
       return methods.init.apply(this, arguments);
+
     } else {
       $.error('Method ' + methodOrOptions + ' does not exist on jQuery.sideNav');
     }
@@ -5415,6 +5414,7 @@ if (Vel) {
           $active_index = $slider.find('.active').index();
           moveToSlide($active_index - 1);
         });
+
       });
     },
     pause: function () {
