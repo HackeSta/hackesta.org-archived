@@ -20,7 +20,7 @@ jQuery.fn.extend({
     var $projectcontainer = $(this);
 
     $.ajaxq("queue",{
-      url:"/data/user_repos.json",
+      url:"/data/hackesta_repos.json",
       crossDomain: true,
       dataType: 'json',
       success: function(data){

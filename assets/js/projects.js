@@ -10,7 +10,6 @@ jQuery(document).ready(function($) {
       $(this).hide();
     });
   }
-  loadprojects();
   loadhackestaprojects();
   loadwebsites();
   loadclosedprojects();
