@@ -87,7 +87,14 @@ font-size: 24px;
   margin-bottom: 10px;
 }
 
-
+#pages i.fa {
+font-size: 2em;
+}
+.center-image {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: unset !important;
+}
 
 #footer ul {
   cursor: default;
