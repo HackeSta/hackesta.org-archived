@@ -182,12 +182,12 @@ loadinstagram: function(){
     crossDomain: true,
     dataType: 'json',
     success: function(json){
-      $.each(json.user.media.nodes,function(index,post){
-        if(post.__typename==="GraphImage"){
+      $.each(json.graphql.user.edge_owner_to_timeline_media.edges,function(index,post){
+        if(post.node.__typename==="GraphImage"){
           $card = $(
             '<div class="card hoverable col s4 m2">'+
               '<div class="card-image">'+
-                '<img src="'+post.thumbnail_src+'" preview_src="'+post.display_src+'"></img>'+
+                '<img src="'+post.node.thumbnail_src+'" preview_src="'+post.node.display_url+'"></img>'+
               '</div>'+
             '</div>'
           );
